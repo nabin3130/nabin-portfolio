@@ -1,6 +1,13 @@
 import Link from "next/link";
 import { Header } from "@/components/Header";
-import { expertise, metrics, projects, supportingWork } from "@/data/portfolio";
+import { projects } from "@/data/portfolio";
+
+const experience = [
+  { period: "2025–", company: "Tomato", role: "Co-founder" },
+  { period: "2024–", company: "CaveDAO / Kaia Chain Fund", role: "Event Host & Marketing" },
+  { period: "2021–2024", company: "PiLab · Bifrost Network", role: "BD & Ecosystem" },
+  { period: "2017–2019", company: "Streami · GOPAX", role: "Service Marketing" },
+];
 
 export default function Home() {
   return (
@@ -9,43 +16,21 @@ export default function Home() {
 
       <section className="hero shell">
         <p className="eyebrow">NABIN KIM · SEOUL · KR / EN</p>
-        <h1>I build growth for Web3 products through partnerships, content, and community.</h1>
-        <div className="hero-bottom">
-          <p>Go-to-market, ecosystem growth, and product communication.</p>
-          <div className="actions">
-            <a href="#projects" className="button primary">View work</a>
-          </div>
+        <h1>Ecosystem growth, partnerships, and product marketing for Web3.</h1>
+      </section>
+
+      <section id="about" className="section about shell">
+        <p className="eyebrow">ABOUT</p>
+        <div>
+          <h2>7+ years across crypto exchanges, blockchain infrastructure, ecosystem growth, and early-stage products.</h2>
+          <p>I turn complex products into clear stories, partnerships, and programs that people can understand and join.</p>
         </div>
       </section>
 
-      <section className="metrics shell">
-        {metrics.slice(0, 3).map((metric) => (
-          <div key={metric.label}>
-            <strong>{metric.value}</strong>
-            <span>{metric.label}</span>
-          </div>
-        ))}
-      </section>
-
-      <section id="expertise" className="section shell">
+      <section id="projects" className="section shell selected-projects">
         <div className="section-heading">
-          <p className="eyebrow">CORE EXPERTISE</p>
-          <h2>What I do.</h2>
-        </div>
-        <div className="expertise-grid">
-          {expertise.slice(0, 4).map((item, index) => (
-            <article key={item.title}>
-              <span>0{index + 1}</span>
-              <h3>{item.title}</h3>
-            </article>
-          ))}
-        </div>
-      </section>
-
-      <section id="projects" className="section shell">
-        <div className="section-heading">
-          <p className="eyebrow">FEATURED PROJECTS</p>
-          <h2>Selected case studies.</h2>
+          <p className="eyebrow">SELECTED PROJECTS</p>
+          <h2>Three projects that show how I work.</h2>
         </div>
 
         <div className="featured-grid">
@@ -57,7 +42,7 @@ export default function Home() {
             >
               <div className="featured-topline">
                 <span>{project.index}</span>
-                <span>View ↗</span>
+                <span>↗</span>
               </div>
               <div className="featured-body">
                 <p className="project-subtitle">{project.subtitle}</p>
@@ -68,43 +53,26 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="work" className="section shell supporting-section">
+      <section id="experience" className="section experience shell">
         <div className="section-heading">
-          <p className="eyebrow">SELECTED WORK</p>
-          <h2>More of what I have built.</h2>
+          <p className="eyebrow">EXPERIENCE</p>
+          <h2>Where I have worked.</h2>
         </div>
-        <div className="work-grid">
-          {supportingWork.map((item, index) => (
-            <article key={item.category}>
-              <div className="work-number">0{index + 1}</div>
-              <p className="work-category">{item.category}</p>
-              <h3>{item.title}</h3>
+
+        <div className="experience-list">
+          {experience.map((item) => (
+            <article key={`${item.period}-${item.company}`}>
+              <span>{item.period}</span>
+              <h3>{item.company}</h3>
+              <p>{item.role}</p>
             </article>
           ))}
         </div>
       </section>
 
-      <section id="about" className="section about shell">
-        <p className="eyebrow">ABOUT</p>
-        <div>
-          <h2>7+ years across exchange, blockchain infrastructure, ecosystem, and early-stage products.</h2>
-          <p>Based in Seoul. Working in Korean and English.</p>
-        </div>
-      </section>
-
-      <section id="contact" className="contact shell">
-        <p className="eyebrow">CONTACT</p>
-        <h2>Let’s connect.</h2>
-        <div className="contact-links">
-          <a href="mailto:hello@example.com">Email ↗</a>
-          <a href="#">LinkedIn ↗</a>
-          <a href="#">Resume ↗</a>
-        </div>
-      </section>
-
       <footer className="shell">
         <span>© 2026 Nabin Kim</span>
-        <span>Seoul · Open to global opportunities</span>
+        <span>Resume · LinkedIn · Email</span>
       </footer>
     </main>
   );
