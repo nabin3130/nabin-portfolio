@@ -309,9 +309,9 @@ img {
 }
 
 .fragrance-visual {
-  display: grid;
-  place-items: center;
-  background: #f6f3ec;
+  background:
+    linear-gradient(rgba(255,255,255,.1), rgba(255,255,255,.1)),
+    url("/images/beyond/dior.jpeg") center / cover no-repeat;
 }
 
 .fragrance-bottle {
@@ -352,10 +352,9 @@ img {
 }
 
 .mission-visual {
-  display: grid;
-  place-items: center;
-  padding: 34px;
-  background: #efefef;
+  background:
+    linear-gradient(rgba(0,0,0,.05), rgba(0,0,0,.05)),
+    url("/images/beyond/digital-navigator.png") center / cover no-repeat;
 }
 
 .browser-frame {
