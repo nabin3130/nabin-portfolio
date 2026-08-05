@@ -112,7 +112,6 @@ export default function Home() {
 
             <article className="beyond-card fragrance-card">
               <div className="beyond-visual fragrance-visual">
-                <div className="fragrance-bottle" />
               </div>
 
               <div className="beyond-copy">
