@@ -1,12 +1,30 @@
-import Link from "next/link";
 import { Header } from "@/components/Header";
-import { projects } from "@/data/portfolio";
 
-const experience = [
-  { period: "2025–", company: "Tomato", role: "Co-founder" },
-  { period: "2024–", company: "CaveDAO / Kaia Chain Fund", role: "Event Host & Marketing" },
-  { period: "2021–2024", company: "PiLab · Bifrost Network", role: "BD & Ecosystem" },
-  { period: "2017–2019", company: "Streami · GOPAX", role: "Service Marketing" },
+const workItems = [
+  {
+    number: "01",
+    title: "Ecosystem Growth",
+    subtitle: "Bifrost Network",
+    className: "work-visual ecosystem-visual",
+  },
+  {
+    number: "02",
+    title: "Content",
+    subtitle: "PR · GitBook",
+    className: "work-visual content-visual",
+  },
+  {
+    number: "03",
+    title: "Events",
+    subtitle: "Global Conferences",
+    className: "work-visual events-visual",
+  },
+  {
+    number: "04",
+    title: "Media",
+    subtitle: "Real Homies Club",
+    className: "work-visual media-visual",
+  },
 ];
 
 export default function Home() {
@@ -14,65 +32,137 @@ export default function Home() {
     <main>
       <Header />
 
-      <section className="hero shell">
-        <p className="eyebrow">NABIN KIM · SEOUL · KR / EN</p>
-        <h1>Ecosystem growth, partnerships, and product marketing for Web3.</h1>
-      </section>
+      <section className="home-hero">
+        <div className="home-shell hero-layout">
+          <div className="hero-copy">
+            <p className="hero-name">Nabin Kim</p>
+            <h1>Ecosystem Growth</h1>
+            <p className="hero-tagline">
+              Helping blockchain projects grow.
+            </p>
+          </div>
 
-      <section id="about" className="section about shell">
-        <p className="eyebrow">ABOUT</p>
-        <div>
-          <h2>7+ years across crypto exchanges, blockchain infrastructure, ecosystem growth, and early-stage products.</h2>
-          <p>I turn complex products into clear stories, partnerships, and programs that people can understand and join.</p>
+          <div className="hero-profile">
+            <img
+              src="/images/cat-profile.svg"
+              alt="Temporary cat profile"
+            />
+          </div>
         </div>
       </section>
 
-      <section id="projects" className="section shell selected-projects">
-        <div className="section-heading">
-          <p className="eyebrow">SELECTED PROJECTS</p>
-          <h2>Three projects that show how I work.</h2>
-        </div>
+      <section id="work" className="home-section">
+        <div className="home-shell">
+          <div className="section-title-row">
+            <h2>Selected Work</h2>
+            <span>Four areas of work</span>
+          </div>
 
-        <div className="featured-grid">
-          {projects.map((project, index) => (
-            <Link
-              href={`/projects/${project.slug}`}
-              className={`featured-card featured-card-${index + 1}`}
-              key={project.slug}
-            >
-              <div className="featured-topline">
-                <span>{project.index}</span>
-                <span>↗</span>
+          <div className="work-grid">
+            {workItems.map((item) => (
+              <article className="work-card" key={item.number}>
+                <div className={item.className}>
+                  <span className="work-number">{item.number}</span>
+                </div>
+
+                <div className="work-card-copy">
+                  <h3>{item.title}</h3>
+                  <p>{item.subtitle}</p>
+                </div>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section id="beyond" className="home-section beyond-section">
+        <div className="home-shell">
+          <div className="section-title-row">
+            <h2>Beyond Work</h2>
+            <span>A few things I care about</span>
+          </div>
+
+          <div className="beyond-grid">
+            <article className="beyond-card food-card">
+              <div className="beyond-visual food-visual" />
+
+              <div className="beyond-copy">
+                <p className="beyond-label">Food</p>
+                <h3>Exploring local restaurants.</h3>
+
+                <div className="beyond-links">
+                  <a
+                    href="https://blog.naver.com/nbk1313"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    Read Blog ↗
+                  </a>
+
+                  <a
+                    href="https://naver.me/GArYudxL"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    Watch Clips ↗
+                  </a>
+                </div>
               </div>
-              <div className="featured-body">
-                <p className="project-subtitle">{project.subtitle}</p>
-                <h3>{project.title}</h3>
-              </div>
-            </Link>
-          ))}
-        </div>
-      </section>
-
-      <section id="experience" className="section experience shell">
-        <div className="section-heading">
-          <p className="eyebrow">EXPERIENCE</p>
-          <h2>Where I have worked.</h2>
-        </div>
-
-        <div className="experience-list">
-          {experience.map((item) => (
-            <article key={`${item.period}-${item.company}`}>
-              <span>{item.period}</span>
-              <h3>{item.company}</h3>
-              <p>{item.role}</p>
             </article>
-          ))}
+
+            <article className="beyond-card fragrance-card">
+              <div className="beyond-visual fragrance-visual">
+                <div className="fragrance-bottle" />
+              </div>
+
+              <div className="beyond-copy">
+                <p className="beyond-label">Fragrance</p>
+                <span className="small-label">Current favorite</span>
+                <h3>Bois d&apos;Argent</h3>
+                <p>by Dior</p>
+              </div>
+            </article>
+
+            <article className="beyond-card mission-card">
+              <div className="beyond-visual mission-visual">
+                <div className="browser-frame">
+                  <div className="browser-bar">
+                    <span />
+                    <span />
+                    <span />
+                  </div>
+
+                  <div className="browser-content">
+                    <strong>Digital Legacy Navigator</strong>
+                    <span>Prepare · Organize · Guide</span>
+                  </div>
+                </div>
+              </div>
+
+              <div className="beyond-copy">
+                <p className="beyond-label">Mission</p>
+                <h3>Digital Legacy Navigator</h3>
+                <p>Helping people prepare their digital lives.</p>
+
+                <a
+                  className="mission-link"
+                  href="https://digital-legacy-five.vercel.app/"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  View Project ↗
+                </a>
+              </div>
+            </article>
+          </div>
         </div>
       </section>
 
-      <footer className="shell">
-        <span>© 2026 Nabin Kim</span>
-        <span>Resume · LinkedIn · Email</span>
+      <footer className="home-footer">
+        <div className="home-shell">
+          <span>Nabin Kim</span>
+          <span>© 2026</span>
+        </div>
       </footer>
     </main>
   );
