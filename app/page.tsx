@@ -123,13 +123,13 @@ export default function Home() {
             </article>
 
             <article className="beyond-card mission-card">
-              <div className="beyond-visual mission-visual">
-
+              <div className="beyond-visual mission-visual" />
+            
               <div className="beyond-copy">
                 <p className="beyond-label">Mission</p>
                 <h3>Digital Legacy Navigator</h3>
                 <p>Helping people prepare their digital lives.</p>
-
+            
                 <a
                   className="mission-link"
                   href="https://digital-legacy-five.vercel.app/"
