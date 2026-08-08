@@ -55,7 +55,6 @@ export default function Home() {
         <div className="home-shell">
           <div className="section-title-row">
             <h2>Selected Work</h2>
-            <span>Four areas of work</span>
           </div>
 
           <div className="work-grid">
@@ -79,7 +78,6 @@ export default function Home() {
         <div className="home-shell">
           <div className="section-title-row">
             <h2>Beyond Work</h2>
-            <span>A few things I care about</span>
           </div>
 
           <div className="beyond-grid">
@@ -96,7 +94,7 @@ export default function Home() {
                     target="_blank"
                     rel="noreferrer"
                   >
-                    Read Blog ↗
+                    Read Blog →
                   </a>
 
                   <a
@@ -104,7 +102,7 @@ export default function Home() {
                     target="_blank"
                     rel="noreferrer"
                   >
-                    Watch Clips ↗
+                    Watch Clips →
                   </a>
                 </div>
               </div>
@@ -112,6 +110,7 @@ export default function Home() {
 
             <article className="beyond-card fragrance-card">
               <div className="beyond-visual fragrance-visual">
+                <div className="fragrance-bottle" aria-hidden="true" />
               </div>
 
               <div className="beyond-copy">
@@ -123,7 +122,19 @@ export default function Home() {
             </article>
 
             <article className="beyond-card mission-card">
-              <div className="beyond-visual mission-visual" />
+              <div className="beyond-visual mission-visual">
+                <div className="browser-frame" aria-hidden="true">
+                  <div className="browser-bar">
+                    <span />
+                    <span />
+                    <span />
+                  </div>
+                  <div className="browser-content">
+                    <strong>Digital Legacy Navigator</strong>
+                    <span>Prepare what matters</span>
+                  </div>
+                </div>
+              </div>
             
               <div className="beyond-copy">
                 <p className="beyond-label">Mission</p>

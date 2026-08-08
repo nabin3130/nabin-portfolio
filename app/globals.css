@@ -149,7 +149,7 @@ img {
 
 .section-title-row {
   display: flex;
-  align-items: end;
+  align-items: flex-end;
   justify-content: space-between;
   gap: 32px;
   margin-bottom: 56px;
@@ -245,17 +245,11 @@ img {
 }
 
 .events-visual {
-  background:
-    linear-gradient(rgba(0, 0, 0, 0.08), rgba(0, 0, 0, 0.08)),
-    url("/images/work/events.jpg") center / cover no-repeat,
-    linear-gradient(135deg, #d6d6d6, #ffffff);
+  background: #d6d6d6 url("/images/work/events.jpg") center / cover no-repeat;
 }
 
 .media-visual {
-  background:
-    linear-gradient(rgba(0, 0, 0, 0.08), rgba(0, 0, 0, 0.08)),
-    url("/images/work/media.jpg") center / cover no-repeat,
-    linear-gradient(135deg, #efefef, #d7d7d7);
+  background: #dedede url("/images/work/media.jpg") center / cover no-repeat;
 }
 
 .work-card-copy {
@@ -302,16 +296,13 @@ img {
 }
 
 .food-visual {
-  background:
-    linear-gradient(rgba(0, 0, 0, 0.03), rgba(0, 0, 0, 0.03)),
-    url("/images/beyond/food.jpg") center / cover no-repeat,
-    linear-gradient(135deg, #e8d6bf, #ffffff);
+  background: #e8d6bf url("/images/beyond/food.jpg") center / cover no-repeat;
 }
 
 .fragrance-visual {
-  background:
-    linear-gradient(rgba(255,255,255,.1), rgba(255,255,255,.1)),
-    url("/images/beyond/dior.jpeg") center / cover no-repeat;
+  display: grid;
+  place-items: center;
+  background: #eeeae3;
 }
 
 .fragrance-bottle {
@@ -319,12 +310,7 @@ img {
   height: 190px;
   position: relative;
   border: 1px solid #cfc9be;
-  background:
-    linear-gradient(
-      180deg,
-      rgba(255, 255, 255, 0.95),
-      rgba(232, 222, 202, 0.7)
-    );
+  background: #f8f5ef;
   box-shadow: 0 24px 50px rgba(0, 0, 0, 0.08);
 }
 
@@ -352,9 +338,10 @@ img {
 }
 
 .mission-visual {
-  background:
-    linear-gradient(rgba(0,0,0,.05), rgba(0,0,0,.05)),
-    url("/images/beyond/digital-navigator.png") center / cover no-repeat;
+  display: grid;
+  place-items: center;
+  padding: 32px;
+  background: #eeeeee;
 }
 
 .browser-frame {

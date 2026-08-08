@@ -11,7 +11,7 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
   if (!project) notFound();
   return <main><Header />
     <article className="case shell">
-      <Link href="/#projects" className="back">← Back to projects</Link>
+      <Link href="/#work" className="back">← Back to work</Link>
       <p className="eyebrow">{project.subtitle}</p><h1>{project.title}</h1><p className="case-lead">{project.summary}</p>
       <div className="case-meta"><div><span>Role & scope</span><p>{project.role}</p></div><div><span>Capabilities</span><p>{project.tags.join(" · ")}</p></div></div>
       <section><p className="eyebrow">THE CHALLENGE</p><h2>{project.challenge}</h2></section>

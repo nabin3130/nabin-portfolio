@@ -9,8 +9,8 @@ export function Header() {
         </Link>
 
         <nav className="nav">
-          <a href="#work">Work</a>
-          <a href="#beyond">Beyond Work</a>
+          <Link href="/#work">Work</Link>
+          <Link href="/#beyond">Beyond Work</Link>
         </nav>
       </div>
     </header>
