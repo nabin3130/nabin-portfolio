@@ -109,9 +109,7 @@ export default function Home() {
             </article>
 
             <article className="beyond-card fragrance-card">
-              <div className="beyond-visual fragrance-visual">
-                <div className="fragrance-bottle" aria-hidden="true" />
-              </div>
+              <div className="beyond-visual fragrance-visual" />
 
               <div className="beyond-copy">
                 <p className="beyond-label">Fragrance</p>
@@ -122,28 +120,16 @@ export default function Home() {
             </article>
 
             <article className="beyond-card mission-card">
-              <div className="beyond-visual mission-visual">
-                <div className="browser-frame" aria-hidden="true">
-                  <div className="browser-bar">
-                    <span />
-                    <span />
-                    <span />
-                  </div>
-                  <div className="browser-content">
-                    <strong>Digital Legacy Navigator</strong>
-                    <span>Prepare what matters</span>
-                  </div>
-                </div>
-              </div>
+              <div className="beyond-visual mission-visual" />
             
               <div className="beyond-copy">
                 <p className="beyond-label">Mission</p>
-                <h3>Digital Legacy Navigator</h3>
+                <h3>Logout</h3>
                 <p>Helping people prepare their digital lives.</p>
             
                 <a
                   className="mission-link"
-                  href="https://digital-legacy-five.vercel.app/"
+                  href="https://digital-legacy-five.vercel.app/en"
                   target="_blank"
                   rel="noreferrer"
                 >
