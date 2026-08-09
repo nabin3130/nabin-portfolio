@@ -8,31 +8,25 @@ const socialLinks = [
 const interviews = [
   {
     number: "01",
-    title: "NFT Experience",
-    text: "“Have you traded NFT before?”",
-    href: "https://www.tiktok.com/@realhomiesclub/video/7606734391443836190?is_from_webapp=1&sender_device=pc&web_id=7595780493363414550",
-    image: "/images/work/media-nft.jpg",
-  },
-  {
-    number: "02",
     title: "First Crypto",
     text: "“What was your first crypto?”",
     href: "https://www.tiktok.com/@realhomiesclub/video/7668248794181537054?is_from_webapp=1&sender_device=pc&web_id=7595780493363414550",
     image: "/images/work/media.jpg",
   },
   {
-    number: "03",
+    number: "02",
     title: "Bitcoin in 2011",
     text: "“Yeah, it was Bitcoin back in 2011”",
     href: "https://www.tiktok.com/@realhomiesclub/video/7607831708485815583?is_from_webapp=1&sender_device=pc&web_id=7595780493363414550",
     image: "/images/work/media-bitcoin-2011.jpg",
   },
-];
-
-const channelMetrics = [
-  { value: "1.6K+", label: "Followers" },
-  { value: "1K+", label: "Likes" },
-  { value: "50+", label: "Interviews" },
+  {
+    number: "03",
+    title: "NFT Experience",
+    text: "“Have you traded NFT before?”",
+    href: "https://www.tiktok.com/@realhomiesclub/video/7606734391443836190?is_from_webapp=1&sender_device=pc&web_id=7595780493363414550",
+    image: "/images/work/media-nft.jpg",
+  },
 ];
 
 export function MediaWork() {
@@ -47,7 +41,6 @@ export function MediaWork() {
         </p>
         <nav aria-label="Media case study sections">
           <a href="#media-interviews"><span>01</span>Interviews</a>
-          <a href="#media-tiktok"><span>02</span>TikTok Channel</a>
           <a href="#media-partnership"><span>03</span>Media Partnership</a>
         </nav>
       </aside>
@@ -112,33 +105,6 @@ export function MediaWork() {
               </a>
             ))}
           </div>
-        </section>
-
-        <section className="media-case-section" id="media-tiktok">
-          <header className="media-case-section-heading">
-            <div>
-              <h2><span>02</span> TikTok Channel</h2>
-              <p>Growing a short-form media channel with authentic, on-the-ground content.</p>
-            </div>
-          </header>
-          <a className="tiktok-channel-panel" href="https://www.tiktok.com/@realhomiesclub" target="_blank" rel="noreferrer" aria-label="Open the Real Homies Club TikTok channel">
-            <div className="tiktok-account-preview">
-              <span>@realhomiesclub</span>
-              <h3>Real Homies Club</h3>
-              <p>Real crypto community conversations, captured on the ground.</p>
-              <div className="tiktok-channel-metrics">
-                {channelMetrics.map((metric) => <div key={metric.label}><strong>{metric.value}</strong><span>{metric.label}</span></div>)}
-              </div>
-            </div>
-            <div className="tiktok-content-preview">
-              {interviews.map((interview) => (
-                <div className="tiktok-preview-image" key={interview.title}>
-                  <img src={interview.image} alt={`${interview.title} TikTok thumbnail`} />
-                  <span>{interview.title}</span>
-                </div>
-              ))}
-            </div>
-          </a>
         </section>
 
         <section className="media-case-section" id="media-partnership">
