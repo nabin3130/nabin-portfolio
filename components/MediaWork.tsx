@@ -8,9 +8,10 @@ const socialLinks = [
 const interviews = [
   {
     number: "01",
-    title: "Bitcoin in 2011",
-    text: "“Yeah, it was Bitcoin back in 2011”",
-    href: "https://www.tiktok.com/@realhomiesclub/video/7607831708485815583?is_from_webapp=1&sender_device=pc&web_id=7595780493363414550",
+    title: "NFT Experience",
+    text: "“Have you traded NFT before?”",
+    href: "https://www.tiktok.com/@realhomiesclub/video/7606734391443836190?is_from_webapp=1&sender_device=pc&web_id=7595780493363414550",
+    image: "/images/work/media-nft.jpg",
   },
   {
     number: "02",
@@ -21,9 +22,10 @@ const interviews = [
   },
   {
     number: "03",
-    title: "NFT Experience",
-    text: "“Have you traded NFT before?”",
-    href: "https://www.tiktok.com/@realhomiesclub/video/7606734391443836190?is_from_webapp=1&sender_device=pc&web_id=7595780493363414550",
+    title: "Bitcoin in 2011",
+    text: "“Yeah, it was Bitcoin back in 2011”",
+    href: "https://www.tiktok.com/@realhomiesclub/video/7607831708485815583?is_from_webapp=1&sender_device=pc&web_id=7595780493363414550",
+    image: "/images/work/media-bitcoin-2011.jpg",
   },
 ];
 
@@ -53,7 +55,7 @@ export function MediaWork() {
       <main className="media-case-content">
         <section className="rhc-summary" aria-labelledby="rhc-title">
           <div className="rhc-summary-brand">
-            <div className="rhc-logo-placeholder" aria-label="Real Homies Club">RHC</div>
+            <img className="rhc-logo" src="/images/work/real-homies-club-logo.png" alt="Real Homies Club logo" />
             <div>
               <h2 id="rhc-title">Real Homies Club</h2>
               <p>Independent crypto media capturing conversations, people, and stories across the global crypto ecosystem.</p>
@@ -129,9 +131,12 @@ export function MediaWork() {
               </div>
             </div>
             <div className="tiktok-content-preview">
-              <div className="tiktok-preview-image"><img src="/images/work/media.jpg" alt="Real Homies Club TikTok interview" /></div>
-              <div className="tiktok-preview-placeholder">Bitcoin in 2011</div>
-              <div className="tiktok-preview-placeholder">NFT Experience</div>
+              {interviews.map((interview) => (
+                <div className="tiktok-preview-image" key={interview.title}>
+                  <img src={interview.image} alt={`${interview.title} TikTok thumbnail`} />
+                  <span>{interview.title}</span>
+                </div>
+              ))}
             </div>
           </a>
         </section>
