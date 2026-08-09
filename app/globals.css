@@ -8,6 +8,132 @@
   --max-width: 1280px;
 }
 
+/* Unified Work typography */
+
+.work-page {
+  font-size: 16px;
+}
+
+.work-page p {
+  font-size: 16px;
+  line-height: 1.55;
+}
+
+.work-page .work-intro,
+.work-page .work-story-copy > p:not(.work-section-number),
+.work-page .independent-project-lead,
+.work-page .independent-project-subtitle,
+.work-page .independent-hero-side > p,
+.work-page .platform-reach-intro p {
+  font-size: 18px;
+  line-height: 1.55;
+}
+
+.work-page .work-story-copy h2,
+.work-page .platform-reach-intro h2 {
+  font-size: clamp(48px, 4.5vw, 56px);
+  line-height: 0.98;
+  letter-spacing: -0.045em;
+}
+
+.work-page h3,
+.work-page .campaign-work-copy h3,
+.work-page .communication-output h3,
+.work-page .marketing-content-item h3,
+.work-page .reference-event-copy h3,
+.work-page .reference-media-copy h3,
+.work-page .media-series-card h3,
+.work-page .platform-reach-grid h3,
+.work-page .independent-process-grid h3,
+.work-page .ecosystem-community-card h3,
+.work-page .ecosystem-product-card h3,
+.work-page .partnership-material-copy h3 {
+  font-size: 20px;
+  line-height: 1.2;
+}
+
+.work-page .campaign-work-copy p,
+.work-page .communication-output p,
+.work-page .marketing-content-item > p,
+.work-page .reference-event-copy p,
+.work-page .reference-media-copy p,
+.work-page .media-series-card p,
+.work-page .platform-reach-grid p,
+.work-page .independent-process-grid p,
+.work-page .independent-detail-list p,
+.work-page .ecosystem-community-card > p,
+.work-page .ecosystem-product-card > p,
+.work-page .partnership-material-copy p,
+.work-page .events-capabilities p {
+  font-size: 16px;
+  line-height: 1.55;
+}
+
+.work-page .work-kicker,
+.work-page .work-section-number,
+.work-page .marketing-subtitle,
+.work-page .events-subtitle,
+.work-page .media-subtitle,
+.work-page .independent-subtitle {
+  font-size: 14px;
+}
+
+.work-page .work-tab,
+.work-page .work-tab span,
+.work-page .marketing-metric p,
+.work-page .events-metric p,
+.work-page .media-highlight p,
+.work-page .ecosystem-reference-metrics span,
+.work-page .communication-meta,
+.work-page .reference-event-visual > span,
+.work-page .reference-media-visual > span,
+.work-page .media-series-card > div,
+.work-page .campaign-work-visual > span,
+.work-page .marketing-content-visual > span,
+.work-page .partnership-material-copy > span,
+.work-page .independent-detail-list > div > span,
+.work-page .independent-process-grid span,
+.work-page .ecosystem-inline-process li span,
+.work-page .ecosystem-product-process li span {
+  font-size: 14px;
+}
+
+.work-page .ecosystem-inline-process li,
+.work-page .ecosystem-product-process li,
+.work-page .marketing-channels li,
+.work-page .events-capabilities strong,
+.work-page .independent-detail-list p strong,
+.work-page .reference-event-copy small,
+.work-page .media-series-card small,
+.work-page .campaign-work-copy small {
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.work-page .campaign-work-visual > strong,
+.work-page .marketing-content-visual > strong,
+.work-page .reference-event-visual > strong,
+.work-page .reference-media-visual > strong,
+.work-page .ecosystem-community-visual > strong {
+  font-size: 20px;
+  line-height: 1.15;
+}
+
+.work-page .ecosystem-board-heading > p {
+  font-size: 18px;
+  line-height: 1.55;
+}
+
+.work-page .ecosystem-board-output strong,
+.work-page .ecosystem-board-output span,
+.work-page .marketing-content-item > ul li,
+.work-page .independent-tags li,
+.work-page .independent-summary span,
+.work-page .material-lightbox-panel > header p,
+.work-page .material-lightbox-panel > footer {
+  font-size: 13px;
+}
+
 * {
   box-sizing: border-box;
 }
