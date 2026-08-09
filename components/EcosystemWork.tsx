@@ -179,24 +179,21 @@ export function EcosystemWork() {
         <div className="community-editorial-content">
           <div className="community-area-grid">
             {communityAreas.map((area) => (
-              <article className="community-area" key={area.number}>
+              <Link
+                className="community-area"
+                href="/work?work=marketing"
+                scroll={false}
+                key={area.number}
+              >
                 <div className="community-area-meta">
                   <span>{area.number}</span>
                   <p>{area.category}</p>
                 </div>
                 <h3>{area.title}</h3>
                 <p className="community-area-description">{area.description}</p>
-              </article>
+              </Link>
             ))}
           </div>
-
-          <Link className="community-marketing-cta" href="/work?work=marketing" scroll={false}>
-            <span className="community-cta-copy">
-              <strong>Explore related marketing work</strong>
-              <p>See the content, campaigns, and communications behind the work.</p>
-            </span>
-            <b aria-hidden="true">→</b>
-          </Link>
         </div>
       </section>
 

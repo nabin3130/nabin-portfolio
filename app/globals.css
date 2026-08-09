@@ -3699,8 +3699,9 @@ img {
 }
 
 .ecosystem-reference-layout .ecosystem-partnership-board {
-  min-height: 610px;
+  min-height: auto;
   padding-top: 30px;
+  justify-content: flex-start;
 }
 
 .partnership-ecosystem-section .ecosystem-section-intro {
@@ -3742,15 +3743,18 @@ img {
 }
 
 .partnership-material-grid {
-  margin-top: 34px;
+  margin-top: 14px;
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: 12px;
 }
 
 .partnership-material-card {
+  aspect-ratio: 1;
   min-width: 0;
   padding: 0;
+  display: grid;
+  grid-template-rows: 52% 48%;
   overflow: hidden;
   border: 1px solid #424048;
   border-radius: 8px;
@@ -3768,7 +3772,7 @@ img {
 }
 
 .partnership-material-preview {
-  height: 190px;
+  height: auto;
   overflow: hidden;
   background: #e9edf4;
 }
@@ -3795,8 +3799,8 @@ img {
 
 .partnership-material-copy {
   position: relative;
-  min-height: 168px;
-  padding: 16px 16px 18px;
+  min-height: 0;
+  padding: 10px 12px 12px;
   display: flex;
   flex-direction: column;
 }
@@ -3807,14 +3811,18 @@ img {
 }
 
 .partnership-material-copy h3 {
-  margin: 8px 0 0;
-  font-size: 16px;
+  margin: 5px 0 0;
+  font-size: 15px;
   line-height: 1.05;
   letter-spacing: -0.025em;
 }
 
 .partnership-material-copy p {
-  margin: 12px 0 0;
+  margin: 7px 0 0;
+  display: -webkit-box;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
   color: #aaa7b0;
   font-size: 10px;
   line-height: 1.45;
@@ -4011,7 +4019,7 @@ img {
 }
 
 .work-page .community-growth-editorial .ecosystem-section-intro h2 {
-  font-size: 44px;
+  font-size: 31px;
 }
 
 .community-editorial-content {
@@ -4023,6 +4031,8 @@ img {
   grid-template-columns: repeat(2, minmax(0, 1fr));
   border-top: 1px solid var(--border);
   border-left: 1px solid var(--border);
+  border-radius: 8px;
+  overflow: hidden;
 }
 
 .community-area {
@@ -4030,6 +4040,12 @@ img {
   padding: 20px 24px 22px;
   border-right: 1px solid var(--border);
   border-bottom: 1px solid var(--border);
+  background: #ffffff;
+  transition: background 0.2s ease;
+}
+
+.community-area:hover {
+  background: #fafafa;
 }
 
 .community-area-meta {
