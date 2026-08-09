@@ -141,7 +141,7 @@ export function EcosystemWork() {
         </div>
       </section>
 
-      <section className="work-story-section compact-ecosystem-section">
+      <section className="work-story-section compact-ecosystem-section partnership-ecosystem-section">
         <div className="work-story-copy ecosystem-section-intro">
           <h2>Partnerships &amp;<br />Ecosystem</h2>
           <p>Managed partnerships across validators, wallets, infrastructure providers, and ecosystem stakeholders.</p>

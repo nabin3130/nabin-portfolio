@@ -3572,6 +3572,45 @@ img {
 
 .ecosystem-reference-layout .ecosystem-partnership-board {
   min-height: 610px;
+  padding-top: 30px;
+}
+
+.partnership-ecosystem-section .ecosystem-section-intro {
+  padding-top: 30px;
+}
+
+.partnership-ecosystem-section .ecosystem-board-heading > span {
+  display: none;
+}
+
+.partnership-ecosystem-section .ecosystem-board-heading > strong {
+  margin-top: 0;
+  padding-top: 0;
+}
+
+.ecosystem-reference-layout .partnership-ecosystem-section .ecosystem-section-intro > p:not(.work-section-number) {
+  max-width: 420px;
+  margin-top: 30px;
+  color: #555555;
+  font-size: 18px;
+  line-height: 1.65;
+}
+
+.partnership-ecosystem-section .ecosystem-inline-process {
+  margin-top: 36px;
+}
+
+.partnership-ecosystem-section .ecosystem-inline-process li {
+  min-height: 58px;
+  align-items: center;
+  gap: 13px;
+  padding: 15px 0;
+  font-size: 14px;
+  line-height: 1.35;
+}
+
+.partnership-ecosystem-section .ecosystem-inline-process li span {
+  font-size: 12px;
 }
 
 .partnership-material-grid {
@@ -4963,6 +5002,19 @@ img {
 
   .ecosystem-reference-layout .ecosystem-partnership-board {
     min-height: auto;
+    padding-top: 24px;
+  }
+
+  .partnership-ecosystem-section .ecosystem-section-intro {
+    padding-top: 0;
+  }
+
+  .partnership-ecosystem-section .ecosystem-board-heading > span {
+    display: block;
+  }
+
+  .partnership-ecosystem-section .ecosystem-board-heading > strong {
+    margin-top: 24px;
   }
 
   .partnership-material-grid {
