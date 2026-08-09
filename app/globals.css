@@ -3567,6 +3567,181 @@ img {
   line-height: 1.35;
 }
 
+.ecosystem-reference-layout .ecosystem-partnership-board {
+  min-height: 610px;
+}
+
+.partnership-material-grid {
+  margin-top: 34px;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.partnership-material-card {
+  min-width: 0;
+  padding: 0;
+  overflow: hidden;
+  border: 1px solid #424048;
+  border-radius: 8px;
+  background: #101015;
+  color: var(--card);
+  font: inherit;
+  text-align: left;
+  cursor: pointer;
+  transition: border-color 0.2s ease, transform 0.2s ease;
+}
+
+.partnership-material-card:hover {
+  border-color: #8a878f;
+  transform: translateY(-2px);
+}
+
+.partnership-material-preview {
+  height: 190px;
+  overflow: hidden;
+  background: #e9edf4;
+}
+
+.partnership-material-preview img {
+  width: 100%;
+  height: 100%;
+  transition: transform 0.3s ease;
+}
+
+.partnership-material-preview .material-portrait {
+  object-fit: cover;
+  object-position: center 12%;
+}
+
+.partnership-material-preview .material-landscape {
+  object-fit: cover;
+  object-position: center;
+}
+
+.partnership-material-card:hover .partnership-material-preview img {
+  transform: scale(1.025);
+}
+
+.partnership-material-copy {
+  position: relative;
+  min-height: 168px;
+  padding: 16px 34px 18px 16px;
+  display: flex;
+  flex-direction: column;
+}
+
+.partnership-material-copy > span {
+  color: var(--accent);
+  font-size: 10px;
+}
+
+.partnership-material-copy h3 {
+  margin: 8px 0 0;
+  font-size: 16px;
+  line-height: 1.05;
+  letter-spacing: -0.025em;
+}
+
+.partnership-material-copy p {
+  margin: 12px 0 0;
+  color: #aaa7b0;
+  font-size: 10px;
+  line-height: 1.45;
+}
+
+.partnership-material-copy b {
+  position: absolute;
+  right: 15px;
+  bottom: 14px;
+  font-size: 18px;
+  font-weight: 400;
+}
+
+.material-lightbox {
+  position: fixed;
+  z-index: 100;
+  inset: 0;
+  padding: 24px;
+  display: grid;
+  place-items: center;
+  background: rgba(0, 0, 0, 0.86);
+  backdrop-filter: blur(8px);
+}
+
+.material-lightbox-panel {
+  width: min(1180px, 100%);
+  height: min(92vh, 980px);
+  display: grid;
+  grid-template-rows: auto minmax(0, 1fr) auto;
+  overflow: hidden;
+  border: 1px solid #3b3b3b;
+  background: #111111;
+  color: var(--card);
+}
+
+.material-lightbox-panel > header,
+.material-lightbox-panel > footer {
+  min-height: 60px;
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  border-bottom: 1px solid #333333;
+}
+
+.material-lightbox-panel > header p {
+  margin: 0;
+  font-size: 13px;
+}
+
+.material-lightbox-panel > header p span {
+  color: var(--accent);
+}
+
+.material-lightbox-panel button {
+  border: 0;
+  background: transparent;
+  color: var(--card);
+  font: inherit;
+  cursor: pointer;
+}
+
+.material-lightbox-panel > header button {
+  width: 42px;
+  height: 42px;
+  font-size: 28px;
+  line-height: 1;
+}
+
+.material-lightbox-scroll {
+  min-height: 0;
+  padding: 28px;
+  overflow: auto;
+  background: #202020;
+}
+
+.material-lightbox-scroll img {
+  width: auto;
+  max-width: 100%;
+  height: auto;
+  margin: 0 auto;
+  object-fit: contain;
+}
+
+.material-lightbox-panel > footer {
+  border-top: 1px solid #333333;
+  border-bottom: 0;
+  color: #aaaaaa;
+  font-size: 12px;
+}
+
+.material-lightbox-panel > footer button {
+  min-height: 42px;
+  color: var(--card);
+}
+
 .ecosystem-featured-metric {
   margin-top: 28px;
   padding: 18px 0;
@@ -4072,6 +4247,10 @@ img {
   .ecosystem-community-card {
     min-width: 210px;
     scroll-snap-align: start;
+  }
+
+  .partnership-material-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
 
@@ -4781,5 +4960,45 @@ img {
 
   .ecosystem-product-grid {
     grid-template-columns: 1fr;
+  }
+
+  .ecosystem-reference-layout .ecosystem-partnership-board {
+    min-height: auto;
+  }
+
+  .partnership-material-grid {
+    width: calc(100vw - 48px);
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none;
+  }
+
+  .partnership-material-grid::-webkit-scrollbar {
+    display: none;
+  }
+
+  .partnership-material-card {
+    min-width: min(76vw, 290px);
+    scroll-snap-align: start;
+  }
+
+  .material-lightbox {
+    padding: 0;
+  }
+
+  .material-lightbox-panel {
+    width: 100%;
+    height: 100dvh;
+    border: 0;
+  }
+
+  .material-lightbox-scroll {
+    padding: 16px;
+  }
+
+  .material-lightbox-panel > header,
+  .material-lightbox-panel > footer {
+    padding: 0 14px;
   }
 }

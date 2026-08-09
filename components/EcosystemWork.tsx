@@ -1,3 +1,7 @@
+"use client";
+
+import { useEffect, useState } from "react";
+
 const ecosystemMetrics = [
   { value: "100+", label: "Partners onboarded" },
   { value: "50,000+", label: "Community reach" },
@@ -11,11 +15,35 @@ const partnershipProcess = [
   "Launch & Growth",
 ];
 
-const partnershipOutputs = [
-  "One-page pitch deck",
-  "Validator deck",
-  "Partner materials",
-  "Conference materials",
+const partnershipMaterials = [
+  {
+    number: "01",
+    title: "One-Page Pitch Deck",
+    description: "Alliance strategy, service flow, and key benefits overview.",
+    image: "/images/work/partnership/kyc-alliance-en.png",
+    imageClass: "material-portrait",
+  },
+  {
+    number: "02",
+    title: "Localization",
+    description: "KYC Alliance & CNS solution overview (Korean version).",
+    image: "/images/work/partnership/kyc-alliance-ko.png",
+    imageClass: "material-portrait",
+  },
+  {
+    number: "03",
+    title: "Validator Deck",
+    description: "Technical architecture, rewards model, and node benefits.",
+    image: "/images/work/partnership/validator-deck.jpg",
+    imageClass: "material-portrait",
+  },
+  {
+    number: "04",
+    title: "Conference Pamphlet",
+    description: "Bifrost Network introduction material for conferences.",
+    image: "/images/work/partnership/conference-pamphlet.png",
+    imageClass: "material-landscape",
+  },
 ];
 
 const communityWork = [
@@ -53,6 +81,34 @@ const productSteps = [
 ];
 
 export function EcosystemWork() {
+  const [activeMaterial, setActiveMaterial] = useState<number | null>(null);
+
+  useEffect(() => {
+    if (activeMaterial === null) return;
+
+    const previousOverflow = document.body.style.overflow;
+    document.body.style.overflow = "hidden";
+
+    function handleKeyDown(event: KeyboardEvent) {
+      if (event.key === "Escape") setActiveMaterial(null);
+      if (event.key === "ArrowLeft") {
+        setActiveMaterial((current) => current === null ? null : (current + partnershipMaterials.length - 1) % partnershipMaterials.length);
+      }
+      if (event.key === "ArrowRight") {
+        setActiveMaterial((current) => current === null ? null : (current + 1) % partnershipMaterials.length);
+      }
+    }
+
+    window.addEventListener("keydown", handleKeyDown);
+    return () => {
+      document.body.style.overflow = previousOverflow;
+      window.removeEventListener("keydown", handleKeyDown);
+    };
+  }, [activeMaterial]);
+
+  const selectedMaterial = activeMaterial === null ? null : partnershipMaterials[activeMaterial];
+  const selectedIndex = activeMaterial ?? 0;
+
   return (
     <div className="ecosystem-work ecosystem-reference-layout">
       <section className="work-hero ecosystem-reference-hero">
@@ -88,7 +144,7 @@ export function EcosystemWork() {
       <section className="work-story-section compact-ecosystem-section">
         <div className="work-story-copy ecosystem-section-intro">
           <h2>Partnerships &amp;<br />Ecosystem</h2>
-          <p>Built partner-facing materials for validators, infrastructure providers, and ecosystem stakeholders.</p>
+          <p>Managed partnerships across validators, wallets, infrastructure providers, and ecosystem stakeholders.</p>
           <ol className="ecosystem-inline-process">
             {partnershipProcess.map((step, index) => <li key={step}><span>0{index + 1}</span>{step}</li>)}
           </ol>
@@ -100,8 +156,26 @@ export function EcosystemWork() {
             <strong>Strategic partnership<br />enablement.</strong>
             <p>Technical product value translated into clear, audience-specific materials.</p>
           </div>
-          <div className="ecosystem-board-output">
-            {partnershipOutputs.map((output, index) => <div key={output}><span>0{index + 1}</span><strong>{output}</strong></div>)}
+          <div className="partnership-material-grid">
+            {partnershipMaterials.map((material, index) => (
+              <button
+                className="partnership-material-card"
+                type="button"
+                key={material.title}
+                onClick={() => setActiveMaterial(index)}
+                aria-label={`Open ${material.title}`}
+              >
+                <div className="partnership-material-preview">
+                  <img className={material.imageClass} src={material.image} alt={`${material.title} preview`} />
+                </div>
+                <div className="partnership-material-copy">
+                  <span>{material.number}</span>
+                  <h3>{material.title}</h3>
+                  <p>{material.description}</p>
+                  <b aria-hidden="true">↗</b>
+                </div>
+              </button>
+            ))}
           </div>
         </div>
       </section>
@@ -156,6 +230,43 @@ export function EcosystemWork() {
           </article>
         </div>
       </section>
+
+      {selectedMaterial ? (
+        <div
+          className="material-lightbox"
+          role="dialog"
+          aria-modal="true"
+          aria-label={`${selectedMaterial.number} / ${selectedMaterial.title}`}
+          onMouseDown={(event) => {
+            if (event.target === event.currentTarget) setActiveMaterial(null);
+          }}
+        >
+          <div className="material-lightbox-panel">
+            <header>
+              <p><span>{selectedMaterial.number}</span> / {selectedMaterial.title}</p>
+              <button type="button" onClick={() => setActiveMaterial(null)} aria-label="Close material">×</button>
+            </header>
+            <div className="material-lightbox-scroll">
+              <img src={selectedMaterial.image} alt={`${selectedMaterial.title} full material`} />
+            </div>
+            <footer>
+              <button
+                type="button"
+                onClick={() => setActiveMaterial((selectedIndex + partnershipMaterials.length - 1) % partnershipMaterials.length)}
+              >
+                ← Previous
+              </button>
+              <span>{selectedIndex + 1} / {partnershipMaterials.length}</span>
+              <button
+                type="button"
+                onClick={() => setActiveMaterial((selectedIndex + 1) % partnershipMaterials.length)}
+              >
+                Next →
+              </button>
+            </footer>
+          </div>
+        </div>
+      ) : null}
     </div>
   );
 }
