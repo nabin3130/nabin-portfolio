@@ -4167,6 +4167,516 @@ img {
   font-size: 9px;
 }
 
+/* Media case study */
+
+.media-case-study {
+  display: grid;
+  grid-template-columns: 280px minmax(0, 1fr);
+  gap: 56px;
+  padding: 68px 0 96px;
+}
+
+.media-case-sidebar {
+  align-self: start;
+  position: sticky;
+  top: 150px;
+}
+
+.media-case-sidebar h1 {
+  margin: 22px 0 0;
+  font-size: 54px;
+  line-height: 0.96;
+  letter-spacing: -0.055em;
+}
+
+.work-page .media-case-sidebar > p:not(.work-kicker) {
+  margin: 28px 0 0;
+  color: var(--muted);
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+.media-case-sidebar nav {
+  margin-top: 38px;
+  border-top: 1px solid var(--border);
+}
+
+.media-case-sidebar nav a {
+  min-height: 54px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  border-bottom: 1px solid var(--border);
+  font-size: 16px;
+}
+
+.media-case-sidebar nav span,
+.media-case-section-heading h2 span {
+  color: var(--accent);
+  font-size: 14px;
+}
+
+.media-case-content {
+  min-width: 0;
+}
+
+.rhc-summary {
+  min-height: 260px;
+  padding: 30px;
+  display: grid;
+  grid-template-columns: minmax(0, 1.25fr) minmax(280px, 0.9fr) auto;
+  gap: 30px;
+  align-items: center;
+  border: 1px solid var(--border);
+}
+
+.rhc-summary-brand {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+}
+
+.rhc-logo-placeholder {
+  width: 76px;
+  aspect-ratio: 1;
+  flex: 0 0 auto;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background: #111111;
+  color: #ffffff;
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: -0.04em;
+}
+
+.rhc-summary h2 {
+  margin: 0;
+  font-size: 34px;
+  letter-spacing: -0.045em;
+}
+
+.work-page .rhc-summary-brand p {
+  max-width: 510px;
+  margin: 12px 0 0;
+  color: var(--muted);
+  font-size: 16px;
+  line-height: 1.55;
+}
+
+.rhc-summary-metrics {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.rhc-summary-metrics > div {
+  min-width: 0;
+  padding: 0 18px;
+  border-left: 1px solid var(--border);
+}
+
+.rhc-summary-metrics strong,
+.rhc-summary-metrics span {
+  display: block;
+}
+
+.rhc-summary-metrics strong {
+  font-size: 28px;
+  letter-spacing: -0.045em;
+}
+
+.rhc-summary-metrics span {
+  margin-top: 7px;
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.rhc-socials > p {
+  margin: 0 0 12px;
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.rhc-socials > div {
+  display: flex;
+  gap: 8px;
+}
+
+.rhc-socials a {
+  width: 42px;
+  height: 42px;
+  display: grid;
+  place-items: center;
+  border: 1px solid var(--border);
+  border-radius: 50%;
+  font-size: 13px;
+  font-weight: 700;
+  transition: border-color 0.2s ease, color 0.2s ease, transform 0.2s ease;
+}
+
+.rhc-socials a:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+  transform: translateY(-2px);
+}
+
+.media-case-section {
+  padding: 68px 0;
+  border-bottom: 1px solid var(--border);
+  scroll-margin-top: 150px;
+}
+
+.media-case-section-heading {
+  display: flex;
+  justify-content: space-between;
+  gap: 32px;
+  align-items: flex-end;
+  margin-bottom: 30px;
+}
+
+.media-case-section-heading h2 {
+  margin: 0;
+  display: flex;
+  align-items: baseline;
+  gap: 14px;
+  font-size: 42px;
+  line-height: 1;
+  letter-spacing: -0.045em;
+}
+
+.work-page .media-case-section-heading p {
+  max-width: 650px;
+  margin: 14px 0 0;
+  color: var(--muted);
+  font-size: 18px;
+  line-height: 1.55;
+}
+
+.media-case-section-heading > a {
+  padding-bottom: 4px;
+  border-bottom: 1px solid currentColor;
+  font-size: 16px;
+  white-space: nowrap;
+}
+
+.selected-interview-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.selected-interview-card {
+  min-width: 0;
+}
+
+.selected-interview-visual {
+  position: relative;
+  aspect-ratio: 4 / 5;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+  border: 1px solid var(--border);
+  background: #f0f0f0;
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.selected-interview-visual img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 43%;
+  transition: transform 0.3s ease;
+}
+
+.selected-interview-visual b {
+  position: absolute;
+  right: 14px;
+  bottom: 14px;
+  opacity: 0;
+  color: #ffffff;
+  font-size: 20px;
+  font-weight: 400;
+  transition: opacity 0.2s ease;
+}
+
+.selected-interview-card:hover .selected-interview-visual img {
+  transform: scale(1.025);
+}
+
+.selected-interview-card:hover .selected-interview-visual b {
+  opacity: 1;
+}
+
+.selected-interview-card > span {
+  display: block;
+  margin-top: 16px;
+  color: var(--accent);
+  font-size: 14px;
+}
+
+.selected-interview-card h3 {
+  margin: 8px 0 0;
+  font-size: 20px;
+}
+
+.work-page .selected-interview-card > p {
+  margin: 8px 0 0;
+  color: var(--muted);
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.tiktok-channel-panel {
+  min-height: 380px;
+  padding: 30px;
+  display: grid;
+  grid-template-columns: minmax(250px, 0.8fr) minmax(0, 1.3fr);
+  gap: 36px;
+  border: 1px solid var(--border);
+  background: #fafafa;
+  transition: border-color 0.2s ease;
+}
+
+.tiktok-channel-panel:hover {
+  border-color: #bbbbbb;
+}
+
+.tiktok-account-preview {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.tiktok-account-preview > span {
+  color: var(--accent);
+  font-size: 14px;
+}
+
+.tiktok-account-preview h3 {
+  margin: 12px 0 0;
+  font-size: 38px;
+  letter-spacing: -0.045em;
+}
+
+.work-page .tiktok-account-preview > p {
+  margin: 16px 0 0;
+  color: var(--muted);
+  font-size: 16px;
+  line-height: 1.55;
+}
+
+.tiktok-channel-metrics {
+  margin-top: 34px;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.tiktok-channel-metrics > div {
+  padding-right: 12px;
+  border-right: 1px solid var(--border);
+}
+
+.tiktok-channel-metrics > div + div {
+  padding-left: 12px;
+}
+
+.tiktok-channel-metrics strong,
+.tiktok-channel-metrics span {
+  display: block;
+}
+
+.tiktok-channel-metrics strong {
+  font-size: 24px;
+}
+
+.tiktok-channel-metrics span {
+  margin-top: 6px;
+  color: var(--muted);
+  font-size: 13px;
+}
+
+.tiktok-content-preview {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.tiktok-content-preview > div {
+  min-width: 0;
+  overflow: hidden;
+  border: 1px solid var(--border);
+  background: #eeeeee;
+}
+
+.tiktok-preview-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 43%;
+}
+
+.tiktok-preview-placeholder {
+  padding: 18px;
+  display: flex;
+  align-items: flex-end;
+  color: #555555;
+  font-size: 16px;
+}
+
+.media-partnership-panel {
+  min-height: 300px;
+  display: grid;
+  grid-template-columns: 0.85fr 1.1fr 1.2fr;
+  border: 1px solid var(--border);
+}
+
+.media-partnership-panel > div {
+  padding: 30px;
+}
+
+.media-partnership-panel > div + div {
+  border-left: 1px solid var(--border);
+}
+
+.media-partnership-title > span {
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.media-partnership-panel h3 {
+  margin: 18px 0 0;
+  font-size: 24px;
+  letter-spacing: -0.03em;
+}
+
+.media-partnership-role h3 {
+  margin-top: 0;
+  font-size: 20px;
+}
+
+.media-partnership-role ul {
+  margin: 20px 0 0;
+  padding-left: 18px;
+}
+
+.media-partnership-role li {
+  margin-top: 9px;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.media-partnership-placeholder {
+  display: grid;
+  place-items: center;
+  background: #f0f0f0;
+  color: var(--muted);
+  font-size: 14px;
+}
+
+@media (max-width: 1050px) {
+  .media-case-study {
+    grid-template-columns: 1fr;
+  }
+
+  .media-case-sidebar {
+    position: static;
+  }
+
+  .media-case-sidebar nav {
+    display: flex;
+    overflow-x: auto;
+  }
+
+  .media-case-sidebar nav a {
+    min-width: max-content;
+    padding: 0 18px;
+    border-right: 1px solid var(--border);
+  }
+
+  .rhc-summary {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .rhc-socials {
+    grid-column: 1 / -1;
+  }
+}
+
+@media (max-width: 700px) {
+  .media-case-study {
+    gap: 42px;
+    padding: 48px 0 72px;
+  }
+
+  .media-case-sidebar h1 {
+    font-size: 48px;
+  }
+
+  .rhc-summary,
+  .tiktok-channel-panel,
+  .media-partnership-panel {
+    grid-template-columns: 1fr;
+  }
+
+  .rhc-summary {
+    padding: 24px;
+  }
+
+  .rhc-summary-metrics > div:first-child {
+    border-left: 0;
+    padding-left: 0;
+  }
+
+  .media-case-section {
+    padding: 54px 0;
+  }
+
+  .media-case-section-heading {
+    display: block;
+  }
+
+  .media-case-section-heading h2 {
+    font-size: 34px;
+  }
+
+  .media-case-section-heading > a {
+    display: inline-block;
+    margin-top: 20px;
+  }
+
+  .selected-interview-grid {
+    display: flex;
+    width: calc(100vw - 32px);
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+  }
+
+  .selected-interview-card {
+    min-width: min(78vw, 320px);
+    scroll-snap-align: start;
+  }
+
+  .tiktok-content-preview {
+    min-height: 300px;
+    overflow-x: auto;
+  }
+
+  .tiktok-content-preview > div {
+    min-width: 150px;
+  }
+
+  .media-partnership-panel > div + div {
+    border-top: 1px solid var(--border);
+    border-left: 0;
+  }
+
+  .media-partnership-placeholder {
+    min-height: 220px;
+  }
+}
+
 /* Footer */
 
 .home-footer {

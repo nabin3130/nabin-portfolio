@@ -1,187 +1,168 @@
-const mediaHighlights = [
-  { icon: "●", value: "Interviews", label: "Builder & community voices" },
-  { icon: "◎", value: "Global", label: "On-site conversations" },
-  { icon: "＋", value: "4", label: "Distribution platforms" },
-  { icon: "▶", value: "Short-form", label: "Mobile-first content" },
+const socialLinks = [
+  { label: "TikTok", short: "TT", href: "https://www.tiktok.com/@realhomiesclub" },
+  { label: "YouTube", short: "YT", href: "https://www.youtube.com/@realhomiesclub" },
+  { label: "Instagram", short: "IG", href: "https://www.instagram.com/realhomiesclub" },
+  { label: "X", short: "X", href: "https://x.com/real_BD_2025" },
 ];
 
-const featuredVideos = [
+const interviews = [
   {
-    label: "Community Interview",
-    title: "What was your first crypto?",
-    text: "A direct question designed for an authentic, concise answer.",
-    visual: "featured-real-visual",
+    number: "01",
+    title: "Bitcoin in 2011",
+    text: "“Yeah, it was Bitcoin back in 2011”",
+    href: "https://www.tiktok.com/@realhomiesclub/video/7607831708485815583?is_from_webapp=1&sender_device=pc&web_id=7595780493363414550",
+  },
+  {
+    number: "02",
+    title: "First Crypto",
+    text: "“What was your first crypto?”",
+    href: "https://www.tiktok.com/@realhomiesclub/video/7668248794181537054?is_from_webapp=1&sender_device=pc&web_id=7595780493363414550",
     image: "/images/work/media.jpg",
   },
   {
-    label: "Builder Story",
-    title: "People Behind Web3",
-    text: "Short conversations introducing builders and their perspectives.",
-    visual: "featured-builder-visual",
-  },
-  {
-    label: "Ecosystem Voice",
-    title: "Inside the Community",
-    text: "Community perspectives that make ecosystems easier to understand.",
-    visual: "featured-ecosystem-visual",
-  },
-  {
-    label: "Founder Interview",
-    title: "Building in Web3",
-    text: "Personal experiences from people developing products and communities.",
-    visual: "featured-founder-visual",
+    number: "03",
+    title: "NFT Experience",
+    text: "“Have you traded NFT before?”",
+    href: "https://www.tiktok.com/@realhomiesclub/video/7606734391443836190?is_from_webapp=1&sender_device=pc&web_id=7595780493363414550",
   },
 ];
 
-const interviewSeries = [
-  {
-    label: "Builders",
-    title: "Builder Stories",
-    text: "Personal perspectives from people building products and communities.",
-  },
-  {
-    label: "Ecosystems",
-    title: "Community Voices",
-    text: "Short conversations with participants across Web3 ecosystems.",
-  },
-  {
-    label: "Events",
-    title: "Event Conversations",
-    text: "On-site questions and real-time perspectives from conferences.",
-  },
-  {
-    label: "Culture",
-    title: "Beyond the Product",
-    text: "Ideas, experiences, and culture behind the technology.",
-  },
+const channelMetrics = [
+  { value: "1.6K+", label: "Followers" },
+  { value: "1K+", label: "Likes" },
+  { value: "50+", label: "Interviews" },
 ];
-
-const conferenceCoverage = [
-  { label: "Europe", title: "ETHCC", text: "Community interviews and builder perspectives." },
-  { label: "Asia", title: "Devcon", text: "On-site conversations across the ecosystem." },
-  { label: "Seoul", title: "Korea Blockchain Week", text: "Event moments and community-facing content." },
-  { label: "Global", title: "Token2049", text: "Conversations with projects, partners, and builders." },
-];
-
-const platforms = [
-  { number: "01", title: "TikTok", text: "Short-form interviews" },
-  { number: "02", title: "YouTube Shorts", text: "Mobile video stories" },
-  { number: "03", title: "Instagram", text: "Reels & visual content" },
-  { number: "04", title: "X", text: "Conversation & distribution" },
-];
-
-type FeaturedItem = {
-  label: string;
-  title: string;
-  text: string;
-  visual: string;
-  image?: string;
-};
-
-function FeaturedCard({ item }: { item: FeaturedItem }) {
-  return (
-    <article className="reference-media-card featured-video-card">
-      <div className={`reference-media-visual ${item.visual}`}>
-        {item.image ? <img src={item.image} alt="Real Homies Club crypto interview" /> : null}
-        <span>{item.label}</span>
-        <strong>{item.title}</strong>
-      </div>
-      <div className="reference-media-copy">
-        <h3>{item.title}</h3>
-        <p>{item.text}</p>
-      </div>
-    </article>
-  );
-}
 
 export function MediaWork() {
   return (
-    <div className="media-work media-reference-layout">
-      <section className="work-hero media-hero">
-        <div className="work-hero-copy">
-          <p className="work-kicker"><span>04</span> / Media</p>
-          <h1>Real<br />Homies Club</h1>
-          <p className="media-subtitle">Independent crypto media project</p>
-          <p className="work-intro">
-            Sharing builder stories and community perspectives through
-            interviews, short-form video, and on-site conference content.
-          </p>
-        </div>
+    <div className="media-case-study">
+      <aside className="media-case-sidebar">
+        <p className="work-kicker"><span>04</span> / Media</p>
+        <h1>Media</h1>
+        <p>
+          Co-founded and grew an independent crypto media, creating short-form
+          interviews and on-the-ground content.
+        </p>
+        <nav aria-label="Media case study sections">
+          <a href="#media-interviews"><span>01</span>Interviews</a>
+          <a href="#media-tiktok"><span>02</span>TikTok Channel</a>
+          <a href="#media-partnership"><span>03</span>Media Partnership</a>
+        </nav>
+      </aside>
 
-        <div className="media-highlight-grid" aria-label="Media formats and reach">
-          {mediaHighlights.map((item) => (
-            <div className="media-highlight" key={item.value}>
-              <span className="media-highlight-icon" aria-hidden="true">{item.icon}</span>
-              <strong>{item.value}</strong>
-              <p>{item.label}</p>
+      <main className="media-case-content">
+        <section className="rhc-summary" aria-labelledby="rhc-title">
+          <div className="rhc-summary-brand">
+            <div className="rhc-logo-placeholder" aria-label="Real Homies Club">RHC</div>
+            <div>
+              <h2 id="rhc-title">Real Homies Club</h2>
+              <p>Independent crypto media capturing conversations, people, and stories across the global crypto ecosystem.</p>
             </div>
-          ))}
-        </div>
-      </section>
+          </div>
+          <div className="rhc-summary-metrics" aria-label="Real Homies Club selected metrics">
+            <div><strong>50+</strong><span>Interviews</span></div>
+            <div><strong>1.6K+</strong><span>Followers</span></div>
+            <div><strong>1K+</strong><span>Likes</span></div>
+          </div>
+          <div className="rhc-socials">
+            <p>Published across</p>
+            <div>
+              {socialLinks.map((social) => (
+                <a
+                  href={social.href}
+                  target="_blank"
+                  rel="noreferrer"
+                  aria-label={`Open Real Homies Club on ${social.label}`}
+                  title={social.label}
+                  key={social.label}
+                >
+                  {social.short}
+                </a>
+              ))}
+            </div>
+          </div>
+        </section>
 
-      <section className="work-story-section media-section compact-media-section">
-        <div className="work-story-copy media-section-intro">
-          <h2>Featured Videos</h2>
-          <p>Short-form interviews with builders and community voices in Web3.</p>
-        </div>
-        <div className="reference-media-grid">
-          {featuredVideos.map((item) => <FeaturedCard item={item} key={item.title} />)}
-        </div>
-      </section>
+        <section className="media-case-section" id="media-interviews">
+          <header className="media-case-section-heading">
+            <div>
+              <h2><span>01</span> Interviews</h2>
+              <p>Conversations with founders, builders, and community members across the crypto ecosystem.</p>
+            </div>
+            <a href="https://www.tiktok.com/@realhomiesclub" target="_blank" rel="noreferrer">View all interviews →</a>
+          </header>
+          <div className="selected-interview-grid">
+            {interviews.map((interview) => (
+              <a
+                className={`selected-interview-card${interview.image ? " has-image" : ""}`}
+                href={interview.href}
+                target="_blank"
+                rel="noreferrer"
+                key={interview.title}
+              >
+                <div className="selected-interview-visual">
+                  {interview.image ? <img src={interview.image} alt={`${interview.title} interview thumbnail`} /> : <span>Thumbnail to be added</span>}
+                  <b aria-hidden="true">↗</b>
+                </div>
+                <span>{interview.number}</span>
+                <h3>{interview.title}</h3>
+                <p>{interview.text}</p>
+              </a>
+            ))}
+          </div>
+        </section>
 
-      <section className="work-story-section media-section compact-media-section">
-        <div className="work-story-copy media-section-intro">
-          <h2>Interview Series</h2>
-          <p>Repeatable content themes for conversations with people across the ecosystem.</p>
-        </div>
-        <div className="reference-media-grid">
-          {interviewSeries.map((item, index) => (
-            <article className="media-series-card" key={item.title}>
-              <div><span>{item.label}</span><b>0{index + 1}</b></div>
-              <h3>{item.title}</h3>
-              <p>{item.text}</p>
-              <small>Explore theme →</small>
-            </article>
-          ))}
-        </div>
-      </section>
-
-      <section className="work-story-section media-section compact-media-section">
-        <div className="work-story-copy media-section-intro">
-          <h2>Conference<br />Coverage</h2>
-          <p>On-site conversations and community perspectives from major Web3 events.</p>
-        </div>
-        <div className="reference-media-grid">
-          {conferenceCoverage.map((item, index) => (
-            <article className="reference-media-card coverage-media-card" key={item.title}>
-              <div className={`reference-media-visual coverage-visual coverage-visual-${index + 1}`}>
-                <span>{item.label}</span>
-                <strong>{item.title}</strong>
+        <section className="media-case-section" id="media-tiktok">
+          <header className="media-case-section-heading">
+            <div>
+              <h2><span>02</span> TikTok Channel</h2>
+              <p>Growing a short-form media channel with authentic, on-the-ground content.</p>
+            </div>
+          </header>
+          <a className="tiktok-channel-panel" href="https://www.tiktok.com/@realhomiesclub" target="_blank" rel="noreferrer" aria-label="Open the Real Homies Club TikTok channel">
+            <div className="tiktok-account-preview">
+              <span>@realhomiesclub</span>
+              <h3>Real Homies Club</h3>
+              <p>Real crypto community conversations, captured on the ground.</p>
+              <div className="tiktok-channel-metrics">
+                {channelMetrics.map((metric) => <div key={metric.label}><strong>{metric.value}</strong><span>{metric.label}</span></div>)}
               </div>
-              <div className="reference-media-copy">
-                <h3>{item.title}</h3>
-                <p>{item.text}</p>
-              </div>
-            </article>
-          ))}
-        </div>
-      </section>
+            </div>
+            <div className="tiktok-content-preview">
+              <div className="tiktok-preview-image"><img src="/images/work/media.jpg" alt="Real Homies Club TikTok interview" /></div>
+              <div className="tiktok-preview-placeholder">Bitcoin in 2011</div>
+              <div className="tiktok-preview-placeholder">NFT Experience</div>
+            </div>
+          </a>
+        </section>
 
-      <section className="platform-reach-section">
-        <div className="platform-reach-intro">
-          <h2>Platform Reach</h2>
-          <p>Content adapted for discovery and distribution across four social platforms.</p>
-        </div>
-        <div className="platform-reach-grid">
-          {platforms.map((platform) => (
-            <article key={platform.title}>
-              <span>{platform.number}</span>
-              <h3>{platform.title}</h3>
-              <p>{platform.text}</p>
-            </article>
-          ))}
-        </div>
-      </section>
+        <section className="media-case-section" id="media-partnership">
+          <header className="media-case-section-heading">
+            <div>
+              <h2><span>03</span> Media Partnership</h2>
+              <p>Official media partner for a global crypto conference.</p>
+            </div>
+          </header>
+          <div className="media-partnership-panel">
+            <div className="media-partnership-title">
+              <span>Southeast Asia Blockchain Week</span>
+              <h3>Media Partner</h3>
+            </div>
+            <div className="media-partnership-role">
+              <h3>What I did</h3>
+              <ul>
+                <li>On-site interviews</li>
+                <li>Short-form content production</li>
+                <li>Interviewed founders, builders, and ecosystem participants</li>
+                <li>Distributed content across social channels</li>
+              </ul>
+            </div>
+            <div className="media-partnership-placeholder">
+              <span>Conference visual to be added</span>
+            </div>
+          </div>
+        </section>
+      </main>
     </div>
   );
 }
