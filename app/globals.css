@@ -1980,6 +1980,329 @@ img {
   line-height: 1.35;
 }
 
+/* Marketing reference-aligned layout */
+
+.marketing-reference-layout .marketing-hero {
+  min-height: 520px;
+  padding: 68px 0 72px;
+  grid-template-columns: minmax(300px, 0.82fr) minmax(600px, 1.45fr);
+  gap: 72px;
+}
+
+.marketing-reference-layout .marketing-hero h1 {
+  font-size: clamp(58px, 6vw, 84px);
+  line-height: 0.9;
+}
+
+.marketing-reference-layout .marketing-subtitle {
+  margin: 22px 0 -22px;
+  font-size: 17px;
+}
+
+.marketing-reference-layout .work-intro {
+  margin-top: 42px;
+  font-size: 15px;
+  line-height: 1.55;
+}
+
+.marketing-reference-layout .marketing-metrics {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 26px;
+  align-items: center;
+  border: 0;
+}
+
+.marketing-reference-layout .marketing-metric {
+  min-height: 200px;
+  padding: 18px 0;
+  border: 0;
+}
+
+.marketing-reference-layout .marketing-metric-icon {
+  width: 58px;
+  height: 58px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background: #ffe7e7;
+  color: var(--accent);
+  font-size: 22px;
+  font-weight: 700;
+}
+
+.marketing-reference-layout .marketing-metric strong {
+  margin-top: 30px;
+  font-size: clamp(28px, 2.8vw, 42px);
+}
+
+.marketing-reference-layout .marketing-metric p {
+  max-width: 115px;
+  margin-top: 8px;
+  color: var(--text);
+  line-height: 1.35;
+}
+
+.marketing-reference-layout .compact-marketing-section {
+  grid-template-columns: 220px minmax(0, 1fr);
+  gap: 46px;
+  padding: 48px 0;
+}
+
+.marketing-reference-layout .marketing-section-intro {
+  padding-left: 12px;
+  border-left: 2px solid var(--accent);
+}
+
+.marketing-reference-layout .marketing-section-intro h2 {
+  font-size: 30px;
+  line-height: 0.96;
+  letter-spacing: -0.045em;
+}
+
+.marketing-reference-layout .marketing-section-intro > p:not(.work-section-number) {
+  margin-top: 22px;
+  font-size: 12px;
+  line-height: 1.55;
+}
+
+.marketing-reference-layout .campaign-samples {
+  gap: 14px;
+}
+
+.campaign-work-card {
+  min-width: 0;
+  overflow: hidden;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  background: var(--card);
+}
+
+.campaign-work-visual {
+  position: relative;
+  height: 240px;
+  padding: 22px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow: hidden;
+}
+
+.campaign-work-visual > span,
+.campaign-work-visual > strong {
+  position: relative;
+  z-index: 2;
+  display: block;
+}
+
+.campaign-work-visual > span {
+  width: max-content;
+  padding: 6px 9px;
+  border-radius: 999px;
+  background: var(--text);
+  color: var(--card);
+  font-size: 9px;
+  letter-spacing: 0.04em;
+}
+
+.campaign-work-visual > strong {
+  max-width: 280px;
+  font-size: clamp(28px, 3.2vw, 46px);
+  line-height: 0.95;
+  letter-spacing: -0.05em;
+}
+
+.campaign-plan-visual {
+  background: #eeeeee;
+}
+
+.campaign-plan-visual::before {
+  content: "";
+  position: absolute;
+  right: -24px;
+  bottom: -36px;
+  width: 58%;
+  height: 78%;
+  border: 1px solid #bcbcbc;
+  background: var(--card);
+  transform: rotate(-7deg);
+  box-shadow: -26px -18px 0 #d7d7d7;
+}
+
+.creator-campaign-visual {
+  background: var(--text);
+  color: var(--card);
+}
+
+.creator-campaign-visual::before,
+.creator-campaign-visual::after {
+  content: "";
+  position: absolute;
+  top: 42px;
+  right: 54px;
+  width: 120px;
+  height: 188px;
+  border: 1px solid #505050;
+  border-radius: 18px;
+  background: #1d1d1d;
+  transform: rotate(8deg);
+}
+
+.creator-campaign-visual::after {
+  right: 142px;
+  transform: rotate(-7deg);
+}
+
+.campaign-work-copy {
+  padding: 18px;
+}
+
+.campaign-work-copy h3 {
+  margin: 0;
+  font-size: 18px;
+  letter-spacing: -0.03em;
+}
+
+.campaign-work-copy p {
+  min-height: 38px;
+  margin: 8px 0 0;
+  color: var(--muted);
+  font-size: 11px;
+  line-height: 1.45;
+}
+
+.campaign-work-copy small {
+  display: block;
+  margin-top: 18px;
+  padding-top: 14px;
+  border-top: 1px solid var(--border);
+  font-size: 10px;
+}
+
+.marketing-reference-layout .communications-grid {
+  gap: 14px;
+}
+
+.marketing-reference-layout .communication-output {
+  min-height: 270px;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.communication-mark {
+  margin: 48px 0 0;
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  font-size: 11px;
+}
+
+.communication-mark span {
+  font-weight: 700;
+}
+
+.communication-mark i {
+  color: var(--muted);
+  font-style: normal;
+}
+
+.communication-mark strong {
+  font-size: 13px;
+}
+
+.marketing-reference-layout .communication-output h3 {
+  margin-top: auto;
+  font-size: 19px;
+}
+
+.marketing-reference-layout .communication-output p {
+  min-height: 54px;
+  margin-top: 14px;
+  padding-top: 12px;
+  font-size: 10px;
+}
+
+.marketing-reference-layout .marketing-content-grid {
+  gap: 14px;
+}
+
+.marketing-reference-layout .marketing-content-visual {
+  min-height: 210px;
+  border-radius: 10px 10px 0 0;
+}
+
+.marketing-reference-layout .marketing-content-visual > strong {
+  font-size: 20px;
+}
+
+.marketing-reference-layout .marketing-content-item h3 {
+  margin: 13px 0 0;
+  font-size: 16px;
+}
+
+.marketing-reference-layout .marketing-content-item > p {
+  min-height: 38px;
+  margin-top: 6px;
+  font-size: 10px;
+}
+
+.marketing-content-item > ul {
+  margin: 12px 0 0;
+  padding: 0;
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+  list-style: none;
+}
+
+.marketing-content-item > ul li {
+  padding: 4px 7px;
+  border-radius: 3px;
+  background: #eeeeee;
+  color: #555555;
+  font-size: 9px;
+}
+
+.marketing-reference-layout .marketing-channels {
+  margin: 28px 0 72px;
+  padding: 22px;
+  grid-template-columns: 240px minmax(0, 1fr);
+  gap: 24px;
+  border-radius: 10px;
+}
+
+.marketing-reference-layout .marketing-channels strong {
+  font-size: 13px;
+  line-height: 1.45;
+}
+
+.marketing-reference-layout .marketing-channels ul {
+  grid-template-columns: repeat(8, minmax(0, 1fr));
+}
+
+.marketing-reference-layout .marketing-channels li {
+  min-height: 82px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 10px;
+}
+
+.marketing-reference-layout .marketing-channels li span {
+  width: 30px;
+  height: 30px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background: #f0f0f0;
+  color: var(--accent);
+  font-size: 9px;
+}
+
+.marketing-reference-layout .marketing-channels li strong {
+  font-size: 9px;
+  font-weight: 400;
+}
+
 /* Footer */
 
 .home-footer {
@@ -2195,6 +2518,23 @@ img {
   .independent-project {
     grid-template-columns: 1fr;
     gap: 48px;
+  }
+
+  .marketing-reference-layout .marketing-hero {
+    grid-template-columns: 1fr;
+  }
+
+  .marketing-reference-layout .marketing-metrics {
+    width: 100%;
+  }
+
+  .marketing-reference-layout .compact-marketing-section {
+    grid-template-columns: 190px minmax(0, 1fr);
+    gap: 32px;
+  }
+
+  .marketing-reference-layout .marketing-channels {
+    grid-template-columns: 1fr;
   }
 }
 
@@ -2637,5 +2977,60 @@ img {
 
   .logout-focus-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .marketing-reference-layout .marketing-hero {
+    padding-top: 58px;
+  }
+
+  .marketing-reference-layout .marketing-metrics {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0;
+  }
+
+  .marketing-reference-layout .marketing-metric {
+    min-height: 160px;
+    padding: 20px 8px;
+    border-top: 1px solid var(--border);
+  }
+
+  .marketing-reference-layout .marketing-metric:nth-child(odd) {
+    border-right: 1px solid var(--border);
+  }
+
+  .marketing-reference-layout .marketing-metric-icon {
+    width: 48px;
+    height: 48px;
+  }
+
+  .marketing-reference-layout .marketing-metric strong {
+    margin-top: 22px;
+  }
+
+  .marketing-reference-layout .compact-marketing-section {
+    grid-template-columns: 1fr;
+    gap: 30px;
+    padding: 58px 0;
+  }
+
+  .marketing-reference-layout .campaign-samples {
+    grid-template-columns: 1fr;
+  }
+
+  .campaign-work-visual {
+    height: 220px;
+  }
+
+  .marketing-reference-layout .communications-grid,
+  .marketing-reference-layout .marketing-content-grid {
+    width: calc(100vw - 16px);
+  }
+
+  .marketing-reference-layout .communication-output {
+    min-height: 300px;
+  }
+
+  .marketing-reference-layout .marketing-channels ul {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
   }
 }

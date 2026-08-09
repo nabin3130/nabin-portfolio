@@ -1,67 +1,89 @@
 const marketingMetrics = [
-  { value: "5,000+", label: "Article views" },
-  { value: "50,000+", label: "Community reach" },
-  { value: "25%", label: "Higher engagement" },
-  { value: "KR / EN", label: "Bilingual content" },
+  { icon: "↗", value: "5,000+", label: "Article views" },
+  { icon: "◎", value: "50,000+", label: "Community reach" },
+  { icon: "+", value: "25%", label: "Higher engagement" },
+  { icon: "A", value: "KR / EN", label: "Bilingual content" },
 ];
 
-const communicationOutputs = [
+const campaignWork = [
   {
-    type: "PR & Editorial",
-    title: "Product Communications",
-    text: "PR, Medium, and social content that clarified technical product value.",
+    label: "Campaign Planning",
+    title: "Integrated Campaigns",
+    text: "Campaign planning and coordinated distribution across Web3 audiences.",
+    detail: "Planning · Content · Distribution",
+    visual: "campaign-plan-visual",
   },
   {
-    type: "Partner Enablement",
-    title: "Partnership Communications",
-    text: "Stakeholder-specific messaging and materials for ecosystem partners.",
+    label: "Creator Partnerships",
+    title: "Influencer Campaigns",
+    text: "Research, outreach, scripts, negotiation, and campaign delivery.",
+    detail: "Research · Outreach · Execution",
+    visual: "creator-campaign-visual",
+  },
+];
+
+const communications = [
+  {
+    label: "Product Communication",
+    title: "Launch Announcements",
+    text: "Clear market-facing communication for product updates and launches.",
   },
   {
-    type: "Distribution",
-    title: "Editorial Planning",
-    text: "Content calendars and coordinated Korean and English distribution.",
+    label: "Partner Communication",
+    title: "Partnership Announcements",
+    text: "Stakeholder-specific messaging for ecosystem partnerships.",
+  },
+  {
+    label: "PR & Editorial",
+    title: "Press & Medium Content",
+    text: "Korean and English editorial content for products and communities.",
   },
 ];
 
 const productContent = [
   {
-    number: "01",
-    title: "GitBook & Documentation",
-    text: "Bilingual product guides for core user journeys.",
+    label: "Documentation",
+    title: "GitBook & Product Docs",
+    text: "Bilingual guides and developer-facing product documentation.",
     className: "marketing-docs-visual",
+    tags: ["GitBook", "Docs", "EN / KR"],
   },
   {
-    number: "02",
-    title: "GIF Tutorials",
-    text: "Step-by-step visual support for technical product actions.",
+    label: "Tutorial",
+    title: "Product Tutorials",
+    text: "Step-by-step GIF support for wallet, bridge, and staking journeys.",
     className: "marketing-tutorial-visual",
+    tags: ["Tutorials", "How-to", "EN / KR"],
   },
   {
-    number: "03",
+    label: "Video",
     title: "Product Videos",
     text: "YouTube how-to content for wallet and bridge features.",
     className: "marketing-video-visual",
+    tags: ["Video", "Education", "YouTube"],
   },
 ];
 
+const channels = ["Medium", "X", "Discord", "Telegram", "YouTube", "Email", "Notion", "Canva"];
+
 export function MarketingContentWork() {
   return (
-    <div className="marketing-work">
+    <div className="marketing-work marketing-reference-layout">
       <section className="work-hero marketing-hero">
         <div className="work-hero-copy">
           <p className="work-kicker"><span>02</span> / Marketing &amp; Content</p>
           <h1>Marketing &amp;<br />Content</h1>
           <p className="marketing-subtitle">Campaigns · PR · Product Content</p>
           <p className="work-intro">
-            Translating technical products into coordinated campaigns,
-            communications, and educational content for Web3 audiences.
+            End-to-end marketing execution and content creation that supports
+            awareness, education, and adoption across Web3 products and communities.
           </p>
         </div>
 
         <div className="marketing-metrics" aria-label="Selected marketing outcomes">
-          {marketingMetrics.map((metric, index) => (
+          {marketingMetrics.map((metric) => (
             <div className="marketing-metric" key={metric.label}>
-              <span>0{index + 1}</span>
+              <span className="marketing-metric-icon" aria-hidden="true">{metric.icon}</span>
               <strong>{metric.value}</strong>
               <p>{metric.label}</p>
             </div>
@@ -69,74 +91,50 @@ export function MarketingContentWork() {
         </div>
       </section>
 
-      <section className="work-story-section marketing-section">
-        <div className="work-story-copy">
-          <p className="work-section-number">02.1</p>
+      <section className="work-story-section marketing-section compact-marketing-section">
+        <div className="work-story-copy marketing-section-intro">
           <h2>Campaigns</h2>
           <p>
-            Planned editorial and creator-facing work across the channels used
-            to educate, engage, and reach Web3 communities.
+            Planned and executed integrated marketing work to build awareness,
+            educate users, and coordinate distribution.
           </p>
         </div>
 
         <div className="campaign-samples">
-          <article className="campaign-sample campaign-editorial">
-            <div>
-              <span>Editorial system</span>
-              <strong>From content planning<br />to distribution.</strong>
-            </div>
-            <p>Medium · PR · Social · Community</p>
-          </article>
-          <article className="campaign-sample campaign-creator">
-            <div>
-              <span>Creator partnerships</span>
-              <strong>Outreach to<br />campaign execution.</strong>
-            </div>
-            <p>Research · Scripts · Negotiation · Delivery</p>
-          </article>
-        </div>
-      </section>
-
-      <section className="work-story-section marketing-section">
-        <div className="work-story-copy">
-          <p className="work-section-number">02.2</p>
-          <h2>PR &amp;<br />Communications</h2>
-          <p>
-            Built clear communications for product updates, partnerships, and
-            ecosystem audiences in Korean and English.
-          </p>
-        </div>
-
-        <div className="communications-grid">
-          {communicationOutputs.map((output, index) => (
-            <article className="communication-output" key={output.title}>
-              <div className="communication-meta">
-                <span>{output.type}</span>
-                <b>0{index + 1}</b>
+          {campaignWork.map((item) => (
+            <article className="campaign-work-card" key={item.title}>
+              <div className={`campaign-work-visual ${item.visual}`}>
+                <span>{item.label}</span>
+                <strong>{item.title}</strong>
               </div>
-              <h3>{output.title}</h3>
-              <p>{output.text}</p>
+              <div className="campaign-work-copy">
+                <h3>{item.title}</h3>
+                <p>{item.text}</p>
+                <small>{item.detail}</small>
+              </div>
             </article>
           ))}
         </div>
       </section>
 
-      <section className="work-story-section marketing-section">
-        <div className="work-story-copy">
-          <p className="work-section-number">02.3</p>
-          <h2>Product<br />Content</h2>
+      <section className="work-story-section marketing-section compact-marketing-section">
+        <div className="work-story-copy marketing-section-intro">
+          <h2>PR &amp;<br />Communications</h2>
           <p>
-            Created documentation, tutorials, and videos that made wallet,
-            bridge, staking, and validator journeys easier to understand.
+            Managed product, partnership, and ecosystem communications in
+            Korean and English.
           </p>
         </div>
 
-        <div className="marketing-content-grid">
-          {productContent.map((item) => (
-            <article className="marketing-content-item" key={item.title}>
-              <div className={`marketing-content-visual ${item.className}`}>
-                <span>{item.number}</span>
-                <strong>{item.title}</strong>
+        <div className="communications-grid">
+          {communications.map((item, index) => (
+            <article className="communication-output" key={item.title}>
+              <div className="communication-meta">
+                <span>{item.label}</span>
+                <b>0{index + 1}</b>
+              </div>
+              <div className="communication-mark" aria-hidden="true">
+                <span>BIFROST</span><i>×</i><strong>{index === 0 ? "PRODUCT" : index === 1 ? "PARTNER" : "MEDIA"}</strong>
               </div>
               <h3>{item.title}</h3>
               <p>{item.text}</p>
@@ -145,18 +143,41 @@ export function MarketingContentWork() {
         </div>
       </section>
 
+      <section className="work-story-section marketing-section compact-marketing-section">
+        <div className="work-story-copy marketing-section-intro">
+          <h2>Product<br />Content</h2>
+          <p>
+            Created documentation, tutorials, and educational videos that made
+            technical products easier to understand and use.
+          </p>
+        </div>
+
+        <div className="marketing-content-grid">
+          {productContent.map((item, index) => (
+            <article className="marketing-content-item" key={item.title}>
+              <div className={`marketing-content-visual ${item.className}`}>
+                <span>0{index + 1}</span>
+                <strong>{item.label}</strong>
+              </div>
+              <h3>{item.title}</h3>
+              <p>{item.text}</p>
+              <ul>
+                {item.tags.map((tag) => <li key={tag}>{tag}</li>)}
+              </ul>
+            </article>
+          ))}
+        </div>
+      </section>
+
       <section className="marketing-channels" aria-label="Marketing channels">
         <div>
           <span>Tools &amp; Channels</span>
-          <strong>Built for coordinated distribution.</strong>
+          <strong>Used across campaigns, content, and community communication.</strong>
         </div>
         <ul>
-          <li>Medium</li>
-          <li>Social</li>
-          <li>Discord</li>
-          <li>Telegram</li>
-          <li>YouTube</li>
-          <li>Email</li>
+          {channels.map((channel, index) => (
+            <li key={channel}><span>0{index + 1}</span><strong>{channel}</strong></li>
+          ))}
         </ul>
       </section>
     </div>
