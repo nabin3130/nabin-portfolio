@@ -153,7 +153,7 @@ export function EcosystemWork() {
         <div className="ecosystem-partnership-board">
           <div className="ecosystem-board-heading">
             <span>Bifrost Network</span>
-            <strong>Strategic partnership<br />enablement.</strong>
+            <strong>Strategic partnership enablement</strong>
             <p>Technical product value translated into clear, audience-specific materials.</p>
           </div>
           <div className="partnership-material-grid">
@@ -172,7 +172,6 @@ export function EcosystemWork() {
                   <span>{material.number}</span>
                   <h3>{material.title}</h3>
                   <p>{material.description}</p>
-                  <b aria-hidden="true">↗</b>
                 </div>
               </button>
             ))}
