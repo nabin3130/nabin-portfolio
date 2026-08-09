@@ -4000,6 +4000,124 @@ img {
   line-height: 1.45;
 }
 
+.community-growth-editorial {
+  grid-template-columns: minmax(260px, 0.72fr) minmax(0, 1.7fr);
+}
+
+.community-growth-editorial .ecosystem-section-intro > p:not(.work-section-number) {
+  max-width: 410px;
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+.community-editorial-content {
+  min-width: 0;
+}
+
+.community-area-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  border-top: 1px solid var(--border);
+  border-left: 1px solid var(--border);
+}
+
+.community-area {
+  min-height: 285px;
+  padding: 24px 28px 30px;
+  border-right: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+}
+
+.community-area-meta {
+  display: flex;
+  align-items: baseline;
+  gap: 18px;
+}
+
+.community-area-meta > span {
+  color: var(--accent);
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.community-area-meta > p {
+  margin: 0;
+  color: #4f4f4f;
+  font-size: 14px;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+}
+
+.work-page .community-area h3 {
+  margin: 30px 0 0;
+  padding-bottom: 24px;
+  border-bottom: 1px solid var(--border);
+  font-size: clamp(24px, 2.3vw, 30px);
+  line-height: 1.12;
+  letter-spacing: -0.035em;
+}
+
+.work-page .community-area-description {
+  max-width: 430px;
+  margin: 24px 0 0;
+  color: #4f4f4f;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.community-marketing-cta {
+  margin-top: 28px;
+  min-height: 92px;
+  padding: 18px 22px;
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr) auto;
+  gap: 18px;
+  align-items: center;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  background: #fafafa;
+  transition: border-color 0.2s ease, background 0.2s ease;
+}
+
+.community-marketing-cta:hover {
+  border-color: #c9c9c9;
+  background: #f6f6f6;
+}
+
+.community-cta-icon {
+  width: 48px;
+  height: 48px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background: #ffe3e3;
+  color: var(--accent);
+  font-size: 24px;
+}
+
+.community-cta-copy strong {
+  display: block;
+  font-size: 18px;
+}
+
+.work-page .community-cta-copy p {
+  margin: 5px 0 0;
+  color: var(--muted);
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.community-marketing-cta > b {
+  color: var(--accent);
+  font-size: 27px;
+  font-weight: 400;
+  transition: transform 0.2s ease;
+}
+
+.community-marketing-cta:hover > b {
+  transform: translateX(4px);
+}
+
 .ecosystem-product-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -4409,6 +4527,10 @@ img {
   .ecosystem-community-card {
     min-width: 210px;
     scroll-snap-align: start;
+  }
+
+  .community-growth-editorial {
+    grid-template-columns: minmax(220px, 0.72fr) minmax(0, 1.55fr);
   }
 
   .partnership-material-grid {
@@ -5118,6 +5240,29 @@ img {
 
   .ecosystem-community-grid {
     width: calc(100vw - 16px);
+  }
+
+  .community-growth-editorial {
+    grid-template-columns: 1fr;
+  }
+
+  .community-area-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .community-area {
+    min-height: auto;
+    padding: 26px 0 32px;
+    border-right: 0;
+  }
+
+  .community-marketing-cta {
+    grid-template-columns: auto minmax(0, 1fr);
+    padding: 18px;
+  }
+
+  .community-marketing-cta > b {
+    display: none;
   }
 
   .ecosystem-community-card {

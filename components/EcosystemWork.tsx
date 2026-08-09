@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import Link from "next/link";
 
 const ecosystemMetrics = [
   { value: "100+", label: "Partners onboarded" },
@@ -46,30 +47,30 @@ const partnershipMaterials = [
   },
 ];
 
-const communityWork = [
+const communityAreas = [
   {
-    label: "Editorial",
-    title: "Medium & PR",
-    text: "Product and ecosystem stories in Korean and English.",
-    className: "ecosystem-community-editorial",
+    number: "01",
+    category: "Community",
+    title: "Discord Community",
+    description: "Community operations, member engagement, announcements, and ongoing support across global channels.",
   },
   {
-    label: "Education",
-    title: "User Guides",
-    text: "Clear explanations for technical product journeys.",
-    className: "ecosystem-community-guides",
+    number: "02",
+    category: "Ambassadors",
+    title: "Ambassador Programs",
+    description: "Recruited and coordinated global ambassadors to support local communities and ecosystem initiatives.",
   },
   {
-    label: "Community",
-    title: "Social Content",
-    text: "Editorial planning and multi-channel communication.",
-    className: "ecosystem-community-social",
+    number: "03",
+    category: "Influencers",
+    title: "Influencer Partnerships",
+    description: "Sourced and coordinated creators across X, YouTube, and Telegram for product and ecosystem campaigns.",
   },
   {
-    label: "Campaigns",
-    title: "Creator Partnerships",
-    text: "Research, outreach, scripts, negotiation, and delivery.",
-    className: "ecosystem-community-creator",
+    number: "04",
+    category: "Campaigns",
+    title: "Community Campaigns",
+    description: "Planned and executed community initiatives around product launches, NFTs, and ecosystem engagement.",
   },
 ];
 
@@ -166,23 +167,37 @@ export function EcosystemWork() {
         </div>
       </section>
 
-      <section className="work-story-section compact-ecosystem-section">
+      <section className="work-story-section compact-ecosystem-section community-growth-editorial">
         <div className="work-story-copy ecosystem-section-intro">
           <h2>Community &amp;<br />Growth</h2>
-          <p>Sustained community growth through editorial, education, social content, and creator campaigns.</p>
-          <div className="ecosystem-featured-metric"><strong>50,000+</strong><span>community reach</span></div>
+          <p>
+            Built and managed a global community through community operations,
+            ambassador programs, influencer partnerships, and ecosystem campaigns.
+          </p>
         </div>
 
-        <div className="ecosystem-community-grid">
-          {communityWork.map((item, index) => (
-            <article className="ecosystem-community-card" key={item.title}>
-              <div className={`ecosystem-community-visual ${item.className}`}>
-                <span>0{index + 1}</span><strong>{item.label}</strong>
-              </div>
-              <h3>{item.title}</h3>
-              <p>{item.text}</p>
-            </article>
-          ))}
+        <div className="community-editorial-content">
+          <div className="community-area-grid">
+            {communityAreas.map((area) => (
+              <article className="community-area" key={area.number}>
+                <div className="community-area-meta">
+                  <span>{area.number}</span>
+                  <p>{area.category}</p>
+                </div>
+                <h3>{area.title}</h3>
+                <p className="community-area-description">{area.description}</p>
+              </article>
+            ))}
+          </div>
+
+          <Link className="community-marketing-cta" href="/work?work=marketing" scroll={false}>
+            <span className="community-cta-icon" aria-hidden="true">→</span>
+            <span className="community-cta-copy">
+              <strong>Explore related marketing work</strong>
+              <p>See the content, campaigns, and communications behind the work.</p>
+            </span>
+            <b aria-hidden="true">→</b>
+          </Link>
         </div>
       </section>
 
