@@ -114,7 +114,7 @@ export function EcosystemWork() {
       <section className="work-hero ecosystem-reference-hero">
         <div className="work-hero-copy">
           <p className="work-kicker"><span>01</span> / Ecosystem Growth</p>
-          <h1>Bifrost<br />Network</h1>
+          <h1>Bifrost Network</h1>
           <p className="work-intro">
             Connecting a Web3 infrastructure product with users, partners, and
             communities through education, content, enablement, and ecosystem communication.
@@ -126,19 +126,6 @@ export function EcosystemWork() {
           </div>
         </div>
 
-        <div className="ecosystem-reference-map" aria-label="Bifrost ecosystem map">
-          <div className="ecosystem-reference-orbits"><i /><i /><i /></div>
-          <div className="ecosystem-reference-center">BIFROST</div>
-          <div className="reference-map-node map-community">
-            <b>01</b><strong>Community</strong><span>Users · Education · Content</span>
-          </div>
-          <div className="reference-map-node map-partners">
-            <b>02</b><strong>Partners</strong><span>Validators · Infrastructure</span>
-          </div>
-          <div className="reference-map-node map-product">
-            <b>03</b><strong>Product</strong><span>Bridge · Staking · Wallet</span>
-          </div>
-        </div>
       </section>
 
       <section className="work-story-section compact-ecosystem-section partnership-ecosystem-section">
