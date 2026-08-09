@@ -9,7 +9,7 @@ export function Header() {
         </Link>
 
         <nav className="nav">
-          <Link href="/#work">Work</Link>
+          <Link href="/work?work=ecosystem">Work</Link>
           <Link href="/#beyond">Beyond Work</Link>
         </nav>
       </div>
