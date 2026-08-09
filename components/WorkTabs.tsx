@@ -4,16 +4,18 @@ import { usePathname, useRouter, useSearchParams } from "next/navigation";
 
 const tabs = [
   { key: "ecosystem", number: "01", label: "Ecosystem Growth", enabled: true },
-  { key: "marketing", number: "02", label: "Marketing & Content", enabled: false },
+  { key: "marketing", number: "02", label: "Marketing & Content", enabled: true },
   { key: "events", number: "03", label: "Events", enabled: false },
   { key: "media", number: "04", label: "Media", enabled: false },
+  { key: "independent", number: "05", label: "Independent", enabled: false },
 ] as const;
 
 export function WorkTabs() {
   const router = useRouter();
   const pathname = usePathname();
   const searchParams = useSearchParams();
-  const activeWork = searchParams.get("work") ?? "ecosystem";
+  const requestedWork = searchParams.get("work");
+  const activeWork = requestedWork === "marketing" ? "marketing" : "ecosystem";
 
   function selectWork(key: string, enabled: boolean) {
     if (!enabled || key === activeWork) return;
@@ -26,7 +28,7 @@ export function WorkTabs() {
   return (
     <nav className="work-tabs" aria-label="Work categories">
       {tabs.map((tab) => {
-        const isActive = tab.key === "ecosystem";
+        const isActive = tab.key === activeWork;
 
         return (
           <button

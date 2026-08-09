@@ -1,6 +1,6 @@
 import { Suspense } from "react";
-import { EcosystemWork } from "@/components/EcosystemWork";
 import { Header } from "@/components/Header";
+import { WorkContent } from "@/components/WorkContent";
 import { WorkTabs } from "@/components/WorkTabs";
 
 export default function WorkPage() {
@@ -11,7 +11,9 @@ export default function WorkPage() {
         <Suspense fallback={<div className="work-tabs-placeholder" />}>
           <WorkTabs />
         </Suspense>
-        <EcosystemWork />
+        <Suspense>
+          <WorkContent />
+        </Suspense>
       </div>
     </main>
   );
