@@ -1193,6 +1193,271 @@ img {
   font-size: 11px;
 }
 
+/* Events */
+
+.events-hero {
+  grid-template-columns: minmax(0, 0.9fr) minmax(520px, 1.1fr);
+}
+
+.events-hero h1 {
+  font-size: clamp(66px, 7.5vw, 110px);
+}
+
+.events-subtitle {
+  margin: 30px 0 -18px;
+  color: var(--muted);
+  font-size: 18px;
+}
+
+.events-metrics {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  border-top: 1px solid var(--border);
+  border-left: 1px solid var(--border);
+}
+
+.events-metric {
+  min-height: 216px;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  border-right: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+}
+
+.events-metric > span {
+  color: var(--accent);
+  font-size: 11px;
+}
+
+.events-metric strong {
+  margin-top: auto;
+  color: var(--accent);
+  font-size: clamp(34px, 3.8vw, 58px);
+  line-height: 0.95;
+  letter-spacing: -0.055em;
+}
+
+.events-metric p {
+  margin: 10px 0 0;
+  color: var(--muted);
+  font-size: 12px;
+}
+
+.conference-presentation {
+  min-width: 0;
+}
+
+.event-feature-image {
+  position: relative;
+  height: 520px;
+  margin: 0;
+  overflow: hidden;
+  background: #d6d6d6;
+}
+
+.event-feature-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 45%;
+}
+
+.event-feature-image::after {
+  content: "";
+  position: absolute;
+  inset: 55% 0 0;
+  background: linear-gradient(transparent, rgba(0, 0, 0, 0.72));
+}
+
+.event-feature-image figcaption {
+  position: absolute;
+  z-index: 1;
+  right: 30px;
+  bottom: 28px;
+  left: 30px;
+  color: var(--card);
+}
+
+.event-feature-image figcaption span,
+.event-feature-image figcaption strong {
+  display: block;
+}
+
+.event-feature-image figcaption span {
+  margin-bottom: 8px;
+  font-size: 10px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.event-feature-image figcaption strong {
+  font-size: clamp(28px, 3vw, 44px);
+  letter-spacing: -0.045em;
+}
+
+.conference-list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  border-left: 1px solid var(--border);
+}
+
+.conference-entry {
+  min-height: 210px;
+  padding: 24px;
+  display: grid;
+  grid-template-columns: 32px 1fr;
+  gap: 14px;
+  border-right: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+}
+
+.conference-entry > span {
+  color: var(--accent);
+  font-size: 11px;
+}
+
+.conference-entry > div {
+  display: flex;
+  flex-direction: column;
+}
+
+.conference-entry p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 10px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.conference-entry h3 {
+  margin: auto 0 0;
+  font-size: 23px;
+  line-height: 1;
+  letter-spacing: -0.04em;
+}
+
+.conference-entry small {
+  display: block;
+  min-height: 52px;
+  margin-top: 18px;
+  padding-top: 14px;
+  border-top: 1px solid var(--border);
+  color: var(--muted);
+  font-size: 11px;
+  line-height: 1.45;
+}
+
+.meetup-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.meetup-program {
+  min-height: 410px;
+  padding: 26px;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid var(--border);
+  background: var(--card);
+}
+
+.meetup-program > span {
+  color: var(--accent);
+  font-size: 11px;
+}
+
+.meetup-program h3 {
+  margin: auto 0 0;
+  font-size: 30px;
+  line-height: 0.98;
+  letter-spacing: -0.045em;
+}
+
+.meetup-program p {
+  min-height: 88px;
+  margin: 22px 0 0;
+  padding-top: 18px;
+  border-top: 1px solid var(--border);
+  color: var(--muted);
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+.meetup-program:nth-child(2) {
+  background: var(--text);
+  color: var(--card);
+}
+
+.meetup-program:nth-child(2) p {
+  border-top-color: #333333;
+  color: #aaaaaa;
+}
+
+.meetup-program:nth-child(3) {
+  background: var(--accent);
+  color: var(--card);
+}
+
+.meetup-program:nth-child(3) > span,
+.meetup-program:nth-child(3) p {
+  color: var(--card);
+}
+
+.meetup-program:nth-child(3) p {
+  border-top-color: rgba(255, 255, 255, 0.35);
+}
+
+.activation-board {
+  min-height: 520px;
+  padding: 40px;
+  display: grid;
+  grid-template-columns: minmax(220px, 0.8fr) minmax(0, 1fr);
+  gap: 56px;
+  background: #f1f1f1;
+}
+
+.activation-heading span,
+.activation-heading strong {
+  display: block;
+}
+
+.activation-heading span {
+  color: var(--accent);
+  font-size: 11px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.activation-heading strong {
+  margin-top: 54px;
+  font-size: clamp(38px, 4.5vw, 64px);
+  line-height: 0.95;
+  letter-spacing: -0.055em;
+}
+
+.activation-board ol {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  border-top: 1px solid #cecece;
+}
+
+.activation-board li {
+  min-height: 82px;
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  border-bottom: 1px solid #cecece;
+  font-size: 16px;
+}
+
+.activation-board li span {
+  color: var(--accent);
+  font-size: 11px;
+}
+
 /* Footer */
 
 .home-footer {
@@ -1375,6 +1640,14 @@ img {
 
   .marketing-channels {
     grid-template-columns: 1fr;
+  }
+
+  .events-hero {
+    grid-template-columns: 1fr;
+  }
+
+  .events-metrics {
+    width: min(720px, 100%);
   }
 }
 
@@ -1649,5 +1922,63 @@ img {
   .marketing-channels li {
     border-top: 1px solid var(--border);
     border-left: 0;
+  }
+
+  .events-hero h1 {
+    font-size: clamp(62px, 19vw, 88px);
+  }
+
+  .events-subtitle {
+    font-size: 16px;
+  }
+
+  .events-metric {
+    min-height: 156px;
+    padding: 20px;
+  }
+
+  .events-metric strong {
+    font-size: 30px;
+  }
+
+  .event-feature-image {
+    height: 440px;
+  }
+
+  .conference-list {
+    grid-template-columns: 1fr;
+  }
+
+  .conference-entry {
+    min-height: 190px;
+  }
+
+  .meetup-grid {
+    display: flex;
+    width: calc(100vw - 16px);
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none;
+  }
+
+  .meetup-grid::-webkit-scrollbar {
+    display: none;
+  }
+
+  .meetup-program {
+    min-width: min(78vw, 320px);
+    min-height: 370px;
+    scroll-snap-align: start;
+  }
+
+  .activation-board {
+    min-height: auto;
+    padding: 28px;
+    grid-template-columns: 1fr;
+    gap: 48px;
+  }
+
+  .activation-heading strong {
+    margin-top: 34px;
   }
 }

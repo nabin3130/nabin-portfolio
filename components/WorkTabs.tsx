@@ -5,7 +5,7 @@ import { usePathname, useRouter, useSearchParams } from "next/navigation";
 const tabs = [
   { key: "ecosystem", number: "01", label: "Ecosystem Growth", enabled: true },
   { key: "marketing", number: "02", label: "Marketing & Content", enabled: true },
-  { key: "events", number: "03", label: "Events", enabled: false },
+  { key: "events", number: "03", label: "Events", enabled: true },
   { key: "media", number: "04", label: "Media", enabled: false },
   { key: "independent", number: "05", label: "Independent", enabled: false },
 ] as const;
@@ -15,7 +15,9 @@ export function WorkTabs() {
   const pathname = usePathname();
   const searchParams = useSearchParams();
   const requestedWork = searchParams.get("work");
-  const activeWork = requestedWork === "marketing" ? "marketing" : "ecosystem";
+  const activeWork = requestedWork === "marketing" || requestedWork === "events"
+    ? requestedWork
+    : "ecosystem";
 
   function selectWork(key: string, enabled: boolean) {
     if (!enabled || key === activeWork) return;
