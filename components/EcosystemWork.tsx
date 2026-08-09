@@ -191,7 +191,6 @@ export function EcosystemWork() {
           </div>
 
           <Link className="community-marketing-cta" href="/work?work=marketing" scroll={false}>
-            <span className="community-cta-icon" aria-hidden="true">→</span>
             <span className="community-cta-copy">
               <strong>Explore related marketing work</strong>
               <p>See the content, campaigns, and communications behind the work.</p>

@@ -4010,6 +4010,10 @@ img {
   line-height: 1.6;
 }
 
+.work-page .community-growth-editorial .ecosystem-section-intro h2 {
+  font-size: 44px;
+}
+
 .community-editorial-content {
   min-width: 0;
 }
@@ -4022,8 +4026,8 @@ img {
 }
 
 .community-area {
-  min-height: 285px;
-  padding: 24px 28px 30px;
+  min-height: 230px;
+  padding: 20px 24px 22px;
   border-right: 1px solid var(--border);
   border-bottom: 1px solid var(--border);
 }
@@ -4049,29 +4053,29 @@ img {
 }
 
 .work-page .community-area h3 {
-  margin: 30px 0 0;
-  padding-bottom: 24px;
+  margin: 20px 0 0;
+  padding-bottom: 16px;
   border-bottom: 1px solid var(--border);
-  font-size: clamp(24px, 2.3vw, 30px);
+  font-size: 24px;
   line-height: 1.12;
   letter-spacing: -0.035em;
 }
 
 .work-page .community-area-description {
   max-width: 430px;
-  margin: 24px 0 0;
+  margin: 16px 0 0;
   color: #4f4f4f;
   font-size: 16px;
   line-height: 1.6;
 }
 
 .community-marketing-cta {
-  margin-top: 28px;
-  min-height: 92px;
-  padding: 18px 22px;
+  margin-top: 20px;
+  min-height: 76px;
+  padding: 14px 20px;
   display: grid;
-  grid-template-columns: auto minmax(0, 1fr) auto;
-  gap: 18px;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 16px;
   align-items: center;
   border: 1px solid var(--border);
   border-radius: 6px;
@@ -4084,20 +4088,9 @@ img {
   background: #f6f6f6;
 }
 
-.community-cta-icon {
-  width: 48px;
-  height: 48px;
-  display: grid;
-  place-items: center;
-  border-radius: 50%;
-  background: #ffe3e3;
-  color: var(--accent);
-  font-size: 24px;
-}
-
 .community-cta-copy strong {
   display: block;
-  font-size: 18px;
+  font-size: 17px;
 }
 
 .work-page .community-cta-copy p {
@@ -5257,7 +5250,7 @@ img {
   }
 
   .community-marketing-cta {
-    grid-template-columns: auto minmax(0, 1fr);
+    grid-template-columns: minmax(0, 1fr);
     padding: 18px;
   }
 
