@@ -4125,60 +4125,19 @@ img {
 .ecosystem-video-visual {
   position: relative;
   height: 260px;
-  padding: 24px;
+  overflow: hidden;
   border-radius: 10px;
-}
-
-.ecosystem-docs-visual {
-  background: #eeeeee;
-}
-
-.ecosystem-docs-visual > span,
-.ecosystem-docs-visual > strong,
-.ecosystem-video-visual > span,
-.ecosystem-video-visual > strong {
-  display: block;
-}
-
-.ecosystem-docs-visual > span,
-.ecosystem-video-visual > span {
-  font-size: 8px;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-}
-
-.ecosystem-docs-visual > strong,
-.ecosystem-video-visual > strong {
-  margin-top: 52px;
-  font-size: clamp(26px, 3.2vw, 44px);
-  line-height: 0.96;
-  letter-spacing: -0.045em;
-}
-
-.ecosystem-docs-visual i {
-  display: block;
-  width: 56%;
-  height: 1px;
-  margin-top: 14px;
-  background: #c3c3c3;
-}
-
-.ecosystem-video-visual {
+  border: 1px solid var(--border);
   background: #111016;
-  color: var(--card);
 }
 
-.ecosystem-video-visual b {
-  position: absolute;
-  right: 22px;
-  bottom: 22px;
-  width: 44px;
-  height: 44px;
-  display: grid;
-  place-items: center;
-  border-radius: 50%;
-  background: var(--accent);
-  font-size: 11px;
+.ecosystem-docs-visual img,
+.ecosystem-video-visual img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
 }
 
 .ecosystem-product-card h3 {

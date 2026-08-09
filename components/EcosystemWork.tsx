@@ -212,18 +212,20 @@ export function EcosystemWork() {
         <div className="ecosystem-product-grid">
           <article className="ecosystem-product-card">
             <div className="ecosystem-docs-visual">
-              <span>Bifrost Documentation</span>
-              <strong>Getting Started<br />with Bifrost</strong>
-              <i /><i /><i />
+              <img
+                src="/images/work/product-gitbook.jpg"
+                alt="Bifrost Network GitBook staking guide"
+              />
             </div>
             <h3>GitBook &amp; Product Docs</h3>
             <p>Bilingual guides, GIF tutorials, and product documentation.</p>
           </article>
           <article className="ecosystem-product-card">
             <div className="ecosystem-video-visual">
-              <span>Product Education</span>
-              <strong>Wallet &amp; Bridge<br />How-to Videos</strong>
-              <b aria-hidden="true">▶</b>
+              <img
+                src="/images/work/product-video.jpg"
+                alt="How to Bridge BFC from Ethereum to Polygon video"
+              />
             </div>
             <h3>Product Videos</h3>
             <p>YouTube tutorials for wallet and bridge features.</p>
