@@ -2303,6 +2303,309 @@ img {
   font-weight: 400;
 }
 
+/* Events reference-aligned layout */
+
+.events-reference-layout .events-hero {
+  min-height: 500px;
+  padding: 64px 0 68px;
+  grid-template-columns: minmax(300px, 0.82fr) minmax(600px, 1.45fr);
+  gap: 72px;
+}
+
+.events-reference-layout .events-hero h1 {
+  font-size: clamp(70px, 7vw, 104px);
+  line-height: 0.88;
+}
+
+.events-reference-layout .events-subtitle {
+  margin: 22px 0 -22px;
+  font-size: 17px;
+}
+
+.events-reference-layout .work-intro {
+  margin-top: 42px;
+  font-size: 15px;
+  line-height: 1.55;
+}
+
+.events-reference-layout .events-metrics {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 26px;
+  align-items: center;
+  border: 0;
+}
+
+.events-reference-layout .events-metric {
+  min-height: 200px;
+  padding: 18px 0;
+  border: 0;
+}
+
+.events-reference-layout .events-metric-icon {
+  width: 58px;
+  height: 58px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background: #ffe7e7;
+  color: var(--accent);
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.events-reference-layout .events-metric strong {
+  margin-top: 30px;
+  font-size: clamp(25px, 2.6vw, 39px);
+  white-space: nowrap;
+}
+
+.events-reference-layout .events-metric p {
+  max-width: 120px;
+  margin-top: 8px;
+  color: var(--text);
+  line-height: 1.35;
+}
+
+.events-reference-layout .compact-events-section {
+  grid-template-columns: 200px minmax(0, 1fr);
+  gap: 38px;
+  padding: 42px 0;
+}
+
+.events-reference-layout .events-section-intro {
+  padding-left: 12px;
+  border-left: 2px solid var(--accent);
+}
+
+.events-reference-layout .events-section-intro .work-section-number {
+  display: none;
+}
+
+.events-reference-layout .events-section-intro h2 {
+  font-size: 29px;
+  line-height: 0.96;
+  letter-spacing: -0.045em;
+}
+
+.events-reference-layout .events-section-intro > p:not(.work-section-number) {
+  margin-top: 22px;
+  font-size: 12px;
+  line-height: 1.55;
+}
+
+.reference-event-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 12px;
+  min-width: 0;
+}
+
+.reference-event-card {
+  min-width: 0;
+  overflow: hidden;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  background: var(--card);
+}
+
+.reference-event-visual {
+  position: relative;
+  height: 174px;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow: hidden;
+  background: #ededed;
+}
+
+.reference-event-visual > img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 42%;
+}
+
+.reference-event-visual > span,
+.reference-event-visual > strong {
+  position: relative;
+  z-index: 2;
+}
+
+.reference-event-visual > span {
+  width: max-content;
+  max-width: 100%;
+  padding: 5px 8px;
+  overflow: hidden;
+  border-radius: 999px;
+  background: rgba(0, 0, 0, 0.88);
+  color: var(--card);
+  font-size: 8px;
+  letter-spacing: 0.04em;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.reference-event-visual > strong {
+  font-size: clamp(20px, 2vw, 29px);
+  line-height: 0.95;
+  letter-spacing: -0.045em;
+}
+
+.conference-token-visual,
+.activation-content-visual {
+  background: var(--text);
+  color: var(--card);
+}
+
+.conference-token-visual::after,
+.activation-content-visual::after {
+  content: "";
+  position: absolute;
+  right: -34px;
+  bottom: -48px;
+  width: 160px;
+  height: 160px;
+  border: 1px solid #454545;
+  border-radius: 50%;
+  box-shadow: -42px -12px 0 -1px transparent, -42px -12px 0 0 #454545;
+}
+
+.conference-kbw-visual,
+.meetup-cave-visual,
+.activation-register-visual {
+  background: var(--accent);
+  color: var(--card);
+}
+
+.conference-kbw-visual::before,
+.activation-register-visual::before {
+  content: "";
+  position: absolute;
+  inset: 44px 18px 18px;
+  border: 1px solid rgba(255, 255, 255, 0.45);
+  background: repeating-linear-gradient(90deg, transparent 0 24px, rgba(255, 255, 255, 0.14) 24px 25px);
+}
+
+.conference-dev-visual,
+.meetup-gopax-visual,
+.activation-venue-visual {
+  background: #dcdcdc;
+}
+
+.conference-dev-visual::before,
+.meetup-gopax-visual::before,
+.activation-venue-visual::before {
+  content: "";
+  position: absolute;
+  right: 18px;
+  bottom: 18px;
+  left: 18px;
+  height: 56px;
+  border-top: 1px solid #9d9d9d;
+  border-bottom: 1px solid #9d9d9d;
+}
+
+.conference-global-visual,
+.meetup-bifrost-visual,
+.meetup-community-visual,
+.activation-guest-visual {
+  background: #f4f4f4;
+}
+
+.conference-global-visual::before,
+.meetup-bifrost-visual::before,
+.meetup-community-visual::before,
+.activation-guest-visual::before {
+  content: "";
+  position: absolute;
+  top: 52px;
+  right: 24px;
+  width: 82px;
+  height: 82px;
+  border: 1px solid #bdbdbd;
+  border-radius: 50%;
+  box-shadow: -44px 32px 0 -1px #f4f4f4, -44px 32px 0 0 #bdbdbd;
+}
+
+.meetup-cave-visual::after {
+  content: "";
+  position: absolute;
+  inset: 45% 0 0;
+  background: linear-gradient(transparent, rgba(0, 0, 0, 0.58));
+}
+
+.reference-event-copy {
+  padding: 14px;
+}
+
+.reference-event-copy h3 {
+  min-height: 38px;
+  margin: 0;
+  font-size: 15px;
+  line-height: 1.2;
+  letter-spacing: -0.025em;
+}
+
+.reference-event-copy p {
+  min-height: 66px;
+  margin: 9px 0 0;
+  color: var(--muted);
+  font-size: 9px;
+  line-height: 1.5;
+}
+
+.reference-event-copy small {
+  display: block;
+  margin-top: 12px;
+  padding-top: 11px;
+  border-top: 1px solid var(--border);
+  font-size: 9px;
+}
+
+.events-capabilities {
+  margin: 38px 0 72px;
+  padding: 22px;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  border: 1px solid var(--border);
+  border-radius: 10px;
+}
+
+.events-capabilities > div {
+  min-height: 90px;
+  padding: 8px 18px;
+  border-left: 1px solid var(--border);
+}
+
+.events-capabilities > div:first-child {
+  border-left: 0;
+}
+
+.events-capabilities span,
+.events-capabilities strong {
+  display: block;
+}
+
+.events-capabilities span {
+  color: var(--accent);
+  font-size: 9px;
+}
+
+.events-capabilities strong {
+  margin-top: 12px;
+  font-size: 12px;
+}
+
+.events-capabilities p {
+  margin: 7px 0 0;
+  color: var(--muted);
+  font-size: 9px;
+  line-height: 1.45;
+}
+
 /* Footer */
 
 .home-footer {
@@ -2535,6 +2838,34 @@ img {
 
   .marketing-reference-layout .marketing-channels {
     grid-template-columns: 1fr;
+  }
+
+  .events-reference-layout .events-hero {
+    grid-template-columns: 1fr;
+  }
+
+  .events-reference-layout .events-metrics {
+    width: 100%;
+  }
+
+  .events-reference-layout .compact-events-section {
+    grid-template-columns: 170px minmax(0, 1fr);
+    gap: 28px;
+  }
+
+  .reference-event-grid {
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none;
+  }
+
+  .reference-event-grid::-webkit-scrollbar {
+    display: none;
+  }
+
+  .reference-event-card {
+    min-width: 210px;
+    scroll-snap-align: start;
   }
 }
 
@@ -3032,5 +3363,61 @@ img {
 
   .marketing-reference-layout .marketing-channels ul {
     grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+
+  .events-reference-layout .events-hero {
+    padding-top: 58px;
+  }
+
+  .events-reference-layout .events-metrics {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0;
+  }
+
+  .events-reference-layout .events-metric {
+    min-height: 160px;
+    padding: 20px 8px;
+    border-top: 1px solid var(--border);
+  }
+
+  .events-reference-layout .events-metric:nth-child(odd) {
+    border-right: 1px solid var(--border);
+  }
+
+  .events-reference-layout .events-metric-icon {
+    width: 48px;
+    height: 48px;
+  }
+
+  .events-reference-layout .events-metric strong {
+    margin-top: 22px;
+    font-size: 29px;
+  }
+
+  .events-reference-layout .compact-events-section {
+    grid-template-columns: 1fr;
+    gap: 28px;
+    padding: 58px 0;
+  }
+
+  .reference-event-grid {
+    width: calc(100vw - 16px);
+  }
+
+  .reference-event-card {
+    min-width: min(76vw, 280px);
+  }
+
+  .reference-event-visual {
+    height: 190px;
+  }
+
+  .events-capabilities {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .events-capabilities > div {
+    border-top: 1px solid var(--border);
+    border-left: 0;
   }
 }
