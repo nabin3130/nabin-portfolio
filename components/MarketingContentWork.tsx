@@ -25,11 +25,11 @@ const influencerVideos = [
 ];
 
 const documentationGuides = [
-  { title: "Add Network", icon: "◎", href: "https://docs.bifrostnetwork.com/bifrost-network/add-network/metamask" },
-  { title: "Stake BFC", icon: "◉", href: "https://docs.bifrostnetwork.com/bifrost-network/staking/staking-guide/stake-bfc" },
-  { title: "Bridge Deposit", icon: "→", href: "https://docs.bifrostnetwork.com/bifrost-network/bridge/bridge-guide/depositing-to-the-bifrost-network" },
-  { title: "Bridge Withdrawal", icon: "←", href: "https://docs.bifrostnetwork.com/bifrost-network/bridge/bridge-guide/withdrawing-to-another-network" },
-  { title: "Transfer Protection", icon: "◇", href: "https://docs.bifi.finance/biport-guide/how-to-use/transfer-protection" },
+  { title: "Add Network", href: "https://docs.bifrostnetwork.com/bifrost-network/add-network/metamask" },
+  { title: "Stake BFC", href: "https://docs.bifrostnetwork.com/bifrost-network/staking/staking-guide/stake-bfc" },
+  { title: "Bridge Deposit", href: "https://docs.bifrostnetwork.com/bifrost-network/bridge/bridge-guide/depositing-to-the-bifrost-network" },
+  { title: "Bridge Withdrawal", href: "https://docs.bifrostnetwork.com/bifrost-network/bridge/bridge-guide/withdrawing-to-another-network" },
+  { title: "Transfer Protection", href: "https://docs.bifi.finance/biport-guide/how-to-use/transfer-protection" },
 ];
 
 const tutorialVideos = [
@@ -141,11 +141,10 @@ export function MarketingContentWork() {
                 <div className="selected-guide-list">
                   {documentationGuides.map((guide, index) => (
                     <a href={guide.href} target="_blank" rel="noreferrer" key={guide.title}>
-                      <span>0{index + 1}</span><i aria-hidden="true">{guide.icon}</i><strong>{guide.title}</strong><b aria-hidden="true">↗</b>
+                      <span>0{index + 1}</span><strong>{guide.title}</strong>
                     </a>
                   ))}
                 </div>
-                <div className="documentation-features"><span>Korean &amp;<br />English</span><span>Step-by-step<br />guides</span><span>Visual GIF<br />tutorials</span></div>
               </div>
             </div>
           </div>
