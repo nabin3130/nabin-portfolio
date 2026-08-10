@@ -1,8 +1,8 @@
 const publishedContent = [
   { channel: "Telegram", image: "/images/work/marketing-theori-telegram.png", alt: "Theori validator announcement published on Telegram" },
   { channel: "X (Twitter)", image: "/images/work/marketing-theori-x.png", alt: "Theori validator announcement published on X" },
-  { channel: "Medium (EN)", image: "/images/work/marketing-theori-telegram.png", alt: "English Medium article announcing Theori as a Bifrost Network validator", href: "https://medium.com/bifrost/announcing-theori-as-a-bifrost-network-validator-e0e2d7964ec9" },
-  { channel: "Medium (KR)", image: "/images/work/marketing-theori-telegram.png", alt: "Korean Medium article announcing Theori as a Bifrost Network validator", href: "https://medium.com/bifrost-blog-kor/%EB%B0%94%EC%9D%B4%ED%94%84%EB%A1%9C%EC%8A%A4%ED%8A%B8-%EB%84%A4%ED%8A%B8%EC%9B%8C%ED%81%AC-%EB%B0%B8%EB%A6%AC%EB%8D%B0%EC%9D%B4%ED%84%B0%EB%A1%9C-%ED%8B%B0%EC%98%A4%EB%A6%AC-%ED%95%A9%EB%A5%98-a561ca3b73fe" },
+  { channel: "Medium (EN)", image: "/images/work/marketing-theori-medium-en.png", alt: "English Medium article announcing Theori as a Bifrost Network validator", href: "https://medium.com/bifrost/announcing-theori-as-a-bifrost-network-validator-e0e2d7964ec9" },
+  { channel: "Medium (KR)", image: "/images/work/marketing-theori-medium-kr.png", alt: "Korean Medium article announcing Theori as a Bifrost Network validator", href: "https://medium.com/bifrost-blog-kor/%EB%B0%94%EC%9D%B4%ED%94%84%EB%A1%9C%EC%8A%A4%ED%8A%B8-%EB%84%A4%ED%8A%B8%EC%9B%8C%ED%81%AC-%EB%B0%B8%EB%A6%AC%EB%8D%B0%EC%9D%B4%ED%84%B0%EB%A1%9C-%ED%8B%B0%EC%98%A4%EB%A6%AC-%ED%95%A9%EB%A5%98-a561ca3b73fe" },
 ];
 
 const communicationHighlights = [
