@@ -27,24 +27,48 @@ const selectedEvents = [
     city: "Dubai",
     role: "Event Operations",
     text: "Venue sourcing, vendor coordination, guest check-in, content capture, and wrap-up.",
+    media: "/images/work/event-binance-week-optimized.jpg",
+    mediaType: "image",
   },
   {
     title: "TOKEN2049 Dubai 2025",
     city: "Dubai",
     role: "Event Operations",
     text: "Sourced and prepared venues, coordinated with vendors, and supported smooth guest experience.",
+    media: "/images/work/event-token2049-dubai.mp4",
+    mediaType: "video",
   },
   {
-    title: "TOKEN2049 Singapore 2025",
-    city: "Singapore",
-    role: "Event Support",
-    text: "Sourced venues for 50–100 attendees and acted as the primary point of contact for restaurants.",
+    title: "DevCon 2024 · Pudgy Carnival",
+    city: "Bangkok",
+    role: "Event Operations",
+    text: "Assisted with venue setup, event goods, attendee guidance, and on-site guest experience.",
+    media: "/images/work/event-devcon-optimized.jpg",
+    mediaType: "image",
   },
   {
-    title: "Korea Blockchain Week 2025",
+    title: "GOPAX · Stellar Meetup",
     city: "Seoul",
-    role: "Event Support",
-    text: "Arranged transportation and coordinated with cafés for 100-person gatherings.",
+    role: "Meetup Operations",
+    text: "Coordinated the event, supported new-user sign-ups, and promoted the meetup through social media.",
+    media: "/images/work/event-stellar-meetup.jpg",
+    mediaType: "image",
+  },
+  {
+    title: "GOPAX · Fintech Conference",
+    city: "Seoul",
+    role: "Conference Operations",
+    text: "Managed booth setup and operations, supported user onboarding, and coordinated with conference vendors.",
+    media: "/images/work/event-fintech-conference.jpg",
+    mediaType: "image",
+  },
+  {
+    title: "GOPAX · BTL Marketing",
+    city: "Seoul",
+    role: "Offline Marketing",
+    text: "Planned and executed an offline campaign and coordinated on-site advertising operations.",
+    media: "/images/work/event-btl-marketing.jpg",
+    mediaType: "image",
   },
 ];
 
@@ -101,8 +125,12 @@ export function EventsWork() {
           <div className="selected-event-grid">
             {selectedEvents.map((event) => (
               <article className="selected-event-card" key={event.title}>
-                <div className="selected-event-placeholder">
-                  <span>Event image to be added</span>
+                <div className="selected-event-media">
+                  {event.mediaType === "video" ? (
+                    <video src={event.media} controls muted playsInline preload="metadata" aria-label={`${event.title} event video`} />
+                  ) : (
+                    <img src={event.media} alt={`${event.title} event`} />
+                  )}
                 </div>
                 <div className="selected-event-copy">
                   <h3>{event.title}</h3>
@@ -121,21 +149,22 @@ export function EventsWork() {
             text="Additional conferences, meetups, and past event experience."
           />
           <div className="more-events-panel">
-            <div className="more-events-years">
-              <div><h3>2025</h3><ul><li>ETHCC [8]</li></ul></div>
-              <div><h3>2024</h3><ul><li>Devcon 7</li><li>Taiwan Blockchain Week</li></ul></div>
+            <div className="more-events-list">
+              <h3>Additional Events</h3>
+              <ul>
+                <li><strong>TOKEN2049 Singapore 2025</strong><span>Venue sourcing, contact, pricing, and availability</span></li>
+                <li><strong>Korea Blockchain Week 2025</strong><span>Transportation, logistics, bus rental sourcing, and driver communication</span></li>
+                <li><strong>ETHCC [8]</strong><span>Event support</span></li>
+              </ul>
             </div>
-            <div className="more-events-earlier">
+            <div className="more-events-list">
               <h3>Earlier Experience — GOPAX</h3>
-              <ul><li>Stellar Meetup</li><li>Fintech Conference</li></ul>
+              <ul>
+                <li><strong>Fintech Conference</strong><span>Booth operations, user onboarding, vendor coordination</span></li>
+                <li><strong>BTL Marketing</strong><span>Offline campaigns including subway ads and station branding</span></li>
+                <li><strong>Stellar Meetup</strong><span>Event hosting, catering, user onboarding, and social media promotion</span></li>
+              </ul>
             </div>
-            <div className="more-events-collage" aria-label="Earlier event images awaiting assets">
-              {Array.from({ length: 4 }, (_, index) => <div key={index}><span>Image to be added</span></div>)}
-            </div>
-          </div>
-          <div className="events-case-note">
-            <span aria-hidden="true">◎</span>
-            <div><strong>Creating meaningful connections, on the ground.</strong><p>From venue planning to community engagement and content creation, I focus on delivering real impact at every event.</p></div>
           </div>
         </section>
       </main>
