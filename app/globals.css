@@ -4284,126 +4284,34 @@ img {
   line-height: 1.4;
 }
 
-.content-showcase {
+.content-publishing-layout {
   margin-top: 20px;
   display: grid;
-  grid-template-columns: minmax(300px, 0.85fr) minmax(0, 1.3fr);
+  grid-template-columns: minmax(260px, 0.62fr) minmax(0, 1.55fr);
   overflow: hidden;
   border: 1px solid var(--border);
   border-radius: 7px;
 }
 
-.content-showcase > div {
+.content-publishing-layout > div {
   padding: 24px;
 }
 
-.content-showcase > div + div {
+.content-publishing-layout > div + div {
   border-left: 1px solid var(--border);
 }
 
-.content-showcase h3 {
+.content-publishing-layout h3 {
   margin: 0;
-  font-size: 18px;
+  font-size: 20px;
 }
 
-.announcement-collage {
-  margin-top: 20px;
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 10px;
-}
-
-.announcement-collage > a {
-  position: relative;
-  min-width: 0;
-  aspect-ratio: 4 / 3;
-  overflow: hidden;
-  border: 1px solid var(--border);
-  background: #f1f1f1;
-}
-
-.announcement-collage > a > img {
-  display: block;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transition: transform 0.25s ease;
-}
-
-.announcement-collage > a:hover > img {
-  transform: scale(1.025);
-}
-
-.announcement-collage > a > div {
-  position: absolute;
-  right: 8px;
-  bottom: 8px;
-  left: 8px;
-  padding: 10px;
-  background: rgba(255, 255, 255, 0.93);
-}
-
-.announcement-collage > a:not(.has-image) > div {
-  inset: 0;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  background: transparent;
-}
-
-.announcement-collage span {
-  color: var(--accent);
-  font-size: 12px;
-}
-
-.announcement-collage small {
-  margin-left: 8px;
-  color: #6b45c6;
-  font-size: 12px;
-}
-
-.announcement-collage h4 {
-  margin: 6px 0 0;
-  font-size: 15px;
-  line-height: 1.25;
-}
-
-.work-page .announcement-collage p {
-  margin: 5px 0 0;
+.work-page .content-management-proof > p,
+.work-page .published-content-proof > p {
+  margin: 10px 0 0;
   color: var(--muted);
-  font-size: 13px;
-  line-height: 1.3;
-}
-
-.recent-content-examples article {
-  min-height: 106px;
-  padding: 16px 0;
-  display: grid;
-  grid-template-columns: 34px minmax(0, 1fr);
-  gap: 12px;
-  border-bottom: 1px solid var(--border);
-}
-
-.recent-content-examples article > span {
-  color: var(--accent);
-  font-size: 13px;
-}
-
-.recent-content-examples small {
-  color: #6b45c6;
-  font-size: 13px;
-}
-
-.recent-content-examples h4 {
-  margin: 6px 0 0;
-  font-size: 18px;
-  line-height: 1.3;
-}
-
-.work-page .recent-content-examples p {
-  margin: 7px 0 0;
-  color: var(--muted);
-  font-size: 14px;
+  font-size: 16px;
+  line-height: 1.5;
 }
 
 .content-management-list {
@@ -4431,6 +4339,52 @@ img {
 .content-management-list strong {
   font-size: 16px;
   line-height: 1.45;
+}
+
+.published-content-grid {
+  margin-top: 20px;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.published-content-grid > article,
+.published-content-grid > a {
+  min-width: 0;
+}
+
+.published-content-grid > article > span,
+.published-content-grid > a > span {
+  display: block;
+  min-height: 25px;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.published-content-grid > article > div,
+.published-content-grid > a > div {
+  height: 360px;
+  overflow: hidden;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  background: #111111;
+}
+
+.published-content-grid img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top center;
+  transition: transform 0.2s ease;
+}
+
+.published-content-grid .medium-card img {
+  object-position: top center;
+}
+
+.published-content-grid a:hover img {
+  transform: scale(1.015);
 }
 
 .bilingual-pr-feature {
@@ -4832,7 +4786,7 @@ img {
   }
 
   .marketing-channel-strip,
-  .content-showcase,
+  .content-publishing-layout,
   .bilingual-pr-feature,
   .influencer-case-panel,
   .tutorial-video-layout {
@@ -4840,7 +4794,7 @@ img {
   }
 
   .marketing-channel-strip > div + div,
-  .content-showcase > div + div {
+  .content-publishing-layout > div + div {
     border-top: 1px solid var(--border);
     border-left: 0;
   }
@@ -4864,8 +4818,13 @@ img {
     grid-template-columns: 1fr;
   }
 
-  .announcement-collage {
-    grid-template-columns: 1fr;
+  .published-content-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .published-content-grid > article > div,
+  .published-content-grid > a > div {
+    height: 390px;
   }
 
   .education-subsection {

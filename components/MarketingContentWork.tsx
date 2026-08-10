@@ -1,8 +1,8 @@
-const contentExamples = [
-  { type: "Product Launch", title: "The BIFROST Network is Live!", channel: "X · Telegram · Medium", image: "/images/work/marketing-announcement-mainnet.png", href: "https://medium.com/bifrost/the-bifrost-network-is-live-b66aaa19b203" },
-  { type: "Network Update", title: "Bifrost Now Supporting Base", channel: "X · Telegram · Medium", image: "/images/work/marketing-announcement-base.png", href: "https://medium.com/bifrost/bifrost-now-supporting-base-e0e3d0f58b34" },
-  { type: "Guide", title: "Introducing BFC Staking on the BIFROST Network", channel: "Medium · GitBook", image: "/images/work/marketing-announcement-staking.png", href: "https://medium.com/bifrost/introducing-bfc-staking-on-the-bifrost-network-73bbef03254f" },
-  { type: "Product Explanation", title: "Everything you need to know about BIFROST", channel: "Medium", href: "https://medium.com/bifrost/everything-you-need-to-know-about-bifrost-8f8943107ace" },
+const publishedContent = [
+  { channel: "Telegram", image: "/images/work/marketing-theori-telegram.png", alt: "Theori validator announcement published on Telegram" },
+  { channel: "X (Twitter)", image: "/images/work/marketing-theori-x.png", alt: "Theori validator announcement published on X" },
+  { channel: "Medium (EN)", image: "/images/work/marketing-theori-telegram.png", alt: "English Medium article announcing Theori as a Bifrost Network validator", href: "https://medium.com/bifrost/announcing-theori-as-a-bifrost-network-validator-e0e2d7964ec9" },
+  { channel: "Medium (KR)", image: "/images/work/marketing-theori-telegram.png", alt: "Korean Medium article announcing Theori as a Bifrost Network validator", href: "https://medium.com/bifrost-blog-kor/%EB%B0%94%EC%9D%B4%ED%94%84%EB%A1%9C%EC%8A%A4%ED%8A%B8-%EB%84%A4%ED%8A%B8%EC%9B%8C%ED%81%AC-%EB%B0%B8%EB%A6%AC%EB%8D%B0%EC%9D%B4%ED%84%B0%EB%A1%9C-%ED%8B%B0%EC%98%A4%EB%A6%AC-%ED%95%A9%EB%A5%98-a561ca3b73fe" },
 ];
 
 const communicationHighlights = [
@@ -28,9 +28,7 @@ const contentManagementTypes = [
   "Product launch announcements",
   "Partnership announcements",
   "Product and network updates",
-  "Staking and product guides",
-  "Ecosystem communications",
-  "Publishing across Medium, X, Telegram, and Discord",
+  "Publishing across channels",
 ];
 
 const documentationTopics = ["Add Network", "Stake / Unstake", "Bridge Deposit / Withdrawal", "Wallet Features", "Transfer Protection"];
@@ -89,25 +87,25 @@ export function MarketingContentWork() {
             <div><span>Languages</span><strong>Korean · English</strong></div>
             <div><span>Scope</span><strong>Writing · Planning · Publishing</strong></div>
           </div>
-          <div className="content-showcase">
-            <div className="recent-content-examples">
-              <h3>Recent Content Examples</h3>
-              <div className="announcement-collage">
-              {contentExamples.map((item, index) => (
-                <a href={item.href} target="_blank" rel="noreferrer" className={item.image ? "has-image" : ""} key={item.title}>
-                  {item.image ? <img src={item.image} alt={`${item.title} announcement artwork`} /> : null}
-                  <div><span>0{index + 1}</span><small>{item.type}</small><h4>{item.title}</h4><p>{item.channel}</p></div>
-                </a>
-              ))}
-              </div>
-            </div>
+          <div className="content-publishing-layout">
             <div className="content-management-proof">
               <h3>Content Management</h3>
+              <p>Planned, created, and published various types of content across multiple channels.</p>
               <ul className="content-management-list">
                 {contentManagementTypes.map((item, index) => (
                   <li key={item}><span>0{index + 1}</span><strong>{item}</strong></li>
                 ))}
               </ul>
+            </div>
+            <div className="published-content-proof">
+              <h3>Published Content Examples</h3>
+              <p>Partnership announcement published across multiple channels and languages.</p>
+              <div className="published-content-grid">
+                {publishedContent.map((item) => {
+                  const content = <><span>{item.channel}</span><div><img src={item.image} alt={item.alt} /></div></>;
+                  return item.href ? <a href={item.href} target="_blank" rel="noreferrer" className="medium-card" key={item.channel}>{content}</a> : <article key={item.channel}>{content}</article>;
+                })}
+              </div>
             </div>
           </div>
         </section>
