@@ -1,9 +1,25 @@
 const socialLinks = [
-  { label: "TikTok", short: "TT", href: "https://www.tiktok.com/@realhomiesclub" },
-  { label: "YouTube", short: "YT", href: "https://www.youtube.com/@realhomiesclub" },
-  { label: "Instagram", short: "IG", href: "https://www.instagram.com/realhomiesclub" },
-  { label: "X", short: "X", href: "https://x.com/real_BD_2025" },
+  { label: "TikTok", icon: "tiktok", href: "https://www.tiktok.com/@realhomiesclub" },
+  { label: "YouTube", icon: "youtube", href: "https://www.youtube.com/@realhomiesclub" },
+  { label: "Instagram", icon: "instagram", href: "https://www.instagram.com/realhomiesclub" },
+  { label: "X", icon: "x", href: "https://x.com/real_BD_2025" },
 ];
+
+function SocialIcon({ name }: { name: string }) {
+  if (name === "youtube") {
+    return <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2" y="5" width="20" height="14" rx="4" /><path d="m10 9 5 3-5 3Z" fill="#fff" /></svg>;
+  }
+
+  if (name === "instagram") {
+    return <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5" fill="none" stroke="currentColor" strokeWidth="2" /><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" strokeWidth="2" /><circle cx="17.5" cy="6.5" r="1.2" /></svg>;
+  }
+
+  if (name === "x") {
+    return <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4h3.8l3.7 5.1L17 4h2l-5.6 6.6L20 20h-3.8l-4.1-5.7L7 20H5l6.2-7.2Z" /></svg>;
+  }
+
+  return <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M13.1 3v11.3a4.2 4.2 0 1 1-3.6-4.1v2.5a1.8 1.8 0 1 0 1.2 1.7V3h2.4Zm0 0c.6 2.4 2 3.8 4.4 4.2v2.5a7.2 7.2 0 0 1-4.4-1.8Z" /></svg>;
+}
 
 const interviews = [
   {
@@ -71,7 +87,7 @@ export function MediaWork() {
                   title={social.label}
                   key={social.label}
                 >
-                  {social.short}
+                  <SocialIcon name={social.icon} />
                 </a>
               ))}
             </div>
@@ -128,8 +144,8 @@ export function MediaWork() {
                 <li>Distributed content across social channels</li>
               </ul>
             </div>
-            <div className="media-partnership-placeholder">
-              <span>Conference visual to be added</span>
+            <div className="media-partnership-visual">
+              <img src="/images/work/media-partnership.jpg" alt="Southeast Asia Blockchain Week media partnership announcement" />
             </div>
           </div>
         </section>

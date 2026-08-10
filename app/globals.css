@@ -4229,7 +4229,7 @@ img {
   align-items: center;
   border: 1px solid var(--border);
   border-radius: 8px;
-  background: #fff4f4;
+  background: #f3eee7;
 }
 
 .rhc-summary-brand {
@@ -4309,6 +4309,12 @@ img {
   font-size: 13px;
   font-weight: 700;
   transition: border-color 0.2s ease, color 0.2s ease, transform 0.2s ease;
+}
+
+.rhc-socials a svg {
+  width: 21px;
+  height: 21px;
+  fill: currentColor;
 }
 
 .rhc-socials a:hover {
@@ -4582,12 +4588,19 @@ img {
   line-height: 1.5;
 }
 
-.media-partnership-placeholder {
-  display: grid;
-  place-items: center;
+.media-partnership-visual {
+  min-width: 0;
+  padding: 0 !important;
+  overflow: hidden;
   background: #f0f0f0;
-  color: var(--muted);
-  font-size: 14px;
+}
+
+.media-partnership-visual img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
 }
 
 @media (max-width: 1050px) {
@@ -4687,7 +4700,7 @@ img {
     border-left: 0;
   }
 
-  .media-partnership-placeholder {
+  .media-partnership-visual {
     min-height: 220px;
   }
 }
