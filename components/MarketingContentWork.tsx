@@ -24,7 +24,13 @@ const influencerVideos = [
   { title: "Summoner Influencer Content 02", href: "https://youtu.be/He4pYOQlqMc?si=M12ZbezbpS2hBv6x", image: "/images/work/marketing-summoner-2.jpg" },
 ];
 
-const documentationTopics = ["Add Network", "Stake / Unstake", "Bridge Deposit / Withdrawal", "Wallet Features", "Transfer Protection"];
+const documentationGuides = [
+  { title: "Add Network", icon: "◎", href: "https://docs.bifrostnetwork.com/bifrost-network/add-network/metamask" },
+  { title: "Stake BFC", icon: "◉", href: "https://docs.bifrostnetwork.com/bifrost-network/staking/staking-guide/stake-bfc" },
+  { title: "Bridge Deposit", icon: "→", href: "https://docs.bifrostnetwork.com/bifrost-network/bridge/bridge-guide/depositing-to-the-bifrost-network" },
+  { title: "Bridge Withdrawal", icon: "←", href: "https://docs.bifrostnetwork.com/bifrost-network/bridge/bridge-guide/withdrawing-to-another-network" },
+  { title: "Transfer Protection", icon: "◇", href: "https://docs.bifi.finance/biport-guide/how-to-use/transfer-protection" },
+];
 
 const tutorialVideos = [
   {
@@ -123,13 +129,25 @@ export function MarketingContentWork() {
 
         <section className="marketing-case-section" id="education-content">
           <MarketingHeading number="04" title="Education & How-to Content" text="Turned technical blockchain products and concepts into practical, easy-to-follow educational content." />
-          <div className="education-subsection">
-            <header><span>A</span><div><h3>Product Documentation — GitBook</h3><p>Bifrost Network · Korean / English documentation</p></div></header>
-            <div className="documentation-showcase">
-              <div className="documentation-image"><img src="/images/work/product-gitbook.jpg" alt="Bifrost Network GitBook documentation" /></div>
-              <div className="documentation-topic-grid">{documentationTopics.map((topic, index) => <div key={topic}><span>0{index + 1}</span><strong>{topic}</strong></div>)}</div>
+          <div className="education-subsection documentation-section">
+            <div className="documentation-layout">
+              <div className="documentation-overview">
+                <header><span>A</span><div><h3>Product Documentation — GitBook</h3><p>Bifrost Network · Korean / English documentation</p></div></header>
+                <p className="documentation-description">Created step-by-step guides and documentation for Bifrost Network’s products and features in Korean and English.</p>
+                <div className="documentation-image"><img src="/images/work/product-gitbook.jpg" alt="Bifrost Network GitBook documentation" /></div>
+              </div>
+              <div className="selected-guides">
+                <h3>Selected Guides</h3>
+                <div className="selected-guide-list">
+                  {documentationGuides.map((guide, index) => (
+                    <a href={guide.href} target="_blank" rel="noreferrer" key={guide.title}>
+                      <span>0{index + 1}</span><i aria-hidden="true">{guide.icon}</i><strong>{guide.title}</strong><b aria-hidden="true">↗</b>
+                    </a>
+                  ))}
+                </div>
+                <div className="documentation-features"><span>Korean &amp;<br />English</span><span>Step-by-step<br />guides</span><span>Visual GIF<br />tutorials</span></div>
+              </div>
             </div>
-            <ul className="education-support-list"><li>Korean / English documentation</li><li>Step-by-step product guides</li><li>Visual GIF tutorials</li><li>Network, staking, bridge, and wallet functionality</li></ul>
           </div>
 
           <div className="education-subsection">

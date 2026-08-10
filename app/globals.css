@@ -4554,17 +4554,57 @@ img {
   font-size: 16px;
 }
 
-.documentation-showcase {
-  margin-top: 24px;
+.documentation-layout {
   display: grid;
-  grid-template-columns: minmax(0, 1.25fr) minmax(260px, 0.75fr);
-  gap: 18px;
+  grid-template-columns: minmax(0, 1.45fr) minmax(320px, 0.9fr);
+  gap: 34px;
+}
+
+.documentation-overview > header {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+}
+
+.documentation-overview > header > span {
+  width: 42px;
+  height: 42px;
+  flex: 0 0 auto;
+  display: grid;
+  place-items: center;
+  border: 1px solid #ffcaca;
+  border-radius: 50%;
+  color: var(--accent);
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.documentation-overview header h3,
+.selected-guides h3 {
+  margin: 0;
+  font-size: 24px;
+  letter-spacing: -0.03em;
+}
+
+.work-page .documentation-overview header p {
+  margin: 8px 0 0;
+  color: var(--muted);
+  font-size: 16px;
+}
+
+.work-page .documentation-description {
+  margin: 20px 0 18px 56px;
+  color: #3f3f3f;
+  font-size: 16px;
+  line-height: 1.55;
 }
 
 .documentation-image {
+  margin-left: 56px;
   aspect-ratio: 16 / 9;
   overflow: hidden;
   border: 1px solid var(--border);
+  border-radius: 6px;
 }
 
 .documentation-image img {
@@ -4574,48 +4614,83 @@ img {
   object-position: top center;
 }
 
-.documentation-topic-grid {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  border-top: 1px solid var(--border);
+.selected-guides {
+  padding-left: 34px;
   border-left: 1px solid var(--border);
 }
 
-.documentation-topic-grid > div {
-  min-height: 92px;
-  padding: 16px;
-  border-right: 1px solid var(--border);
-  border-bottom: 1px solid var(--border);
-}
-
-.documentation-topic-grid span,
-.documentation-topic-grid strong {
+.selected-guides h3::after {
+  content: "";
+  width: 34px;
+  height: 2px;
+  margin-top: 14px;
   display: block;
+  background: var(--accent);
 }
 
-.documentation-topic-grid span {
+.selected-guide-list {
+  margin-top: 22px;
+  display: grid;
+  gap: 10px;
+}
+
+.selected-guide-list a {
+  min-height: 66px;
+  padding: 10px 14px;
+  display: grid;
+  grid-template-columns: 34px 48px minmax(0, 1fr) 24px;
+  gap: 10px;
+  align-items: center;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  transition: border-color 0.2s ease, transform 0.2s ease;
+}
+
+.selected-guide-list a:hover {
+  border-color: #bdbdbd;
+  transform: translateY(-1px);
+}
+
+.selected-guide-list a > span {
   color: var(--accent);
-  font-size: 13px;
+  font-size: 14px;
+  font-weight: 700;
 }
 
-.documentation-topic-grid strong {
-  margin-top: 9px;
-  font-size: 15px;
+.selected-guide-list i {
+  width: 42px;
+  height: 42px;
+  display: grid;
+  place-items: center;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  font-size: 22px;
+  font-style: normal;
+}
+
+.selected-guide-list strong {
+  font-size: 16px;
   line-height: 1.3;
 }
 
-.education-support-list {
-  margin: 20px 0 0;
-  padding: 18px 22px;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 12px 28px;
-  border: 1px solid var(--border);
-  list-style-position: inside;
+.selected-guide-list b {
+  color: var(--accent);
+  font-size: 20px;
+  font-weight: 400;
 }
 
-.education-support-list li {
-  font-size: 15px;
+.documentation-features {
+  margin-top: 24px;
+  padding-top: 20px;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+  border-top: 1px dashed var(--border);
+}
+
+.documentation-features span {
+  font-size: 14px;
+  line-height: 1.4;
 }
 
 .tutorial-video-layout {
@@ -4723,8 +4798,7 @@ img {
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 
-  .influencer-case-panel,
-  .documentation-showcase {
+  .influencer-case-panel {
     grid-template-columns: 1fr;
   }
 }
@@ -4795,8 +4869,20 @@ img {
     padding: 20px;
   }
 
-  .documentation-topic-grid {
+  .documentation-layout {
     grid-template-columns: 1fr;
+  }
+
+  .selected-guides {
+    padding-top: 24px;
+    padding-left: 0;
+    border-top: 1px solid var(--border);
+    border-left: 0;
+  }
+
+  .work-page .documentation-description,
+  .documentation-image {
+    margin-left: 0;
   }
 
   .gopax-education-asset {
