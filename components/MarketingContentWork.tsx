@@ -24,13 +24,6 @@ const influencerVideos = [
   { title: "Summoner Influencer Content 02", href: "https://youtu.be/He4pYOQlqMc?si=M12ZbezbpS2hBv6x", image: "/images/work/marketing-summoner-2.jpg" },
 ];
 
-const contentManagementTypes = [
-  "Product launch announcements",
-  "Partnership announcements",
-  "Product and network updates",
-  "Publishing across channels",
-];
-
 const documentationTopics = ["Add Network", "Stake / Unstake", "Bridge Deposit / Withdrawal", "Wallet Features", "Transfer Protection"];
 
 const tutorialVideos = [
@@ -88,15 +81,6 @@ export function MarketingContentWork() {
             <div><span>Scope</span><strong>Writing · Planning · Publishing</strong></div>
           </div>
           <div className="content-publishing-layout">
-            <div className="content-management-proof">
-              <h3>Content Management</h3>
-              <p>Planned, created, and published various types of content across multiple channels.</p>
-              <ul className="content-management-list">
-                {contentManagementTypes.map((item, index) => (
-                  <li key={item}><span>0{index + 1}</span><strong>{item}</strong></li>
-                ))}
-              </ul>
-            </div>
             <div className="published-content-proof">
               <h3>Published Content Examples</h3>
               <p>Partnership announcement published across multiple channels and languages.</p>

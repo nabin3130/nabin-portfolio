@@ -4286,8 +4286,6 @@ img {
 
 .content-publishing-layout {
   margin-top: 20px;
-  display: grid;
-  grid-template-columns: minmax(260px, 0.62fr) minmax(0, 1.55fr);
   overflow: hidden;
   border: 1px solid var(--border);
   border-radius: 7px;
@@ -4297,48 +4295,16 @@ img {
   padding: 24px;
 }
 
-.content-publishing-layout > div + div {
-  border-left: 1px solid var(--border);
-}
-
 .content-publishing-layout h3 {
   margin: 0;
   font-size: 20px;
 }
 
-.work-page .content-management-proof > p,
 .work-page .published-content-proof > p {
   margin: 10px 0 0;
   color: var(--muted);
   font-size: 16px;
   line-height: 1.5;
-}
-
-.content-management-list {
-  margin: 20px 0 0;
-  padding: 0;
-  list-style: none;
-  border-top: 1px solid var(--border);
-}
-
-.content-management-list li {
-  min-height: 64px;
-  padding: 14px 0;
-  display: grid;
-  grid-template-columns: 42px minmax(0, 1fr);
-  gap: 10px;
-  align-items: center;
-  border-bottom: 1px solid var(--border);
-}
-
-.content-management-list span {
-  color: var(--accent);
-  font-size: 14px;
-}
-
-.content-management-list strong {
-  font-size: 16px;
-  line-height: 1.45;
 }
 
 .published-content-grid {
@@ -4786,15 +4752,13 @@ img {
   }
 
   .marketing-channel-strip,
-  .content-publishing-layout,
   .bilingual-pr-feature,
   .influencer-case-panel,
   .tutorial-video-layout {
     grid-template-columns: 1fr;
   }
 
-  .marketing-channel-strip > div + div,
-  .content-publishing-layout > div + div {
+  .marketing-channel-strip > div + div {
     border-top: 1px solid var(--border);
     border-left: 0;
   }
