@@ -1,185 +1,172 @@
-const marketingMetrics = [
-  { icon: "↗", value: "5,000+", label: "Article views" },
-  { icon: "◎", value: "50,000+", label: "Community reach" },
-  { icon: "+", value: "25%", label: "Higher engagement" },
-  { icon: "A", value: "KR / EN", label: "Bilingual content" },
+const contentExamples = [
+  { type: "Product Launch", title: "The BIFROST Network is Live!", channel: "X · Telegram · Medium" },
+  { type: "Network Update", title: "Bifrost Now Supporting Base", channel: "X · Telegram · Medium" },
+  { type: "Guide", title: "Introducing BFC Staking on the BIFROST Network", channel: "Medium · GitBook" },
+  { type: "Product Explanation", title: "Everything you need to know about BIFROST", channel: "Medium" },
 ];
 
-const campaignWork = [
-  {
-    label: "Campaign Planning",
-    title: "Integrated Campaigns",
-    text: "Campaign planning and coordinated distribution across Web3 audiences.",
-    detail: "Planning · Content · Distribution",
-    visual: "campaign-plan-visual",
-  },
-  {
-    label: "Creator Partnerships",
-    title: "Influencer Campaigns",
-    text: "Research, outreach, scripts, negotiation, and campaign delivery.",
-    detail: "Research · Outreach · Execution",
-    visual: "creator-campaign-visual",
-  },
+const communicationHighlights = [
+  "Product launch communications",
+  "Partnership announcements",
+  "Bilingual press releases",
+  "Content planning",
+  "Publishing and distribution",
 ];
 
-const communications = [
-  {
-    label: "Product Communication",
-    title: "Launch Announcements",
-    text: "Clear market-facing communication for product updates and launches.",
-  },
-  {
-    label: "Partner Communication",
-    title: "Partnership Announcements",
-    text: "Stakeholder-specific messaging for ecosystem partnerships.",
-  },
-  {
-    label: "PR & Editorial",
-    title: "Press & Medium Content",
-    text: "Korean and English editorial content for products and communities.",
-  },
+const influencerWork = [
+  "Researched and contacted 50+ crypto influencers across Korea and global markets",
+  "Identified relevant KOLs across X, Telegram, and YouTube",
+  "Created customized outreach scripts",
+  "Negotiated campaign pricing and terms",
+  "Drafted contracts and processed influencer payments",
+  "Coordinated campaign execution and content launch",
+  "Secured cost-effective agreements with approximately 90% of targeted influencers",
 ];
 
-const productContent = [
+const influencerVideos = [
+  { title: "Summoner Influencer Content 01", href: "https://youtu.be/1IrJ5sl2XKo?si=XtnaNF-IlizdpyRk", image: "/images/work/marketing-summoner-1.jpg" },
+  { title: "Summoner Influencer Content 02", href: "https://youtu.be/He4pYOQlqMc?si=M12ZbezbpS2hBv6x", image: "/images/work/marketing-summoner-2.jpg" },
+];
+
+const workflow = ["Research", "Outreach", "Negotiation", "Contract & Payment", "Content Launch"];
+
+const documentationTopics = ["Add Network", "Stake / Unstake", "Bridge Deposit / Withdrawal", "Wallet Features", "Transfer Protection"];
+
+const tutorialVideos = [
   {
-    label: "Documentation",
-    title: "GitBook & Product Docs",
-    text: "Bilingual guides and developer-facing product documentation.",
-    className: "marketing-docs-visual",
-    tags: ["GitBook", "Docs", "EN / KR"],
+    title: "How to Bridge BFC from Ethereum to Polygon",
+    href: "https://youtu.be/jvKY9UBmIQk?si=zOFZVtVB6HslfBpZ",
+    image: "/images/work/marketing-bridge-video.jpg",
   },
   {
-    label: "Tutorial",
-    title: "Product Tutorials",
-    text: "Step-by-step GIF support for wallet, bridge, and staking journeys.",
-    className: "marketing-tutorial-visual",
-    tags: ["Tutorials", "How-to", "EN / KR"],
-  },
-  {
-    label: "Video",
-    title: "Product Videos",
-    text: "YouTube how-to content for wallet and bridge features.",
-    className: "marketing-video-visual",
-    tags: ["Video", "Education", "YouTube"],
+    title: "Biport Wallet / Transfer Protection",
+    href: "https://youtu.be/7HSqfMfXDJY?si=Ty73RskKQFXKEuD0",
+    image: "/images/work/marketing-biport-video.jpg",
   },
 ];
 
-const channels = ["Medium", "X", "Discord", "Telegram", "YouTube", "Email", "Notion", "Canva"];
+function MarketingHeading({ number, title, text }: { number: string; title: string; text: string }) {
+  return (
+    <header className="marketing-case-heading">
+      <h2><span>{number}</span>{title}</h2>
+      <p>{text}</p>
+    </header>
+  );
+}
+
+function VideoCard({ title, href, image }: { title: string; href: string; image: string }) {
+  return (
+    <a className="marketing-video-card" href={href} target="_blank" rel="noreferrer">
+      <div><img src={image} alt={`${title} video thumbnail`} /><span aria-hidden="true">▶</span></div>
+      <h3>{title}</h3>
+      <p>Watch on YouTube ↗</p>
+    </a>
+  );
+}
 
 export function MarketingContentWork() {
   return (
-    <div className="marketing-work marketing-reference-layout">
-      <section className="work-hero marketing-hero">
-        <div className="work-hero-copy">
-          <p className="work-kicker"><span>02</span> / Marketing &amp; Content</p>
-          <h1>Marketing &amp;<br />Content</h1>
-          <p className="marketing-subtitle">Campaigns · PR · Product Content</p>
-          <p className="work-intro">
-            End-to-end marketing execution and content creation that supports
-            awareness, education, and adoption across Web3 products and communities.
-          </p>
-        </div>
+    <div className="marketing-case-study">
+      <aside className="marketing-case-sidebar">
+        <p className="work-kicker"><span>02</span> / Marketing &amp; Content</p>
+        <h1>Marketing<br />&amp; Content</h1>
+        <p>Planned, created, and executed impactful content and communications across announcements, PR, community campaigns, influencer marketing, and educational materials.</p>
+        <nav aria-label="Marketing and Content case study sections">
+          <a href="#content-announcements"><span>01</span>Content &amp; Announcements</a>
+          <a href="#pr-communications"><span>02</span>PR &amp; Communications</a>
+          <a href="#influencer-marketing"><span>03</span>Influencer Marketing</a>
+          <a href="#education-content"><span>04</span>Education &amp; How-to Content</a>
+        </nav>
+      </aside>
 
-        <div className="marketing-metrics" aria-label="Selected marketing outcomes">
-          {marketingMetrics.map((metric) => (
-            <div className="marketing-metric" key={metric.label}>
-              <span className="marketing-metric-icon" aria-hidden="true">{metric.icon}</span>
-              <strong>{metric.value}</strong>
-              <p>{metric.label}</p>
+      <main className="marketing-case-content">
+        <section className="marketing-case-section" id="content-announcements">
+          <MarketingHeading number="01" title="Content & Announcements" text="Created and managed multi-channel announcements, updates, product content, and guides across Bifrost Network’s communication channels." />
+          <div className="marketing-channel-strip">
+            <div><span>Channels</span><strong>Medium · X · Telegram · Discord</strong></div>
+            <div><span>Languages</span><strong>Korean · English</strong></div>
+            <div><span>Scope</span><strong>Writing · Planning · Publishing</strong></div>
+          </div>
+          <div className="content-showcase">
+            <div className="recent-content-examples">
+              <h3>Recent Content Examples</h3>
+              {contentExamples.map((item, index) => (
+                <article key={item.title}>
+                  <span>0{index + 1}</span>
+                  <div><small>{item.type}</small><h4>{item.title}</h4><p>{item.channel}</p></div>
+                </article>
+              ))}
             </div>
-          ))}
-        </div>
-      </section>
-
-      <section className="work-story-section marketing-section compact-marketing-section">
-        <div className="work-story-copy marketing-section-intro">
-          <h2>Campaigns</h2>
-          <p>
-            Planned and executed integrated marketing work to build awareness,
-            educate users, and coordinate distribution.
-          </p>
-        </div>
-
-        <div className="campaign-samples">
-          {campaignWork.map((item) => (
-            <article className="campaign-work-card" key={item.title}>
-              <div className={`campaign-work-visual ${item.visual}`}>
-                <span>{item.label}</span>
-                <strong>{item.title}</strong>
+            <div className="content-management-proof">
+              <h3>Content Management</h3>
+              <div className="content-management-placeholder">
+                <strong>Notion content management</strong>
+                <p>Screenshot to be added</p>
               </div>
-              <div className="campaign-work-copy">
-                <h3>{item.title}</h3>
-                <p>{item.text}</p>
-                <small>{item.detail}</small>
-              </div>
-            </article>
-          ))}
-        </div>
-      </section>
+              <p>Structured announcements, product updates, guides, and ecosystem communications across multiple channels.</p>
+            </div>
+          </div>
+        </section>
 
-      <section className="work-story-section marketing-section compact-marketing-section">
-        <div className="work-story-copy marketing-section-intro">
-          <h2>PR &amp;<br />Communications</h2>
-          <p>
-            Managed product, partnership, and ecosystem communications in
-            Korean and English.
-          </p>
-        </div>
+        <section className="marketing-case-section" id="pr-communications">
+          <MarketingHeading number="02" title="PR & Communications" text="Created bilingual PR and editorial content in Korean and English for product, partnership, and ecosystem communications." />
+          <a className="bilingual-pr-feature" href="https://medium.com/dsrv/%EB%B8%94%EB%A1%9D%EC%B2%B4%EC%9D%B8%EC%9D%98-%EB%AF%B8%EB%9E%98%EB%A5%BC-%EC%97%AC%EB%8A%94-%EB%B0%94%EC%9D%B4%ED%94%84%EB%A1%9C%EC%8A%A4%ED%8A%B8-btcfi%EB%A1%9C-%EB%94%94%ED%8C%8C%EC%9D%B4%EB%A5%BC-%EC%9E%AC%EB%B0%9C%EA%B2%AC%ED%95%98%EB%8B%A4-builders-vibe-part-2-00bc43f69b3d" target="_blank" rel="noreferrer">
+            <div className="bilingual-language-mark"><span>KR</span><b>↔</b><span>EN</span></div>
+            <div><p>Bilingual PR / Editorial Writing</p><h3>블록체인의 미래를 여는 바이프로스트! BTCFi로 디파이를 재발견하다 [Builder’s Vibe – Part.2]</h3><span>Read featured article ↗</span></div>
+          </a>
+          <div className="communication-highlight-list">
+            {communicationHighlights.map((item) => <div key={item}><span>✓</span><p>{item}</p></div>)}
+          </div>
+        </section>
 
-        <div className="communications-grid">
-          {communications.map((item, index) => (
-            <article className="communication-output" key={item.title}>
-              <div className="communication-meta">
-                <span>{item.label}</span>
-                <b>0{index + 1}</b>
-              </div>
-              <div className="communication-mark" aria-hidden="true">
-                <span>BIFROST</span><i>×</i><strong>{index === 0 ? "PRODUCT" : index === 1 ? "PARTNER" : "MEDIA"}</strong>
-              </div>
-              <h3>{item.title}</h3>
-              <p>{item.text}</p>
-            </article>
-          ))}
-        </div>
-      </section>
+        <section className="marketing-case-section" id="influencer-marketing">
+          <MarketingHeading number="03" title="Influencer Marketing" text="Executed influencer campaigns from research and outreach through negotiation, contracting, payment, and content launch." />
+          <div className="influencer-case-panel">
+            <div className="influencer-case-copy">
+              <span>Summoner | MMORPG Game</span>
+              <h3>KOL Partnership / Campaign Execution</h3>
+              <ul>{influencerWork.map((item) => <li key={item}>{item}</li>)}</ul>
+            </div>
+            <div className="influencer-video-grid">
+              {influencerVideos.map((video) => <VideoCard {...video} key={video.href} />)}
+            </div>
+          </div>
+          <ol className="influencer-workflow">
+            {workflow.map((step, index) => <li key={step}><span>0{index + 1}</span><strong>{step}</strong></li>)}
+          </ol>
+        </section>
 
-      <section className="work-story-section marketing-section compact-marketing-section">
-        <div className="work-story-copy marketing-section-intro">
-          <h2>Product<br />Content</h2>
-          <p>
-            Created documentation, tutorials, and educational videos that made
-            technical products easier to understand and use.
-          </p>
-        </div>
+        <section className="marketing-case-section" id="education-content">
+          <MarketingHeading number="04" title="Education & How-to Content" text="Turned technical blockchain products and concepts into practical, easy-to-follow educational content." />
+          <div className="education-subsection">
+            <header><span>A</span><div><h3>Product Documentation — GitBook</h3><p>Bifrost Network · Korean / English documentation</p></div></header>
+            <div className="documentation-showcase">
+              <div className="documentation-image"><img src="/images/work/product-gitbook.jpg" alt="Bifrost Network GitBook documentation" /></div>
+              <div className="documentation-topic-grid">{documentationTopics.map((topic, index) => <div key={topic}><span>0{index + 1}</span><strong>{topic}</strong></div>)}</div>
+            </div>
+            <ul className="education-support-list"><li>Korean / English documentation</li><li>Step-by-step product guides</li><li>Visual GIF tutorials</li><li>Network, staking, bridge, and wallet functionality</li></ul>
+          </div>
 
-        <div className="marketing-content-grid">
-          {productContent.map((item, index) => (
-            <article className="marketing-content-item" key={item.title}>
-              <div className={`marketing-content-visual ${item.className}`}>
-                <span>0{index + 1}</span>
-                <strong>{item.label}</strong>
-              </div>
-              <h3>{item.title}</h3>
-              <p>{item.text}</p>
-              <ul>
-                {item.tags.map((tag) => <li key={tag}>{tag}</li>)}
-              </ul>
-            </article>
-          ))}
-        </div>
-      </section>
+          <div className="education-subsection">
+            <header><span>B</span><div><h3>Video Tutorials — YouTube</h3><p>Bifrost Network / Biport Wallet</p></div></header>
+            <div className="tutorial-video-layout">
+              <div className="tutorial-video-grid">{tutorialVideos.map((video) => <VideoCard {...video} key={video.href} />)}</div>
+              <div className="video-production-block"><strong>Full Production</strong><p>Script Writing</p><p>Filming</p><p>Editing</p><p>Publishing</p></div>
+            </div>
+          </div>
 
-      <section className="marketing-channels" aria-label="Marketing channels">
-        <div>
-          <span>Tools &amp; Channels</span>
-          <strong>Used across campaigns, content, and community communication.</strong>
-        </div>
-        <ul>
-          {channels.map((channel, index) => (
-            <li key={channel}><span>0{index + 1}</span><strong>{channel}</strong></li>
-          ))}
-        </ul>
-      </section>
+          <div className="education-subsection gopax-education">
+            <header><span>C</span><div><h3>Blockchain Education &amp; Awareness — GOPAX</h3><p>Accessible educational and marketing materials for general audiences.</p></div></header>
+            <div className="gopax-education-grid">
+              <div className="gopax-placeholder"><span>Educational e-book</span></div>
+              <div className="gopax-asset"><img src="/images/work/event-btl-marketing.jpg" alt="GOPAX metro advertising" /><span>Metro Advertising</span></div>
+              <div className="gopax-placeholder"><span>Infographics</span></div>
+              <div className="gopax-placeholder"><span>Seasonal / Community Content</span></div>
+            </div>
+            <p>Translated technical blockchain and digital asset concepts into accessible educational and marketing materials for general audiences.</p>
+          </div>
+        </section>
+      </main>
     </div>
   );
 }
