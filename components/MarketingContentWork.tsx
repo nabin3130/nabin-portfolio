@@ -24,7 +24,14 @@ const influencerVideos = [
   { title: "Summoner Influencer Content 02", href: "https://youtu.be/He4pYOQlqMc?si=M12ZbezbpS2hBv6x", image: "/images/work/marketing-summoner-2.jpg" },
 ];
 
-const workflow = ["Research", "Outreach", "Negotiation", "Contract & Payment", "Content Launch"];
+const contentManagementTypes = [
+  "Product launch announcements",
+  "Partnership announcements",
+  "Product and network updates",
+  "Staking and product guides",
+  "Ecosystem communications",
+  "Publishing across Medium, X, Telegram, and Discord",
+];
 
 const documentationTopics = ["Add Network", "Stake / Unstake", "Bridge Deposit / Withdrawal", "Wallet Features", "Transfer Protection"];
 
@@ -55,7 +62,6 @@ function VideoCard({ title, href, image }: { title: string; href: string; image:
     <a className="marketing-video-card" href={href} target="_blank" rel="noreferrer">
       <div><img src={image} alt={`${title} video thumbnail`} /><span aria-hidden="true">▶</span></div>
       <h3>{title}</h3>
-      <p>Watch on YouTube ↗</p>
     </a>
   );
 }
@@ -97,11 +103,11 @@ export function MarketingContentWork() {
             </div>
             <div className="content-management-proof">
               <h3>Content Management</h3>
-              <div className="content-management-placeholder">
-                <strong>Notion content management</strong>
-                <p>Screenshot to be added</p>
-              </div>
-              <p>Structured announcements, product updates, guides, and ecosystem communications across multiple channels.</p>
+              <ul className="content-management-list">
+                {contentManagementTypes.map((item, index) => (
+                  <li key={item}><span>0{index + 1}</span><strong>{item}</strong></li>
+                ))}
+              </ul>
             </div>
           </div>
         </section>
@@ -131,9 +137,6 @@ export function MarketingContentWork() {
               {influencerVideos.map((video) => <VideoCard {...video} key={video.href} />)}
             </div>
           </div>
-          <ol className="influencer-workflow">
-            {workflow.map((step, index) => <li key={step}><span>0{index + 1}</span><strong>{step}</strong></li>)}
-          </ol>
         </section>
 
         <section className="marketing-case-section" id="education-content">
@@ -158,7 +161,7 @@ export function MarketingContentWork() {
           <div className="education-subsection gopax-education">
             <header><span>C</span><div><h3>Blockchain Education &amp; Awareness — GOPAX</h3><p>Accessible educational and marketing materials for general audiences.</p></div></header>
             <div className="gopax-education-grid">
-              <div className="gopax-placeholder"><span>Educational e-book</span></div>
+              <div className="gopax-asset gopax-education-asset"><img src="/images/work/marketing-gopax-education.png" alt="GOPAX Bitcoin Cash educational e-book" /><span>Educational e-book</span></div>
               <div className="gopax-asset"><img src="/images/work/event-btl-marketing.jpg" alt="GOPAX metro advertising" /><span>Metro Advertising</span></div>
               <div className="gopax-placeholder"><span>Infographics</span></div>
               <div className="gopax-placeholder"><span>Seasonal / Community Content</span></div>

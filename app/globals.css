@@ -4406,31 +4406,31 @@ img {
   font-size: 14px;
 }
 
-.content-management-placeholder {
-  min-height: 390px;
-  margin-top: 20px;
+.content-management-list {
+  margin: 20px 0 0;
+  padding: 0;
+  list-style: none;
+  border-top: 1px solid var(--border);
+}
+
+.content-management-list li {
+  min-height: 64px;
+  padding: 14px 0;
   display: grid;
-  place-content: center;
-  text-align: center;
-  border: 1px solid var(--border);
-  background: #f3f3f3;
+  grid-template-columns: 42px minmax(0, 1fr);
+  gap: 10px;
+  align-items: center;
+  border-bottom: 1px solid var(--border);
 }
 
-.content-management-placeholder strong {
-  font-size: 20px;
-}
-
-.work-page .content-management-placeholder p {
-  margin: 8px 0 0;
-  color: var(--muted);
+.content-management-list span {
+  color: var(--accent);
   font-size: 14px;
 }
 
-.work-page .content-management-proof > p {
-  margin: 18px 0 0;
-  color: var(--muted);
+.content-management-list strong {
   font-size: 16px;
-  line-height: 1.55;
+  line-height: 1.45;
 }
 
 .bilingual-pr-feature {
@@ -4593,48 +4593,6 @@ img {
   line-height: 1.35;
 }
 
-.work-page .marketing-video-card > p {
-  margin: 7px 0 0;
-  color: var(--muted);
-  font-size: 14px;
-}
-
-.influencer-workflow {
-  margin: 18px 0 0;
-  padding: 0;
-  display: grid;
-  grid-template-columns: repeat(5, minmax(0, 1fr));
-  list-style: none;
-  border: 1px solid #f1dddd;
-  border-radius: 7px;
-  background: #fff8f8;
-}
-
-.influencer-workflow li {
-  min-height: 90px;
-  padding: 18px;
-}
-
-.influencer-workflow li + li {
-  border-left: 1px solid #f1dddd;
-}
-
-.influencer-workflow span,
-.influencer-workflow strong {
-  display: block;
-}
-
-.influencer-workflow span {
-  color: var(--accent);
-  font-size: 13px;
-}
-
-.influencer-workflow strong {
-  margin-top: 10px;
-  font-size: 15px;
-  line-height: 1.3;
-}
-
 .education-subsection {
   padding: 28px;
   border: 1px solid var(--border);
@@ -4784,6 +4742,16 @@ img {
   object-fit: cover;
 }
 
+.gopax-education-asset {
+  grid-column: span 2;
+  aspect-ratio: 1214 / 738;
+  background: #ffffff;
+}
+
+.gopax-education-asset img {
+  object-fit: contain;
+}
+
 .gopax-asset span {
   position: absolute;
   right: 8px;
@@ -4900,21 +4868,16 @@ img {
     grid-template-columns: 1fr;
   }
 
-  .influencer-workflow {
-    grid-template-columns: 1fr;
-  }
-
-  .influencer-workflow li + li {
-    border-top: 1px solid #f1dddd;
-    border-left: 0;
-  }
-
   .education-subsection {
     padding: 20px;
   }
 
   .documentation-topic-grid {
     grid-template-columns: 1fr;
+  }
+
+  .gopax-education-asset {
+    grid-column: auto;
   }
 }
 
