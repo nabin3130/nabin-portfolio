@@ -4684,63 +4684,55 @@ img {
   font-size: 16px;
 }
 
-.gopax-education-grid {
-  margin-top: 24px;
+.content-campaign-grid {
+  margin-top: 54px;
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: 12px;
+  gap: 20px;
+  padding-bottom: 28px;
+  border-bottom: 1px solid var(--border);
 }
 
-.gopax-asset,
-.gopax-placeholder {
-  position: relative;
-  aspect-ratio: 4 / 3;
+.campaign-visual {
+  aspect-ratio: 3 / 4;
   overflow: hidden;
-  border: 1px solid var(--border);
-  background: #f2f2f2;
+  border-radius: 7px;
+  background: #f3f3f3;
 }
 
-.gopax-asset img {
+.campaign-visual img {
+  display: block;
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
 
-.gopax-education-asset {
-  grid-column: span 2;
-  aspect-ratio: 1214 / 738;
-  background: #ffffff;
+.campaign-education img {
+  object-position: left center;
 }
 
-.gopax-education-asset img {
-  object-fit: contain;
+.campaign-metro img {
+  object-position: left center;
 }
 
-.gopax-asset span {
-  position: absolute;
-  right: 8px;
-  bottom: 8px;
-  left: 8px;
-  padding: 7px;
-  background: rgba(0, 0, 0, 0.68);
-  color: #ffffff;
-  font-size: 13px;
-}
-
-.gopax-placeholder {
-  display: grid;
-  place-items: center;
-  padding: 16px;
-  color: var(--muted);
+.content-campaign-grid article > span {
+  margin-top: 18px;
+  display: block;
+  color: var(--accent);
   font-size: 14px;
-  text-align: center;
+  font-weight: 700;
 }
 
-.work-page .gopax-education > p {
-  margin: 20px 0 0;
+.content-campaign-grid h4 {
+  margin: 10px 0 0;
+  font-size: 20px;
+  line-height: 1.3;
+}
+
+.work-page .content-campaign-grid p {
+  margin: 8px 0 0;
   color: var(--muted);
   font-size: 16px;
-  line-height: 1.55;
 }
 
 @media (max-width: 1100px) {
@@ -4821,7 +4813,7 @@ img {
   .communication-highlight-list,
   .influencer-video-grid,
   .tutorial-video-grid,
-  .gopax-education-grid {
+  .content-campaign-grid {
     grid-template-columns: 1fr;
   }
 
@@ -4854,8 +4846,8 @@ img {
     margin-left: 0;
   }
 
-  .gopax-education-asset {
-    grid-column: auto;
+  .content-campaign-grid {
+    margin-top: 34px;
   }
 }
 

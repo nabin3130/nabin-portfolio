@@ -157,15 +157,14 @@ export function MarketingContentWork() {
             </div>
           </div>
 
-          <div className="education-subsection gopax-education">
-            <header><span>C</span><div><h3>Blockchain Education &amp; Awareness — GOPAX</h3><p>Accessible educational and marketing materials for general audiences.</p></div></header>
-            <div className="gopax-education-grid">
-              <div className="gopax-asset gopax-education-asset"><img src="/images/work/marketing-gopax-education.png" alt="GOPAX Bitcoin Cash educational e-book" /><span>Educational e-book</span></div>
-              <div className="gopax-asset"><img src="/images/work/event-btl-marketing.jpg" alt="GOPAX metro advertising" /><span>Metro Advertising</span></div>
-              <div className="gopax-placeholder"><span>Infographics</span></div>
-              <div className="gopax-placeholder"><span>Seasonal / Community Content</span></div>
+          <div className="education-subsection content-campaigns">
+            <header><span>C</span><div><h3>Content Campaigns</h3><p>Selected marketing and educational content created for different audiences and channels.</p></div></header>
+            <div className="content-campaign-grid">
+              <article><div className="campaign-visual campaign-education"><img src="/images/work/marketing-gopax-education.png" alt="GOPAX Bitcoin Cash educational content" /></div><span>01</span><h4>Educational Content</h4><p>GOPAX</p></article>
+              <article><div className="campaign-visual campaign-metro"><img src="/images/work/event-btl-marketing.jpg" alt="GOPAX metro campaign" /></div><span>02</span><h4>Metro Campaign</h4><p>GOPAX</p></article>
+              <article><div className="campaign-visual"><img src="/images/work/marketing-nft-campaign-01.png" alt="NFT marketplace community campaign artwork" /></div><span>03</span><h4>Community Campaign</h4><p>NFT Marketplace</p></article>
+              <article><div className="campaign-visual"><img src="/images/work/marketing-nft-campaign-02.png" alt="NFT marketplace raffle community campaign artwork" /></div><span>04</span><h4>Community Campaign</h4><p>NFT Marketplace</p></article>
             </div>
-            <p>Translated technical blockchain and digital asset concepts into accessible educational and marketing materials for general audiences.</p>
           </div>
         </section>
       </main>
