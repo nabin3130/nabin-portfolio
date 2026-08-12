@@ -654,7 +654,7 @@ img {
 .work-introduction > div {
   width: min(calc(100% - 48px), var(--max-width));
   margin: 0 auto;
-  padding: 34px 0 30px;
+  padding: 26px 0 24px;
   border-bottom: 1px solid #d8d0c5;
 }
 
@@ -669,7 +669,7 @@ img {
   display: flex;
   flex-wrap: wrap;
   gap: 14px 26px;
-  margin-top: 26px;
+  margin-top: 18px;
 }
 
 .work-introduction-links a {
@@ -3565,7 +3565,7 @@ img {
 
 .ecosystem-reference-layout .ecosystem-reference-hero {
   min-height: 360px;
-  padding: 58px 0 62px;
+  padding: 38px 0 48px;
   grid-template-columns: minmax(0, 1.15fr) minmax(380px, 0.85fr);
   gap: clamp(52px, 7vw, 110px);
   align-items: center;
@@ -3730,8 +3730,8 @@ img {
 
 .ecosystem-reference-layout .ecosystem-section-intro > p:not(.work-section-number) {
   margin-top: 22px;
-  font-size: 12px;
-  line-height: 1.55;
+  font-size: 16px;
+  line-height: 1.6;
 }
 
 .ecosystem-inline-process,
@@ -3752,15 +3752,15 @@ img {
   padding: 10px 0;
   display: flex;
   gap: 9px;
-  border-top: 1px solid var(--border);
-  font-size: 9px;
-  line-height: 1.35;
+  border-top: 0;
+  font-size: 14px;
+  line-height: 1.5;
 }
 
 .ecosystem-inline-process li span,
 .ecosystem-product-process li span {
   color: var(--accent);
-  font-size: 8px;
+  font-size: 13px;
 }
 
 .ecosystem-partnership-board {
@@ -3770,7 +3770,7 @@ img {
   flex-direction: column;
   justify-content: space-between;
   border-radius: 10px;
-  background: #0e0d13;
+  background: #151419;
   color: var(--card);
 }
 
@@ -3827,7 +3827,7 @@ img {
 
 .ecosystem-reference-layout .ecosystem-partnership-board {
   min-height: auto;
-  padding-top: 30px;
+  padding: 26px;
   justify-content: flex-start;
 }
 
@@ -3939,7 +3939,7 @@ img {
 
 .partnership-material-copy h3 {
   margin: 5px 0 0;
-  font-size: 15px;
+  font-size: 16px;
   line-height: 1.05;
   letter-spacing: -0.025em;
 }
@@ -3951,8 +3951,8 @@ img {
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 2;
   color: #aaa7b0;
-  font-size: 10px;
-  line-height: 1.45;
+  font-size: 12px;
+  line-height: 1.5;
 }
 
 .material-lightbox {
@@ -4285,13 +4285,15 @@ img {
 
 .ecosystem-product-card h3 {
   margin: 13px 0 0;
-  font-size: 15px;
+  font-size: 20px;
+  line-height: 1.25;
 }
 
 .ecosystem-product-card > p {
   margin: 7px 0 0;
   color: var(--muted);
-  font-size: 9px;
+  font-size: 16px;
+  line-height: 1.55;
 }
 
 /* Marketing & Content case study */
@@ -4300,7 +4302,7 @@ img {
   display: grid;
   grid-template-columns: 280px minmax(0, 1fr);
   gap: 42px;
-  padding: 40px 0 92px;
+  padding: 30px 0 92px;
 }
 
 .marketing-case-sidebar {
@@ -4325,7 +4327,7 @@ img {
 
 .marketing-case-sidebar nav {
   margin-top: 22px;
-  border-top: 1px solid var(--border);
+  border-top: 0;
 }
 
 .marketing-case-sidebar nav a {
@@ -4333,7 +4335,7 @@ img {
   display: flex;
   align-items: center;
   gap: 14px;
-  border-bottom: 1px solid var(--border);
+  border-bottom: 0;
   font-size: 15px;
   line-height: 1.25;
 }
@@ -4437,8 +4439,8 @@ img {
 .published-content-grid {
   margin-top: 20px;
   display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: 14px;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 22px;
 }
 
 .published-content-grid > article,
@@ -4456,7 +4458,7 @@ img {
 
 .published-content-grid > article > div,
 .published-content-grid > a > div {
-  height: 360px;
+  height: 560px;
   overflow: hidden;
   border: 1px solid var(--border);
   border-radius: 6px;
@@ -4520,7 +4522,7 @@ img {
 .bilingual-pr-feature h3 {
   max-width: 720px;
   margin: 18px 0 0;
-  font-size: 30px;
+  font-size: 27px;
   line-height: 1.35;
   letter-spacing: -0.035em;
 }
@@ -4554,8 +4556,8 @@ img {
 
 .work-page .communication-highlight-list p {
   margin: 0;
-  font-size: 14px;
-  line-height: 1.45;
+  font-size: 15px;
+  line-height: 1.5;
 }
 
 .influencer-case-panel {
@@ -4565,6 +4567,7 @@ img {
   padding: 28px;
   border: 1px solid var(--border);
   border-radius: 7px;
+  align-items: start;
 }
 
 .influencer-case-copy > span {
@@ -4945,7 +4948,7 @@ img {
   }
 
   .published-content-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-columns: 1fr;
   }
 
   .published-content-grid > article > div,
@@ -4984,7 +4987,7 @@ img {
   display: grid;
   grid-template-columns: 250px minmax(0, 1fr);
   gap: 52px;
-  padding: 54px 0 88px;
+  padding: 34px 0 88px;
 }
 
 .events-case-sidebar {
@@ -5009,7 +5012,7 @@ img {
 
 .events-case-sidebar nav {
   margin-top: 34px;
-  border-top: 1px solid var(--border);
+  border-top: 0;
 }
 
 .events-case-sidebar nav a {
@@ -5017,7 +5020,7 @@ img {
   display: flex;
   align-items: center;
   gap: 15px;
-  border-bottom: 1px solid var(--border);
+  border-bottom: 0;
   font-size: 15px;
 }
 
@@ -5115,6 +5118,8 @@ img {
   border: 1px solid var(--border);
   border-radius: 7px;
   background: #ffffff;
+  display: flex;
+  flex-direction: column;
 }
 
 .selected-event-media {
@@ -5135,6 +5140,7 @@ img {
 
 .selected-event-copy {
   padding: 20px;
+  flex: 1;
 }
 
 .selected-event-copy h3 {
@@ -5183,7 +5189,7 @@ img {
 .more-events-panel {
   min-height: 280px;
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-columns: 1fr;
   overflow: hidden;
   border: 1px solid var(--border);
   border-radius: 7px;
@@ -5382,7 +5388,7 @@ img {
   display: grid;
   grid-template-columns: 280px minmax(0, 1fr);
   gap: 46px;
-  padding: 54px 0 82px;
+  padding: 34px 0 82px;
 }
 
 .media-case-sidebar {
@@ -5407,7 +5413,7 @@ img {
 
 .media-case-sidebar nav {
   margin-top: 38px;
-  border-top: 1px solid var(--border);
+  border-top: 0;
 }
 
 .media-case-sidebar nav a {
@@ -5415,7 +5421,7 @@ img {
   display: flex;
   align-items: center;
   gap: 16px;
-  border-bottom: 1px solid var(--border);
+  border-bottom: 0;
   font-size: 16px;
 }
 
@@ -5602,6 +5608,12 @@ img {
   transition: transform 0.3s ease;
 }
 
+.selected-interview-card:first-child .selected-interview-visual img {
+  width: 165%;
+  height: 165%;
+  object-position: center 47%;
+}
+
 .selected-interview-visual b {
   position: absolute;
   right: 14px;
@@ -5755,7 +5767,7 @@ img {
 .media-partnership-panel {
   min-height: 300px;
   display: grid;
-  grid-template-columns: 0.85fr 1.1fr 1.2fr;
+  grid-template-columns: 0.9fr 1.35fr 0.95fr;
   border: 1px solid var(--border);
   border-radius: 8px;
   overflow: hidden;
@@ -6410,7 +6422,7 @@ img {
   }
 
   .work-introduction > div {
-    padding: 30px 0 26px;
+    padding: 24px 0 22px;
   }
 
   .work-introduction h1 {
@@ -7151,5 +7163,188 @@ img {
   .material-lightbox-panel > header,
   .material-lightbox-panel > footer {
     padding: 0 14px;
+  }
+}
+
+/* Mobile containment for Work 01–03. Keep desktop and Media unchanged. */
+@media (max-width: 700px) {
+  .community-editorial-content {
+    width: calc(100% - 16px);
+    max-width: calc(100% - 16px);
+    margin-inline: 8px;
+  }
+
+  .community-area-grid {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .community-area {
+    min-width: 0;
+    padding: 22px 20px 26px;
+  }
+
+  .marketing-case-study,
+  .marketing-case-sidebar,
+  .marketing-case-content,
+  .marketing-case-section,
+  .events-case-study,
+  .events-case-sidebar,
+  .events-case-content,
+  .events-case-section {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+  }
+
+  .marketing-case-study,
+  .events-case-study {
+    gap: 36px;
+    padding-top: 36px;
+  }
+
+  .marketing-case-sidebar h1,
+  .events-case-sidebar h1 {
+    max-width: 100%;
+    font-size: clamp(40px, 13vw, 48px);
+    line-height: 0.98;
+    overflow-wrap: anywhere;
+  }
+
+  .work-page .marketing-case-sidebar > p:not(.work-kicker),
+  .work-page .events-case-sidebar > p:not(.work-kicker) {
+    max-width: 100%;
+    font-size: 16px;
+    line-height: 1.55;
+  }
+
+  .marketing-case-sidebar nav,
+  .events-case-sidebar nav {
+    width: 100%;
+    max-width: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    overflow: visible;
+  }
+
+  .marketing-case-sidebar nav a,
+  .events-case-sidebar nav a {
+    width: 100%;
+    min-width: 0;
+    min-height: 48px;
+    padding: 10px 0;
+    border-right: 0;
+    border-bottom: 1px solid var(--border);
+    white-space: normal;
+    overflow-wrap: anywhere;
+  }
+
+  .marketing-case-heading h2,
+  .events-case-heading h2 {
+    max-width: 100%;
+    align-items: flex-start;
+    font-size: clamp(27px, 8.5vw, 32px);
+    line-height: 1.08;
+    overflow-wrap: anywhere;
+  }
+
+  .work-page .marketing-case-heading > p,
+  .work-page .events-case-heading > p {
+    max-width: 100%;
+    font-size: 16px;
+    line-height: 1.55;
+  }
+
+  .marketing-channel-strip,
+  .content-publishing-layout,
+  .published-content-grid,
+  .bilingual-pr-feature,
+  .communication-highlight-list,
+  .influencer-case-panel,
+  .influencer-video-grid,
+  .education-subsection,
+  .documentation-layout,
+  .documentation-overview,
+  .selected-guides,
+  .selected-guide-list,
+  .tutorial-video-layout,
+  .tutorial-video-grid,
+  .content-campaign-grid,
+  .selected-event-grid,
+  .selected-event-card,
+  .more-events-panel {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+  }
+
+  .content-publishing-layout > div,
+  .influencer-case-panel,
+  .education-subsection,
+  .selected-event-copy,
+  .more-events-panel > div {
+    padding-left: 18px;
+    padding-right: 18px;
+  }
+
+  .documentation-image,
+  .work-page .documentation-description {
+    margin-left: 0;
+  }
+
+  .selected-guides {
+    padding-top: 24px;
+    padding-left: 0;
+    border-top: 1px solid var(--border);
+    border-left: 0;
+  }
+
+  .selected-guide-list a {
+    width: 100%;
+    min-width: 0;
+    padding: 14px 16px;
+    grid-template-columns: 38px minmax(0, 1fr);
+  }
+
+  .published-content-grid > article > div,
+  .published-content-grid > a > div {
+    height: min(112vw, 390px);
+  }
+
+  .event-operation-grid {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    display: flex;
+    gap: 12px;
+    overflow-x: auto;
+    overscroll-behavior-inline: contain;
+    scrollbar-width: none;
+  }
+
+  .event-operation-grid::-webkit-scrollbar {
+    display: none;
+  }
+
+  .event-operation-grid article {
+    width: min(76vw, 270px);
+    min-width: min(76vw, 270px);
+    max-width: min(76vw, 270px);
+    min-height: 0;
+    flex: 0 0 auto;
+    padding: 18px;
+  }
+
+  .selected-event-media,
+  .selected-event-media img,
+  .selected-event-media video {
+    max-width: 100%;
+  }
+
+  .selected-event-copy h3,
+  .work-page .selected-event-copy p,
+  .more-events-panel li,
+  .more-events-panel span {
+    overflow-wrap: anywhere;
   }
 }

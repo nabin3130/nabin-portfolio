@@ -57,7 +57,7 @@ export function MediaWork() {
         </p>
         <nav aria-label="Media case study sections">
           <a href="#media-interviews"><span>01</span>Interviews</a>
-          <a href="#media-partnership"><span>03</span>Media Partnership</a>
+          <a href="#media-partnership"><span>02</span>Media Partnership</a>
         </nav>
       </aside>
 
@@ -126,7 +126,7 @@ export function MediaWork() {
         <section className="media-case-section" id="media-partnership">
           <header className="media-case-section-heading">
             <div>
-              <h2><span>03</span> Media Partnership</h2>
+              <h2><span>02</span> Media Partnership</h2>
               <p>Official media partner for a global crypto conference.</p>
             </div>
           </header>

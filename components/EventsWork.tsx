@@ -156,14 +156,6 @@ export function EventsWork() {
                 <li><strong>ETHCC [8]</strong><ul><li>Event preparation</li><li>On-site support</li><li>Guest assistance</li></ul></li>
               </ul>
             </div>
-            <div className="more-events-list">
-              <h3>Earlier Experience</h3>
-              <ul>
-                <li><strong>Fintech Conference</strong><ul><li>Booth operations</li><li>User onboarding</li><li>Vendor coordination</li></ul></li>
-                <li><strong>BTL Marketing</strong><ul><li>Offline campaigns</li><li>Subway advertising</li><li>Station branding</li></ul></li>
-                <li><strong>Stellar Meetup</strong><ul><li>Event hosting</li><li>Catering and onboarding</li><li>Social media promotion</li></ul></li>
-              </ul>
-            </div>
           </div>
         </section>
       </main>
