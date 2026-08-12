@@ -5,12 +5,11 @@ import { EcosystemWork } from "@/components/EcosystemWork";
 import { MarketingContentWork } from "@/components/MarketingContentWork";
 import { EventsWork } from "@/components/EventsWork";
 import { MediaWork } from "@/components/MediaWork";
-import { IndependentWork } from "@/components/IndependentWork";
 
 export function WorkContent() {
   const searchParams = useSearchParams();
   const requestedWork = searchParams.get("work");
-  const activeWork = requestedWork === "marketing" || requestedWork === "events" || requestedWork === "media" || requestedWork === "independent"
+  const activeWork = requestedWork === "marketing" || requestedWork === "events" || requestedWork === "media"
     ? requestedWork
     : "ecosystem";
 
@@ -24,10 +23,6 @@ export function WorkContent() {
 
   if (activeWork === "media") {
     return <MediaWork />;
-  }
-
-  if (activeWork === "independent") {
-    return <IndependentWork />;
   }
 
   return <EcosystemWork />;

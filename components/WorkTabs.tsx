@@ -7,7 +7,6 @@ const tabs = [
   { key: "marketing", number: "02", label: "Marketing & Content", enabled: true },
   { key: "events", number: "03", label: "Events", enabled: true },
   { key: "media", number: "04", label: "Media", enabled: true },
-  { key: "independent", number: "05", label: "Independent", enabled: true },
 ] as const;
 
 export function WorkTabs() {
@@ -15,7 +14,7 @@ export function WorkTabs() {
   const pathname = usePathname();
   const searchParams = useSearchParams();
   const requestedWork = searchParams.get("work");
-  const activeWork = requestedWork === "marketing" || requestedWork === "events" || requestedWork === "media" || requestedWork === "independent"
+  const activeWork = requestedWork === "marketing" || requestedWork === "events" || requestedWork === "media"
     ? requestedWork
     : "ecosystem";
 
