@@ -7383,3 +7383,122 @@ img {
     overflow-wrap: anywhere;
   }
 }
+
+/* Shared Work spacing and type scale */
+.ecosystem-reference-layout .ecosystem-reference-hero h1,
+.marketing-case-sidebar h1,
+.events-case-sidebar h1,
+.media-case-sidebar h1 {
+  font-size: 48px;
+  line-height: 0.98;
+  letter-spacing: -0.05em;
+}
+
+.work-page .ecosystem-reference-layout .work-intro,
+.work-page .marketing-case-sidebar > p:not(.work-kicker),
+.work-page .events-case-sidebar > p:not(.work-kicker),
+.work-page .media-case-sidebar > p:not(.work-kicker) {
+  font-size: 18px;
+  line-height: 1.55;
+}
+
+.work-page .ecosystem-section-intro h2,
+.marketing-case-heading h2,
+.events-case-heading h2,
+.media-case-section-heading h2 {
+  font-size: 34px;
+  line-height: 1.05;
+  letter-spacing: -0.045em;
+}
+
+.marketing-case-heading h2,
+.events-case-heading h2,
+.media-case-section-heading h2,
+.community-area-meta,
+.marketing-case-sidebar nav a,
+.events-case-sidebar nav a,
+.media-case-sidebar nav a {
+  gap: 14px;
+}
+
+.ecosystem-product-grid,
+.partnership-material-grid,
+.marketing-channel-strip,
+.influencer-video-grid,
+.tutorial-video-grid,
+.event-operation-grid,
+.selected-event-grid,
+.selected-interview-grid {
+  gap: 16px;
+}
+
+.ecosystem-partnership-board,
+.partnership-material-card,
+.community-area-grid,
+.community-marketing-cta,
+.ecosystem-docs-visual,
+.ecosystem-video-visual,
+.marketing-channel-strip,
+.content-publishing-layout,
+.bilingual-pr-feature,
+.communication-highlight-list,
+.influencer-case-panel,
+.marketing-video-card > div,
+.education-subsection,
+.documentation-image,
+.selected-guide-list a,
+.campaign-visual,
+.event-operation-grid article,
+.selected-event-card,
+.more-events-panel,
+.events-case-note,
+.rhc-summary,
+.selected-interview-visual,
+.media-partnership-panel {
+  border-radius: 8px;
+}
+
+.marketing-case-section,
+.events-case-section {
+  padding-bottom: 64px;
+}
+
+.media-case-section {
+  padding-bottom: 64px;
+}
+
+@media (max-width: 700px) {
+  .ecosystem-reference-layout .ecosystem-reference-hero h1,
+  .marketing-case-sidebar h1,
+  .events-case-sidebar h1,
+  .media-case-sidebar h1 {
+    font-size: 42px;
+    line-height: 1;
+  }
+
+  .work-page .ecosystem-reference-layout .work-intro,
+  .work-page .marketing-case-sidebar > p:not(.work-kicker),
+  .work-page .events-case-sidebar > p:not(.work-kicker),
+  .work-page .media-case-sidebar > p:not(.work-kicker) {
+    font-size: 16px;
+    line-height: 1.55;
+  }
+
+  .work-page .ecosystem-section-intro h2,
+  .marketing-case-heading h2,
+  .events-case-heading h2,
+  .media-case-section-heading h2 {
+    font-size: clamp(30px, 8.2vw, 32px);
+    line-height: 1.08;
+  }
+
+  .ecosystem-product-grid,
+  .partnership-material-grid,
+  .influencer-video-grid,
+  .tutorial-video-grid,
+  .event-operation-grid,
+  .selected-event-grid,
+  .selected-interview-grid {
+    gap: 12px;
+  }
+}
