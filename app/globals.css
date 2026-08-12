@@ -3277,92 +3277,18 @@ img {
   min-width: 0;
 }
 
-.tomato-product-visual {
-  position: relative;
+.tomato-product-video {
   height: 430px;
-  padding: 34px;
   overflow: hidden;
   border-radius: 14px;
-  background: #f2f2f2;
-}
-
-.tomato-desktop {
-  width: 68%;
-  height: 100%;
-  padding: 26px;
-  display: flex;
-  flex-direction: column;
-  border-radius: 10px;
   background: #0d1117;
-  color: var(--card);
 }
 
-.tomato-desktop > span {
-  color: var(--accent);
-  font-size: 10px;
-}
-
-.tomato-desktop > strong {
-  max-width: 350px;
-  margin-top: auto;
-  font-size: clamp(30px, 4vw, 54px);
-  line-height: 0.92;
-  letter-spacing: -0.05em;
-}
-
-.tomato-desktop > p {
-  margin: 16px 0 20px;
-  color: #9da4ad;
-  font-size: 10px;
-}
-
-.tomato-desktop > i {
-  width: 72%;
-  padding: 12px;
-  border-radius: 4px;
-  background: var(--card);
-  color: #8a8a8a;
-  font-size: 9px;
-  font-style: normal;
-}
-
-.tomato-phone {
-  position: absolute;
-  right: 12%;
-  bottom: 24px;
-  width: 138px;
-  height: 302px;
-  padding: 18px 12px;
-  border: 5px solid #161616;
-  border-radius: 24px;
-  background: var(--card);
-  box-shadow: 0 12px 22px rgba(0, 0, 0, 0.16);
-  transform: rotate(4deg);
-}
-
-.tomato-phone.phone-two {
-  right: 1%;
-  height: 280px;
-  transform: rotate(10deg);
-}
-
-.tomato-phone span,
-.tomato-phone b {
+.tomato-product-video video {
   display: block;
-  font-size: 8px;
-}
-
-.tomato-phone b {
-  margin-top: 20px;
-  font-size: 11px;
-}
-
-.tomato-phone i {
-  display: block;
-  height: 72px;
-  margin-top: 12px;
-  border-radius: 6px;
-  background: #111820;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .independent-process-grid {
@@ -6715,23 +6641,9 @@ img {
     padding: 58px 0;
   }
 
-  .tomato-product-visual,
+  .tomato-product-video,
   .logout-reference-image {
     height: 350px;
-  }
-
-  .tomato-desktop {
-    width: 78%;
-  }
-
-  .tomato-phone {
-    right: 4%;
-    width: 112px;
-    height: 248px;
-  }
-
-  .tomato-phone.phone-two {
-    display: none;
   }
 
   .independent-process-grid {

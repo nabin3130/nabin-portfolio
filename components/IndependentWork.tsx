@@ -113,15 +113,10 @@ export function IndependentWork() {
         </div>
 
         <div className="independent-project-presentation tomato-presentation">
-          <div className="tomato-product-visual">
-            <div className="tomato-desktop">
-              <span>● Tomato</span>
-              <strong>Discover Crypto Events Worldwide</strong>
-              <p>Find conferences, meetups, and Web3 events.</p>
-              <i>Search events or locations</i>
-            </div>
-            <div className="tomato-phone phone-one"><span>Tomato</span><b>Upcoming Events</b><i /><i /></div>
-            <div className="tomato-phone phone-two"><span>Event</span><b>Conference Detail</b><i /><i /></div>
+          <div className="tomato-product-video">
+            <video autoPlay muted loop playsInline preload="metadata" aria-label="Tomato crypto event discovery product demo">
+              <source src="/videos/tomato-demo.mp4" type="video/mp4" />
+            </video>
           </div>
           <div className="independent-process-grid">
             {tomatoProcess.map((step) => (
