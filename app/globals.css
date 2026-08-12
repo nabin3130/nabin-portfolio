@@ -4493,7 +4493,7 @@ img {
 
 .published-content-grid > article > div,
 .published-content-grid > a > div {
-  height: 560px;
+  height: 280px;
   overflow: hidden;
   border: 1px solid var(--border);
   border-radius: 6px;
@@ -4836,17 +4836,42 @@ img {
 
 .video-production-block {
   padding: 22px;
-  border: 1px solid #ded7f5;
-  background: #f8f6ff;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: var(--card);
 }
 
 .video-production-block strong {
-  font-size: 18px;
+  font-size: 20px;
 }
 
-.work-page .video-production-block p {
-  margin: 15px 0 0;
+.video-production-block ul {
+  margin: 18px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.video-production-block li {
+  position: relative;
+  padding-left: 18px;
+  color: var(--body-text);
   font-size: 16px;
+  line-height: 1.5;
+}
+
+.video-production-block li + li {
+  margin-top: 12px;
+}
+
+.video-production-block li::before {
+  content: "";
+  position: absolute;
+  top: 0.65em;
+  left: 0;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: var(--accent);
 }
 
 .content-campaign-grid {
@@ -4988,7 +5013,7 @@ img {
 
   .published-content-grid > article > div,
   .published-content-grid > a > div {
-    height: 390px;
+    height: 220px;
   }
 
   .education-subsection {
@@ -7343,7 +7368,7 @@ img {
 
   .published-content-grid > article > div,
   .published-content-grid > a > div {
-    height: min(112vw, 390px);
+    height: min(64vw, 220px);
   }
 
   .event-operation-grid {
