@@ -1,5 +1,4 @@
 const contacts = [
-  { label: "kimnabin01@gmail.com", type: "email", href: "mailto:kimnabin01@gmail.com" },
   { label: "@tlsrns10", type: "telegram", href: "https://t.me/tlsrns10" },
   { label: "LinkedIn", type: "linkedin", href: "https://www.linkedin.com/in/nabinkim" },
 ];
@@ -14,10 +13,11 @@ export function ContactFooter() {
               href={contact.href}
               target={contact.type === "email" ? undefined : "_blank"}
               rel={contact.type === "email" ? undefined : "noreferrer"}
+              aria-label={contact.type === "telegram" ? "Nabin Kim on Telegram" : "Nabin Kim on LinkedIn"}
+              title={contact.type === "telegram" ? "Telegram" : "LinkedIn"}
               key={contact.label}
             >
               <ContactIcon type={contact.type} />
-              <span>{contact.label}</span>
             </a>
           ))}
         </div>
@@ -28,10 +28,6 @@ export function ContactFooter() {
 }
 
 function ContactIcon({ type }: { type: string }) {
-  if (type === "email") {
-    return <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 5.5h18v13H3zM4 7l8 6 8-6" /></svg>;
-  }
-
   if (type === "telegram") {
     return <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m3 11 17-7-4 16-5-6-4 3 1-5 8-5-10 4z" /></svg>;
   }

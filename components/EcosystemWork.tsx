@@ -120,13 +120,12 @@ export function EcosystemWork() {
             Connecting a Web3 infrastructure product with users, partners, and
             communities through education, content, enablement, and ecosystem communication.
           </p>
-          <div className="ecosystem-reference-metrics" aria-label="Selected ecosystem outcomes">
-            {ecosystemMetrics.map((metric) => (
-              <div key={metric.label}><strong>{metric.value}</strong><span>{metric.label}</span></div>
-            ))}
-          </div>
         </div>
-
+        <div className="ecosystem-reference-metrics" aria-label="Selected ecosystem outcomes">
+          {ecosystemMetrics.map((metric) => (
+            <div key={metric.label}><strong>{metric.value}</strong><span>{metric.label}</span></div>
+          ))}
+        </div>
       </section>
 
       <section className="work-story-section compact-ecosystem-section partnership-ecosystem-section">

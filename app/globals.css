@@ -3511,9 +3511,11 @@ img {
 /* Ecosystem reference-aligned layout */
 
 .ecosystem-reference-layout .ecosystem-reference-hero {
-  min-height: 430px;
-  padding: 62px 0 68px;
-  grid-template-columns: 1fr;
+  min-height: 360px;
+  padding: 58px 0 62px;
+  grid-template-columns: minmax(0, 1.15fr) minmax(380px, 0.85fr);
+  gap: clamp(52px, 7vw, 110px);
+  align-items: center;
 }
 
 .ecosystem-reference-layout .work-hero h1 {
@@ -3531,21 +3533,20 @@ img {
 }
 
 .ecosystem-reference-metrics {
-  width: min(760px, 100%);
-  margin-top: 46px;
+  width: 100%;
+  margin-top: 22px;
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: 1fr;
 }
 
 .ecosystem-reference-metrics > div {
-  min-height: 78px;
-  padding: 0 22px;
-  border-left: 1px solid var(--border);
+  min-height: 82px;
+  padding: 18px 0;
+  border-top: 1px solid var(--border);
 }
 
 .ecosystem-reference-metrics > div:first-child {
-  padding-left: 0;
-  border-left: 0;
+  border-top: 0;
 }
 
 .ecosystem-reference-metrics strong,
@@ -3560,10 +3561,10 @@ img {
 }
 
 .ecosystem-reference-metrics span {
-  max-width: 140px;
+  max-width: none;
   margin-top: 8px;
   color: var(--muted);
-  font-size: 9px;
+  font-size: 14px;
   line-height: 1.35;
 }
 
@@ -5834,12 +5835,14 @@ img {
 
 .contact-links a {
   display: inline-flex;
+  width: 42px;
+  height: 42px;
   align-items: center;
+  justify-content: center;
   gap: 8px;
-  padding-bottom: 4px;
-  font-size: 16px;
-  border-bottom: 1px solid var(--text);
-  transition: color 0.2s ease, border-color 0.2s ease;
+  border: 1px solid var(--border);
+  border-radius: 50%;
+  transition: color 0.2s ease, border-color 0.2s ease, background-color 0.2s ease;
 }
 
 .contact-links svg {
@@ -5855,6 +5858,7 @@ img {
 .contact-links a:hover {
   color: var(--accent);
   border-color: var(--accent);
+  background: var(--card);
 }
 
 .contact-footer p {
@@ -6168,6 +6172,23 @@ img {
 
   .ecosystem-reference-layout .ecosystem-reference-hero {
     grid-template-columns: 1fr;
+  }
+
+  .ecosystem-reference-metrics {
+    margin-top: 10px;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .ecosystem-reference-metrics > div {
+    min-height: 78px;
+    padding: 0 22px;
+    border-top: 0;
+    border-left: 1px solid var(--border);
+  }
+
+  .ecosystem-reference-metrics > div:first-child {
+    padding-left: 0;
+    border-left: 0;
   }
 
   .ecosystem-reference-map {
