@@ -5063,7 +5063,7 @@ img {
 
 .event-operation-grid {
   display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 14px;
 }
 
@@ -5151,6 +5151,18 @@ img {
   line-height: 1.55;
 }
 
+.selected-event-bullets {
+  margin: 13px 0 0;
+  padding-left: 18px;
+  color: #3f3f3f;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.selected-event-bullets li + li {
+  margin-top: 3px;
+}
+
 .work-page .selected-event-copy .selected-event-meta {
   display: flex;
   align-items: center;
@@ -5194,6 +5206,18 @@ img {
 .more-events-panel ul {
   margin: 17px 0 0;
   padding-left: 18px;
+}
+
+.more-events-panel li > ul {
+  margin: 7px 0 0;
+  padding-left: 17px;
+  color: var(--muted);
+}
+
+.more-events-panel li > ul li {
+  margin-top: 2px;
+  font-size: 14px;
+  line-height: 1.4;
 }
 
 .more-events-panel li {
@@ -5315,8 +5339,31 @@ img {
     grid-template-columns: 1fr;
   }
 
+  .event-operation-grid {
+    grid-template-columns: repeat(3, minmax(220px, 1fr));
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    padding-bottom: 8px;
+  }
+
   .event-operation-grid article {
-    min-height: auto;
+    min-height: 220px;
+    padding: 18px 16px;
+    scroll-snap-align: start;
+  }
+
+  .event-operation-grid article > span {
+    width: 42px;
+    height: 42px;
+  }
+
+  .event-operation-grid h3 {
+    margin-top: 14px;
+    font-size: 18px;
+  }
+
+  .work-page .event-operation-grid p {
+    margin-top: 10px;
   }
 
   .more-events-panel > div + div {

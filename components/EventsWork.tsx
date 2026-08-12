@@ -2,22 +2,17 @@ const operations = [
   {
     number: "01",
     title: "Venue Sourcing & Logistics",
-    text: "Venue research, negotiation, transportation, catering, equipment, and vendor coordination.",
+    text: "Venue research, vendor negotiation, catering, equipment setup, vendor coordination",
   },
   {
     number: "02",
-    title: "Event Operations & On-site Management",
-    text: "Setup, registration, guest relations, check-in, and troubleshooting for seamless execution.",
+    title: "On-site Management",
+    text: "Event setup, registration, relationship management, guest check-in",
   },
   {
     number: "03",
-    title: "Community Activation & Guest Experience",
-    text: "Meetups, onboarding support, attendee engagement, and networking support.",
-  },
-  {
-    number: "04",
     title: "Content & Marketing",
-    text: "Coordinated photography and videography, and promoted events across social channels.",
+    text: "Content production, social media promotion, merchant sourcing",
   },
 ];
 
@@ -25,48 +20,48 @@ const selectedEvents = [
   {
     title: "Binance Blockchain Week 2024",
     city: "Dubai",
-    role: "Event Operations",
-    text: "Venue sourcing, vendor coordination, guest check-in, content capture, and wrap-up.",
+    role: "Operations",
+    text: "Venue sourcing, vendor coordination, attendee registration, guest check-in, content capture",
     media: "/images/work/event-binance-week-optimized.jpg",
     mediaType: "image",
   },
   {
     title: "TOKEN2049 Dubai 2025",
     city: "Dubai",
-    role: "Event Operations",
-    text: "Sourced and prepared venues, coordinated with vendors, and supported smooth guest experience.",
+    role: "On-site Operations",
+    text: "Venue sourcing, catering setup, vendor coordination, video editor sourcing, on-site operations",
     media: "/images/work/event-token2049-dubai.mp4",
     mediaType: "video",
   },
   {
     title: "DevCon 2024 · Pudgy Carnival",
     city: "Bangkok",
-    role: "Event Operations",
-    text: "Assisted with venue setup, event goods, attendee guidance, and on-site guest experience.",
+    role: "Event Support",
+    text: "Venue setup, event goods, attendee guidance, guest support",
     media: "/images/work/event-devcon-optimized.jpg",
     mediaType: "image",
   },
   {
-    title: "GOPAX · Stellar Meetup",
+    title: "Stellar Meetup",
     city: "Seoul",
     role: "Meetup Operations",
-    text: "Coordinated the event, supported new-user sign-ups, and promoted the meetup through social media.",
+    bullets: ["Event coordination", "New-user sign-ups", "Social media promotion"],
     media: "/images/work/event-stellar-meetup.jpg",
     mediaType: "image",
   },
   {
-    title: "GOPAX · Fintech Conference",
+    title: "Fintech Conference",
     city: "Seoul",
     role: "Conference Operations",
-    text: "Managed booth setup and operations, supported user onboarding, and coordinated with conference vendors.",
+    bullets: ["Booth setup and operations", "User onboarding", "Conference vendor coordination"],
     media: "/images/work/event-fintech-conference.jpg",
     mediaType: "image",
   },
   {
-    title: "GOPAX · BTL Marketing",
+    title: "BTL Marketing",
     city: "Seoul",
     role: "Offline Marketing",
-    text: "Planned and executed an offline campaign and coordinated on-site advertising operations.",
+    bullets: ["Offline campaign planning", "Campaign execution", "On-site advertising operations"],
     media: "/images/work/event-btl-marketing.jpg",
     mediaType: "image",
   },
@@ -92,7 +87,7 @@ export function EventsWork() {
           Asia, Europe, and the Middle East, from venue sourcing to on-site execution.
         </p>
         <nav aria-label="Events case study sections">
-          <a href="#event-operations"><span>01</span>Event Operations</a>
+          <a href="#event-operations"><span>01</span>What I Do</a>
           <a href="#selected-events"><span>02</span>Selected Events</a>
           <a href="#more-event-experience"><span>03</span>More Event Experience</a>
         </nav>
@@ -120,7 +115,7 @@ export function EventsWork() {
           <SectionHeading
             number="02"
             title="Selected Events"
-            text="Key conferences and meetups I organized and supported."
+            text="Organized and supported key conferences and meetups"
           />
           <div className="selected-event-grid">
             {selectedEvents.map((event) => (
@@ -135,7 +130,11 @@ export function EventsWork() {
                 <div className="selected-event-copy">
                   <h3>{event.title}</h3>
                   <p className="selected-event-meta"><span>⌖</span>{event.city}<b>·</b>{event.role}</p>
-                  <p>{event.text}</p>
+                  {event.bullets ? (
+                    <ul className="selected-event-bullets">
+                      {event.bullets.map((bullet) => <li key={bullet}>{bullet}</li>)}
+                    </ul>
+                  ) : <p>{event.text}</p>}
                 </div>
               </article>
             ))}
@@ -152,17 +151,17 @@ export function EventsWork() {
             <div className="more-events-list">
               <h3>Additional Events</h3>
               <ul>
-                <li><strong>TOKEN2049 Singapore 2025</strong><span>Venue sourcing, contact, pricing, and availability</span></li>
-                <li><strong>Korea Blockchain Week 2025</strong><span>Transportation, logistics, bus rental sourcing, and driver communication</span></li>
-                <li><strong>ETHCC [8]</strong><span>Event support</span></li>
+                <li><strong>TOKEN2049 Singapore 2025</strong><ul><li>Venue sourcing</li><li>Pricing</li><li>Availability</li></ul></li>
+                <li><strong>Korea Blockchain Week 2025</strong><ul><li>Transportation logistics</li><li>Bus rental sourcing</li><li>Driver communication</li></ul></li>
+                <li><strong>ETHCC [8]</strong><ul><li>Event preparation</li><li>On-site support</li><li>Guest assistance</li></ul></li>
               </ul>
             </div>
             <div className="more-events-list">
-              <h3>Earlier Experience — GOPAX</h3>
+              <h3>Earlier Experience</h3>
               <ul>
-                <li><strong>Fintech Conference</strong><span>Booth operations, user onboarding, vendor coordination</span></li>
-                <li><strong>BTL Marketing</strong><span>Offline campaigns including subway ads and station branding</span></li>
-                <li><strong>Stellar Meetup</strong><span>Event hosting, catering, user onboarding, and social media promotion</span></li>
+                <li><strong>Fintech Conference</strong><ul><li>Booth operations</li><li>User onboarding</li><li>Vendor coordination</li></ul></li>
+                <li><strong>BTL Marketing</strong><ul><li>Offline campaigns</li><li>Subway advertising</li><li>Station branding</li></ul></li>
+                <li><strong>Stellar Meetup</strong><ul><li>Event hosting</li><li>Catering and onboarding</li><li>Social media promotion</li></ul></li>
               </ul>
             </div>
           </div>
