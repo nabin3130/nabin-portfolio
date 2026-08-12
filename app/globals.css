@@ -507,7 +507,7 @@ img {
 }
 
 .beyond-page-heading {
-  max-width: 880px;
+  max-width: 1120px;
 }
 
 .beyond-page-heading > p {
@@ -524,11 +524,16 @@ img {
   letter-spacing: -0.055em;
 }
 
+.beyond-page-heading h1 span {
+  display: block;
+  white-space: nowrap;
+}
+
 .digital-legacy-project {
   margin-top: 80px;
   display: grid;
   grid-template-columns: minmax(280px, 0.72fr) minmax(0, 1.28fr);
-  min-height: 520px;
+  min-height: 620px;
   overflow: hidden;
   border: 1px solid var(--border);
   background: var(--card);
@@ -537,7 +542,6 @@ img {
 
 .digital-legacy-project:hover {
   border-color: #bdbdbd;
-  transform: translateY(-3px);
 }
 
 .digital-legacy-copy {
@@ -569,21 +573,70 @@ img {
   line-height: 1.55;
 }
 
+.digital-legacy-link {
+  width: fit-content;
+  margin-top: 34px;
+  padding-bottom: 4px;
+  border-bottom: 1px solid var(--text);
+  font-size: 16px;
+  font-weight: 700;
+  transition: color 0.2s ease, border-color 0.2s ease;
+}
+
+.digital-legacy-link:hover {
+  color: var(--accent);
+  border-color: var(--accent);
+}
+
 .digital-legacy-visual {
   min-width: 0;
   overflow: hidden;
-  background: #d9d2c7;
+  display: grid;
+  grid-template-rows: 42px minmax(0, 1fr);
+  background: #ece8e2;
 }
 
-.digital-legacy-visual img {
+.digital-legacy-browser-bar {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+  padding: 0 16px;
+  border-bottom: 1px solid var(--border);
+  background: #f7f4f0;
+}
+
+.digital-legacy-browser-bar > span {
+  display: flex;
+  gap: 6px;
+}
+
+.digital-legacy-browser-bar i {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #b8b1a8;
+}
+
+.digital-legacy-browser-bar a {
+  overflow: hidden;
+  color: var(--muted);
+  font-size: 13px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.digital-legacy-browser-bar a:hover {
+  color: var(--text);
+}
+
+.digital-legacy-visual iframe {
   width: 100%;
   height: 100%;
-  object-fit: cover;
-  transition: transform 0.3s ease;
-}
-
-.digital-legacy-project:hover .digital-legacy-visual img {
-  transform: scale(1.01);
+  border: 0;
+  background: #ffffff;
 }
 
 /* Work page */
@@ -6341,6 +6394,10 @@ img {
     font-size: 48px;
   }
 
+  .beyond-page-heading h1 span {
+    white-space: normal;
+  }
+
   .digital-legacy-project {
     margin-top: 52px;
     grid-template-columns: 1fr;
@@ -6357,7 +6414,7 @@ img {
   }
 
   .digital-legacy-visual {
-    min-height: 300px;
+    min-height: 520px;
   }
 
   .case-meta,
