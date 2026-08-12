@@ -1,4 +1,5 @@
 import { Header } from "@/components/Header";
+import { ContactFooter } from "@/components/ContactFooter";
 
 export default function BeyondWorkPage() {
   return (
@@ -34,12 +35,7 @@ export default function BeyondWorkPage() {
         </a>
       </section>
 
-      <footer className="home-footer">
-        <div className="home-shell">
-          <span>Nabin Kim</span>
-          <span>© 2026</span>
-        </div>
-      </footer>
+      <ContactFooter />
     </main>
   );
 }

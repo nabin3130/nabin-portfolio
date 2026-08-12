@@ -592,6 +592,35 @@ img {
   background: var(--card);
 }
 
+.work-introduction {
+  border-bottom: 1px solid var(--border);
+  background: var(--background);
+}
+
+.work-introduction > div {
+  width: min(calc(100% - 48px), var(--max-width));
+  margin: 0 auto;
+  padding: 44px 0 46px;
+  display: grid;
+  grid-template-columns: minmax(220px, 0.55fr) minmax(0, 1fr) minmax(0, 1fr);
+  gap: 42px;
+  align-items: start;
+}
+
+.work-introduction h1 {
+  margin: 0;
+  font-size: clamp(42px, 4.5vw, 60px);
+  line-height: 0.95;
+  letter-spacing: -0.055em;
+}
+
+.work-page .work-introduction p {
+  margin: 0;
+  color: #3f3f3f;
+  font-size: 17px;
+  line-height: 1.55;
+}
+
 .work-shell {
   width: min(calc(100% - 48px), var(--max-width));
   margin: 0 auto;
@@ -5761,6 +5790,57 @@ img {
 
 /* Footer */
 
+.contact-footer {
+  padding: 88px 0 46px;
+  border-top: 1px solid var(--border);
+  background: var(--background);
+}
+
+.contact-footer-inner {
+  width: min(calc(100% - 48px), var(--max-width));
+  margin: 0 auto;
+}
+
+.contact-footer h2 {
+  margin: 0;
+  font-size: clamp(38px, 4vw, 54px);
+  line-height: 1;
+  letter-spacing: -0.05em;
+}
+
+.contact-links {
+  margin-top: 34px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 18px 34px;
+}
+
+.contact-links a,
+.contact-links span {
+  padding-bottom: 4px;
+  font-size: 16px;
+}
+
+.contact-links a {
+  border-bottom: 1px solid var(--text);
+  transition: color 0.2s ease, border-color 0.2s ease;
+}
+
+.contact-links a:hover {
+  color: var(--accent);
+  border-color: var(--accent);
+}
+
+.contact-links span[aria-disabled="true"] {
+  color: var(--muted);
+}
+
+.contact-footer p {
+  margin: 72px 0 0;
+  color: var(--muted);
+  font-size: 14px;
+}
+
 .home-footer {
   padding: 30px 0 46px;
 }
@@ -6105,7 +6185,9 @@ img {
   .header-inner,
   .case,
   .work-shell,
-  .beyond-page-content {
+  .beyond-page-content,
+  .work-introduction > div,
+  .contact-footer-inner {
     width: min(calc(100% - 32px), var(--max-width));
   }
 
@@ -6182,6 +6264,32 @@ img {
   .home-footer .home-shell {
     flex-direction: column;
     align-items: flex-start;
+  }
+
+  .work-introduction > div {
+    padding: 36px 0 38px;
+    grid-template-columns: 1fr;
+    gap: 22px;
+  }
+
+  .work-introduction h1 {
+    font-size: 44px;
+  }
+
+  .work-page .work-introduction p {
+    font-size: 16px;
+  }
+
+  .contact-footer {
+    padding: 68px 0 38px;
+  }
+
+  .contact-links {
+    gap: 16px 26px;
+  }
+
+  .contact-footer p {
+    margin-top: 56px;
   }
 
   .beyond-page-content {
