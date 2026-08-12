@@ -3819,6 +3819,7 @@ img {
 .ecosystem-board-heading > strong {
   display: block;
   margin-top: 30px;
+  color: var(--card);
   font-size: clamp(28px, 2.65vw, 38px);
   line-height: 1;
   letter-spacing: -0.04em;
@@ -7228,20 +7229,44 @@ img {
 
 /* Mobile containment for Work 01–03. Keep desktop and Media unchanged. */
 @media (max-width: 700px) {
+  .ecosystem-work,
+  .ecosystem-reference-layout .compact-ecosystem-section,
+  .ecosystem-partnership-board,
+  .community-editorial-content,
+  .community-area-grid,
+  .ecosystem-product-grid {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    box-sizing: border-box;
+  }
+
+  .ecosystem-partnership-board {
+    overflow: hidden;
+  }
+
+  .partnership-material-grid {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+  }
+
   .community-editorial-content {
-    width: calc(100% - 16px);
-    max-width: calc(100% - 16px);
-    margin-inline: 8px;
+    margin-inline: 0;
   }
 
   .community-area-grid {
-    width: 100%;
-    max-width: 100%;
+    border: 1px solid var(--border);
   }
 
   .community-area {
     min-width: 0;
     padding: 22px 20px 26px;
+    border-right: 0;
+  }
+
+  .community-area:last-child {
+    border-bottom: 0;
   }
 
   .marketing-case-study,
