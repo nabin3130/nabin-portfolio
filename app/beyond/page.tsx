@@ -18,7 +18,7 @@ export default function BeyondWorkPage() {
         <article className="digital-legacy-project">
           <div className="digital-legacy-copy">
             <span>Personal Project</span>
-            <h2>Digital Legacy</h2>
+            <h2>Logout</h2>
             <p>
               A personal project exploring how we manage our digital accounts
               and data after death.
