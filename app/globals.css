@@ -2,6 +2,7 @@
   --background: #f5f5f5;
   --card: #ffffff;
   --text: #000000;
+  --body-text: #444444;
   --muted: #717171;
   --border: #e5e5e5;
   --accent: #ff0000;
@@ -17,6 +18,40 @@
 .work-page p {
   font-size: 16px;
   line-height: 1.55;
+}
+
+/* Shared Work color hierarchy */
+.work-page h1,
+.work-page h2,
+.work-page h3,
+.work-page h4,
+.work-page strong {
+  color: var(--text);
+}
+
+.work-page .work-intro,
+.work-page .ecosystem-section-intro > p:not(.work-section-number),
+.work-page .marketing-case-sidebar > p:not(.work-kicker),
+.work-page .events-case-sidebar > p:not(.work-kicker),
+.work-page .media-case-sidebar > p:not(.work-kicker),
+.work-page .marketing-case-heading > p,
+.work-page .events-case-heading > p,
+.work-page .media-case-section-heading p,
+.work-page .community-area-description,
+.work-page .event-operation-grid p,
+.work-page .selected-event-copy > p,
+.work-page .selected-event-bullets,
+.work-page .rhc-summary-brand p {
+  color: var(--body-text);
+}
+
+.work-page .work-kicker,
+.work-page .work-tab span,
+.work-page .community-area-meta > p,
+.work-page .selected-event-meta,
+.work-page .rhc-summary-metrics span,
+.work-page .rhc-socials > p {
+  color: var(--muted);
 }
 
 .work-page .work-intro,
@@ -794,7 +829,7 @@ img {
 .work-intro {
   max-width: 580px;
   margin: 36px 0 0;
-  color: #525252;
+  color: var(--body-text);
   font-size: 19px;
   line-height: 1.55;
 }
@@ -4189,7 +4224,7 @@ img {
 
 .community-area-meta > p {
   margin: 0;
-  color: #4f4f4f;
+  color: var(--muted);
   font-size: 14px;
   letter-spacing: 0.03em;
   text-transform: uppercase;
@@ -4207,7 +4242,7 @@ img {
 .work-page .community-area-description {
   max-width: 430px;
   margin: 16px 0 0;
-  color: #4f4f4f;
+  color: var(--body-text);
   font-size: 16px;
   line-height: 1.6;
 }
@@ -4320,7 +4355,7 @@ img {
 
 .work-page .marketing-case-sidebar > p:not(.work-kicker) {
   margin: 18px 0 0;
-  color: #444444;
+  color: var(--body-text);
   font-size: 16px;
   line-height: 1.5;
 }
@@ -5005,7 +5040,7 @@ img {
 
 .work-page .events-case-sidebar > p:not(.work-kicker) {
   margin: 26px 0 0;
-  color: #3f3f3f;
+  color: var(--body-text);
   font-size: 18px;
   line-height: 1.6;
 }
@@ -5101,7 +5136,7 @@ img {
 
 .work-page .event-operation-grid p {
   margin: 13px 0 0;
-  color: #454545;
+  color: var(--body-text);
   font-size: 16px;
   line-height: 1.55;
 }
@@ -5152,7 +5187,7 @@ img {
 
 .work-page .selected-event-copy p {
   margin: 13px 0 0;
-  color: #3f3f3f;
+  color: var(--body-text);
   font-size: 16px;
   line-height: 1.55;
 }
@@ -5160,7 +5195,7 @@ img {
 .selected-event-bullets {
   margin: 13px 0 0;
   padding-left: 18px;
-  color: #3f3f3f;
+  color: var(--body-text);
   font-size: 16px;
   line-height: 1.5;
 }
@@ -5173,7 +5208,7 @@ img {
   display: flex;
   align-items: center;
   gap: 9px;
-  color: #555555;
+  color: var(--muted);
   font-size: 14px;
 }
 
@@ -5406,7 +5441,7 @@ img {
 
 .work-page .media-case-sidebar > p:not(.work-kicker) {
   margin: 28px 0 0;
-  color: var(--muted);
+  color: var(--body-text);
   font-size: 18px;
   line-height: 1.6;
 }
@@ -5471,7 +5506,7 @@ img {
 .work-page .rhc-summary-brand p {
   max-width: 510px;
   margin: 12px 0 0;
-  color: var(--muted);
+  color: var(--body-text);
   font-size: 16px;
   line-height: 1.55;
 }
