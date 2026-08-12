@@ -1,7 +1,7 @@
 const contacts = [
-  { label: "Email", href: "" },
-  { label: "LinkedIn", href: "" },
-  { label: "Telegram", href: "" },
+  { label: "Email", href: "mailto:kimnabin01@gmail.com" },
+  { label: "LinkedIn", href: "https://www.linkedin.com/in/nabinkim" },
+  { label: "Telegram", href: "https://t.me/tlsrns10" },
 ];
 
 export function ContactFooter() {

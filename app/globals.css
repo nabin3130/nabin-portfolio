@@ -594,31 +594,56 @@ img {
 
 .work-introduction {
   border-bottom: 1px solid var(--border);
-  background: var(--background);
+  background: #191919;
+  color: #ffffff;
 }
 
 .work-introduction > div {
   width: min(calc(100% - 48px), var(--max-width));
   margin: 0 auto;
-  padding: 44px 0 46px;
-  display: grid;
-  grid-template-columns: minmax(220px, 0.55fr) minmax(0, 1fr) minmax(0, 1fr);
-  gap: 42px;
-  align-items: start;
+  padding: 34px 0 30px;
+  border-bottom: 1px solid #3d3d3d;
 }
 
 .work-introduction h1 {
   margin: 0;
-  font-size: clamp(42px, 4.5vw, 60px);
-  line-height: 0.95;
-  letter-spacing: -0.055em;
+  font-size: 30px;
+  line-height: 1.1;
+  letter-spacing: -0.035em;
 }
 
-.work-page .work-introduction p {
-  margin: 0;
-  color: #3f3f3f;
+.work-introduction-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px 26px;
+  margin-top: 26px;
+}
+
+.work-introduction-links a {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: #bdbdbd;
   font-size: 17px;
-  line-height: 1.55;
+  line-height: 1.3;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  transition: color 0.2s ease;
+}
+
+.work-introduction-links a:hover {
+  color: #ffffff;
+}
+
+.work-introduction-links svg {
+  width: 18px;
+  height: 18px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.7;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  flex: 0 0 auto;
 }
 
 .work-shell {
@@ -6267,16 +6292,14 @@ img {
   }
 
   .work-introduction > div {
-    padding: 36px 0 38px;
-    grid-template-columns: 1fr;
-    gap: 22px;
+    padding: 30px 0 26px;
   }
 
   .work-introduction h1 {
-    font-size: 44px;
+    font-size: 28px;
   }
 
-  .work-page .work-introduction p {
+  .work-introduction-links a {
     font-size: 16px;
   }
 
