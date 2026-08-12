@@ -1,30 +1,40 @@
 const contacts = [
-  { label: "Email", href: "mailto:kimnabin01@gmail.com" },
-  { label: "LinkedIn", href: "https://www.linkedin.com/in/nabinkim" },
-  { label: "Telegram", href: "https://t.me/tlsrns10" },
+  { label: "kimnabin01@gmail.com", type: "email", href: "mailto:kimnabin01@gmail.com" },
+  { label: "@tlsrns10", type: "telegram", href: "https://t.me/tlsrns10" },
+  { label: "LinkedIn", type: "linkedin", href: "https://www.linkedin.com/in/nabinkim" },
 ];
 
 export function ContactFooter() {
   return (
     <footer className="contact-footer">
       <div className="contact-footer-inner">
-        <h2>Let’s connect.</h2>
         <div className="contact-links" aria-label="Contact links">
-          {contacts.map((contact) => contact.href ? (
+          {contacts.map((contact) => (
             <a
               href={contact.href}
-              target={contact.label === "Email" ? undefined : "_blank"}
-              rel={contact.label === "Email" ? undefined : "noreferrer"}
+              target={contact.type === "email" ? undefined : "_blank"}
+              rel={contact.type === "email" ? undefined : "noreferrer"}
               key={contact.label}
             >
-              {contact.label}
+              <ContactIcon type={contact.type} />
+              <span>{contact.label}</span>
             </a>
-          ) : (
-            <span aria-disabled="true" key={contact.label}>{contact.label}</span>
           ))}
         </div>
         <p>© 2026 Nabin Kim</p>
       </div>
     </footer>
   );
+}
+
+function ContactIcon({ type }: { type: string }) {
+  if (type === "email") {
+    return <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 5.5h18v13H3zM4 7l8 6 8-6" /></svg>;
+  }
+
+  if (type === "telegram") {
+    return <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m3 11 17-7-4 16-5-6-4 3 1-5 8-5-10 4z" /></svg>;
+  }
+
+  return <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 9v10M5 5.5v.1M10 19v-6c0-2 1.3-4 3.8-4 2.6 0 4.2 1.7 4.2 4.5V19M10 9v10" /></svg>;
 }
