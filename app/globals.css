@@ -4219,9 +4219,9 @@ img {
 
 .marketing-case-study {
   display: grid;
-  grid-template-columns: 250px minmax(0, 1fr);
-  gap: 52px;
-  padding: 54px 0 92px;
+  grid-template-columns: 280px minmax(0, 1fr);
+  gap: 42px;
+  padding: 40px 0 92px;
 }
 
 .marketing-case-sidebar {
@@ -4231,26 +4231,26 @@ img {
 }
 
 .marketing-case-sidebar h1 {
-  margin: 20px 0 0;
-  font-size: 50px;
-  line-height: 0.98;
+  margin: 14px 0 0;
+  font-size: 42px;
+  line-height: 1;
   letter-spacing: -0.055em;
 }
 
 .work-page .marketing-case-sidebar > p:not(.work-kicker) {
-  margin: 26px 0 0;
+  margin: 18px 0 0;
   color: #444444;
-  font-size: 18px;
-  line-height: 1.6;
+  font-size: 16px;
+  line-height: 1.5;
 }
 
 .marketing-case-sidebar nav {
-  margin-top: 34px;
+  margin-top: 22px;
   border-top: 1px solid var(--border);
 }
 
 .marketing-case-sidebar nav a {
-  min-height: 56px;
+  min-height: 48px;
   display: flex;
   align-items: center;
   gap: 14px;
