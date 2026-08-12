@@ -4695,15 +4695,15 @@ img {
 }
 
 .education-subsection > header > span {
-  width: 32px;
-  height: 32px;
+  width: 42px;
+  height: 42px;
   flex: 0 0 auto;
   display: grid;
   place-items: center;
   border: 1px solid #ffcaca;
   border-radius: 50%;
   color: var(--accent);
-  font-size: 14px;
+  font-size: 18px;
   font-weight: 700;
 }
 
