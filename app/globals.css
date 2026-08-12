@@ -5039,6 +5039,22 @@ img {
 
   .content-campaign-grid {
     margin-top: 34px;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 24px 12px;
+  }
+
+  .content-campaign-grid article > span {
+    margin-top: 12px;
+  }
+
+  .content-campaign-grid h4 {
+    margin-top: 6px;
+    font-size: 17px;
+  }
+
+  .work-page .content-campaign-grid p {
+    margin-top: 4px;
+    font-size: 14px;
   }
 }
 
