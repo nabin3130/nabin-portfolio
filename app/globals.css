@@ -4519,6 +4519,7 @@ img {
 }
 
 .bilingual-pr-feature {
+  margin-top: 18px;
   min-height: 310px;
   padding: 30px;
   display: grid;
@@ -5541,8 +5542,10 @@ img {
 
 .rhc-summary h2 {
   margin: 0;
-  font-size: 34px;
+  font-size: clamp(24px, 2.2vw, 30px);
+  line-height: 1.05;
   letter-spacing: -0.045em;
+  white-space: nowrap;
 }
 
 .work-page .rhc-summary-brand p {
@@ -5876,7 +5879,7 @@ img {
 }
 
 .media-partnership-role ul {
-  margin: 20px 0 0;
+  margin: 0;
   padding-left: 18px;
 }
 
@@ -5948,6 +5951,18 @@ img {
 
   .rhc-summary {
     padding: 24px;
+  }
+
+  .rhc-summary-brand {
+    gap: 14px;
+  }
+
+  .rhc-logo {
+    width: 72px;
+  }
+
+  .rhc-summary h2 {
+    font-size: clamp(20px, 6.8vw, 28px);
   }
 
   .rhc-summary-metrics > div:first-child {

@@ -98,7 +98,7 @@ export function MediaWork() {
           <header className="media-case-section-heading">
             <div>
               <h2><span>01</span> Interviews</h2>
-              <p>Conversations with founders, builders, and community members across the crypto ecosystem.</p>
+              <p>Conversations with founders, builders, and community across the crypto ecosystem.</p>
             </div>
             <a href="https://www.tiktok.com/@realhomiesclub" target="_blank" rel="noreferrer">View all interviews →</a>
           </header>
@@ -136,7 +136,6 @@ export function MediaWork() {
               <h3>Media Partner</h3>
             </div>
             <div className="media-partnership-role">
-              <h3>What I did</h3>
               <ul>
                 <li>On-site interviews</li>
                 <li>Short-form content production</li>

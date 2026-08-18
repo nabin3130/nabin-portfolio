@@ -102,15 +102,15 @@ export function MarketingContentWork() {
 
         <section className="marketing-case-section" id="pr-communications">
           <MarketingHeading number="02" title="PR & Communications" text="Created bilingual PR and editorial content in Korean and English for product, partnership, and ecosystem communications." />
+          <div className="communication-highlight-list">
+            {communicationHighlights.map((item) => <div key={item}><span>✓</span><p>{item}</p></div>)}
+          </div>
           <a className="bilingual-pr-feature" href="https://medium.com/dsrv/%EB%B8%94%EB%A1%9D%EC%B2%B4%EC%9D%B8%EC%9D%98-%EB%AF%B8%EB%9E%98%EB%A5%BC-%EC%97%AC%EB%8A%94-%EB%B0%94%EC%9D%B4%ED%94%84%EB%A1%9C%EC%8A%A4%ED%8A%B8-btcfi%EB%A1%9C-%EB%94%94%ED%8C%8C%EC%9D%B4%EB%A5%BC-%EC%9E%AC%EB%B0%9C%EA%B2%AC%ED%95%98%EB%8B%A4-builders-vibe-part-2-00bc43f69b3d" target="_blank" rel="noreferrer">
             <div className="bilingual-pr-image">
               <img src="/images/work/marketing-pr-builders-vibe.webp" alt="Builder’s Vibe Bifrost article artwork" />
             </div>
-            <div><p>Bilingual PR / Editorial Writing</p><h3>블록체인의 미래를 여는 바이프로스트! BTCFi로 디파이를 재발견하다 [Builder’s Vibe – Part.2]</h3><span>Read featured article ↗</span></div>
+            <div><p>Bilingual PR / Editorial Writing</p><h3>블록체인의 미래를 여는 바이프로스트! BTCFi로 디파이를 재발견하다 [Builder’s Vibe – Part.2]</h3><span>Read the article</span></div>
           </a>
-          <div className="communication-highlight-list">
-            {communicationHighlights.map((item) => <div key={item}><span>✓</span><p>{item}</p></div>)}
-          </div>
         </section>
 
         <section className="marketing-case-section" id="influencer-marketing">
