@@ -1,8 +1,14 @@
 import { Suspense } from "react";
+import type { Metadata } from "next";
 import { Header } from "@/components/Header";
 import { ContactFooter } from "@/components/ContactFooter";
 import { WorkContent } from "@/components/WorkContent";
 import { WorkTabs } from "@/components/WorkTabs";
+
+export const metadata: Metadata = {
+  alternates: { canonical: "/work" },
+  openGraph: { url: "/work" },
+};
 
 export default function WorkPage() {
   return (

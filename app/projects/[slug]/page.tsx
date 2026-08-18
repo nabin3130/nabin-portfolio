@@ -1,9 +1,27 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { Header } from "@/components/Header";
 import { projects } from "@/data/portfolio";
 
 export function generateStaticParams() { return projects.map(p => ({ slug: p.slug })); }
+
+export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
+  const { slug } = await params;
+  const project = projects.find(p => p.slug === slug);
+  if (!project) return {};
+
+  const title = `${project.title} | Nabin Kim`;
+  const url = `/projects/${project.slug}`;
+
+  return {
+    title,
+    description: project.summary,
+    alternates: { canonical: url },
+    openGraph: { title, description: project.summary, url },
+    twitter: { title, description: project.summary },
+  };
+}
 
 export default async function ProjectPage({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;

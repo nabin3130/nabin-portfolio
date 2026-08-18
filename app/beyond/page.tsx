@@ -1,6 +1,22 @@
+import type { Metadata } from "next";
 import { Header } from "@/components/Header";
 import { ContactFooter } from "@/components/ContactFooter";
 import { ExternalSitePreview } from "@/components/ExternalSitePreview";
+
+export const metadata: Metadata = {
+  title: "Beyond Work | Nabin Kim",
+  description: "Personal projects and ideas explored by Nabin Kim outside of professional work.",
+  alternates: { canonical: "/beyond" },
+  openGraph: {
+    title: "Beyond Work | Nabin Kim",
+    description: "Personal projects and ideas explored by Nabin Kim outside of professional work.",
+    url: "/beyond",
+  },
+  twitter: {
+    title: "Beyond Work | Nabin Kim",
+    description: "Personal projects and ideas explored by Nabin Kim outside of professional work.",
+  },
+};
 
 export default function BeyondWorkPage() {
   return (
