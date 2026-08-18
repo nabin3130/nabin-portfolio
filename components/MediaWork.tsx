@@ -1,3 +1,7 @@
+"use client";
+
+import { useEffect, useState } from "react";
+
 const socialLinks = [
   { label: "TikTok", icon: "tiktok", href: "https://www.tiktok.com/@realhomiesclub" },
   { label: "YouTube", icon: "youtube", href: "https://www.youtube.com/@realhomiesclub" },
@@ -46,6 +50,35 @@ const interviews = [
 ];
 
 export function MediaWork() {
+  const [activeSection, setActiveSection] = useState("media-interviews");
+
+  useEffect(() => {
+    const sectionIds = ["media-interviews", "media-partnership"];
+    const updateActiveSection = () => {
+      const activationLine = window.innerHeight * 0.35;
+      let currentSection = sectionIds[0];
+
+      sectionIds.forEach((id) => {
+        const section = document.getElementById(id);
+        if (section && section.getBoundingClientRect().top <= activationLine) currentSection = id;
+      });
+
+      if (window.scrollY + window.innerHeight >= document.documentElement.scrollHeight - 2) {
+        currentSection = sectionIds[sectionIds.length - 1];
+      }
+
+      setActiveSection(currentSection);
+    };
+
+    updateActiveSection();
+    window.addEventListener("scroll", updateActiveSection, { passive: true });
+    window.addEventListener("resize", updateActiveSection);
+    return () => {
+      window.removeEventListener("scroll", updateActiveSection);
+      window.removeEventListener("resize", updateActiveSection);
+    };
+  }, []);
+
   return (
     <div className="media-case-study">
       <aside className="media-case-sidebar">
@@ -56,8 +89,8 @@ export function MediaWork() {
           interviews and on-the-ground content.
         </p>
         <nav aria-label="Media case study sections">
-          <a href="#media-interviews"><span>01</span>Interviews</a>
-          <a href="#media-partnership"><span>02</span>Media Partnership</a>
+          <a className={activeSection === "media-interviews" ? "active" : ""} href="#media-interviews"><span>01</span>Interviews</a>
+          <a className={activeSection === "media-partnership" ? "active" : ""} href="#media-partnership"><span>02</span>Media Partnership</a>
         </nav>
       </aside>
 

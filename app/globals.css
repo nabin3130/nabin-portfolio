@@ -8073,7 +8073,11 @@ img {
 }
 
 .marketing-case-sidebar nav a.active,
-.marketing-case-sidebar nav a.active span {
+.marketing-case-sidebar nav a.active span,
+.events-case-sidebar nav a.active,
+.events-case-sidebar nav a.active span,
+.media-case-sidebar nav a.active,
+.media-case-sidebar nav a.active span {
   color: var(--accent);
   font-weight: 600;
 }

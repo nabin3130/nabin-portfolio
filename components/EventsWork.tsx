@@ -1,3 +1,7 @@
+"use client";
+
+import { useEffect, useState } from "react";
+
 const operations = [
   {
     number: "01",
@@ -101,6 +105,35 @@ function SectionHeading({ number, title, text }: { number: string; title: string
 }
 
 export function EventsWork() {
+  const [activeSection, setActiveSection] = useState("event-operations");
+
+  useEffect(() => {
+    const sectionIds = ["event-operations", "selected-events", "more-event-experience"];
+    const updateActiveSection = () => {
+      const activationLine = window.innerHeight * 0.35;
+      let currentSection = sectionIds[0];
+
+      sectionIds.forEach((id) => {
+        const section = document.getElementById(id);
+        if (section && section.getBoundingClientRect().top <= activationLine) currentSection = id;
+      });
+
+      if (window.scrollY + window.innerHeight >= document.documentElement.scrollHeight - 2) {
+        currentSection = sectionIds[sectionIds.length - 1];
+      }
+
+      setActiveSection(currentSection);
+    };
+
+    updateActiveSection();
+    window.addEventListener("scroll", updateActiveSection, { passive: true });
+    window.addEventListener("resize", updateActiveSection);
+    return () => {
+      window.removeEventListener("scroll", updateActiveSection);
+      window.removeEventListener("resize", updateActiveSection);
+    };
+  }, []);
+
   return (
     <div className="events-case-study">
       <aside className="events-case-sidebar">
@@ -111,9 +144,9 @@ export function EventsWork() {
           Asia, Europe, and the Middle East, from venue sourcing to on-site execution.
         </p>
         <nav aria-label="Events case study sections">
-          <a href="#event-operations"><span>01</span>What I Do</a>
-          <a href="#selected-events"><span>02</span>Selected Events</a>
-          <a href="#more-event-experience"><span>03</span>More Event Experience</a>
+          <a className={activeSection === "event-operations" ? "active" : ""} href="#event-operations"><span>01</span>What I Do</a>
+          <a className={activeSection === "selected-events" ? "active" : ""} href="#selected-events"><span>02</span>Selected Events</a>
+          <a className={activeSection === "more-event-experience" ? "active" : ""} href="#more-event-experience"><span>03</span>More Event Experience</a>
         </nav>
       </aside>
 
