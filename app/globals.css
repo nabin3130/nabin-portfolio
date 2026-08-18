@@ -5212,6 +5212,120 @@ img {
   }
 }
 
+/* Events: compact editorial experience list */
+#more-event-experience {
+  padding-bottom: 36px;
+}
+
+#more-event-experience .events-case-heading {
+  margin-bottom: 22px;
+}
+
+.more-event-experience-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  border-top: 1px solid var(--border);
+}
+
+.more-event-experience-item {
+  min-width: 0;
+  padding: 30px clamp(24px, 3vw, 36px) 4px;
+}
+
+.more-event-experience-item:first-child {
+  padding-left: 0;
+}
+
+.more-event-experience-item:last-child {
+  padding-right: 0;
+}
+
+.more-event-experience-item + .more-event-experience-item {
+  border-left: 1px solid var(--border);
+}
+
+.more-event-number {
+  display: block;
+  color: var(--accent);
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.more-event-experience-item h3 {
+  margin: 17px 0 0;
+  font-size: 20px;
+  line-height: 1.3;
+  letter-spacing: -0.03em;
+}
+
+.work-page .more-event-meta {
+  margin: 14px 0 0;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+.more-event-experience-item ul {
+  margin: 22px 0 0;
+  padding: 14px 0 0;
+  border-top: 1px solid var(--border);
+  list-style: none;
+}
+
+.more-event-experience-item li {
+  color: var(--body-text);
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.more-event-experience-item li + li {
+  margin-top: 7px;
+}
+
+@media (max-width: 900px) {
+  .more-event-experience-item {
+    padding-inline: 20px;
+  }
+}
+
+@media (max-width: 700px) {
+  #more-event-experience {
+    padding-bottom: 28px;
+  }
+
+  #more-event-experience .events-case-heading {
+    margin-bottom: 18px;
+  }
+
+  .more-event-experience-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .more-event-experience-item,
+  .more-event-experience-item:first-child,
+  .more-event-experience-item:last-child {
+    padding: 24px 0;
+  }
+
+  .more-event-experience-item + .more-event-experience-item {
+    border-top: 1px solid var(--border);
+    border-left: 0;
+  }
+
+  .more-event-experience-item h3 {
+    margin-top: 12px;
+  }
+
+  .more-event-experience-item ul {
+    margin-top: 17px;
+    padding-top: 12px;
+  }
+}
+
 /* Ecosystem Growth: compact editorial grid */
 .ecosystem-reference-layout .ecosystem-reference-hero {
   min-height: 0;

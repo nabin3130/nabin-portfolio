@@ -67,6 +67,30 @@ const selectedEvents = [
   },
 ];
 
+const moreEventExperience = [
+  {
+    number: "01",
+    title: "TOKEN2049 Singapore 2025",
+    location: "Singapore",
+    year: "2025",
+    responsibilities: ["Venue sourcing", "Pricing", "Availability"],
+  },
+  {
+    number: "02",
+    title: "Korea Blockchain Week 2025",
+    location: "Seoul",
+    year: "2025",
+    responsibilities: ["Transportation logistics", "Bus rental sourcing", "Driver communication"],
+  },
+  {
+    number: "03",
+    title: "ETHCC [8]",
+    location: "Cannes",
+    year: "2025",
+    responsibilities: ["Event preparation", "On-site support", "Guest assistance"],
+  },
+];
+
 function SectionHeading({ number, title, text }: { number: string; title: string; text: string }) {
   return (
     <header className="events-case-heading">
@@ -147,15 +171,19 @@ export function EventsWork() {
             title="More Event Experience"
             text="Additional conferences, meetups, and past event experience."
           />
-          <div className="more-events-panel">
-            <div className="more-events-list">
-              <h3>Additional Events</h3>
-              <ul>
-                <li><strong>TOKEN2049 Singapore 2025</strong><ul><li>Venue sourcing</li><li>Pricing</li><li>Availability</li></ul></li>
-                <li><strong>Korea Blockchain Week 2025</strong><ul><li>Transportation logistics</li><li>Bus rental sourcing</li><li>Driver communication</li></ul></li>
-                <li><strong>ETHCC [8]</strong><ul><li>Event preparation</li><li>On-site support</li><li>Guest assistance</li></ul></li>
-              </ul>
-            </div>
+          <div className="more-event-experience-grid">
+            {moreEventExperience.map((event) => (
+              <article className="more-event-experience-item" key={event.title}>
+                <span className="more-event-number">{event.number}</span>
+                <h3>{event.title}</h3>
+                <p className="more-event-meta">{event.location}<span aria-hidden="true">·</span>{event.year}</p>
+                <ul>
+                  {event.responsibilities.map((responsibility) => (
+                    <li key={responsibility}>{responsibility}</li>
+                  ))}
+                </ul>
+              </article>
+            ))}
           </div>
         </section>
       </main>
