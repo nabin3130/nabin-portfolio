@@ -9062,7 +9062,7 @@ img {
 
 .work-page .media-partnership-panel {
   min-height: 0;
-  grid-template-columns: minmax(250px, 0.58fr) minmax(0, 1fr);
+  grid-template-columns: minmax(250px, 0.58fr) minmax(280px, 0.72fr);
   gap: clamp(30px, 4.5vw, 64px);
   align-items: center;
   overflow: visible;
@@ -9105,8 +9105,10 @@ img {
 }
 
 .work-page .media-partnership-visual {
+  width: min(100%, 480px);
   aspect-ratio: 1 / 1;
   min-height: 0;
+  justify-self: start;
   border-radius: 8px;
   background: transparent;
 }
@@ -9175,6 +9177,7 @@ img {
   }
 
   .work-page .media-partnership-visual {
-    width: 100%;
+    width: min(100%, 300px);
+    justify-self: center;
   }
 }
