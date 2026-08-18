@@ -133,7 +133,7 @@ export function EcosystemWork() {
           <h2>Partnerships &amp;<br />Ecosystem</h2>
           <p>Managed partnerships across validators, wallets, infrastructure providers, and ecosystem stakeholders.</p>
           <ol className="ecosystem-inline-process">
-            {partnershipProcess.map((step, index) => <li key={step}><span>0{index + 1}</span>{step}</li>)}
+            {partnershipProcess.map((step) => <li key={step}>{step}</li>)}
           </ol>
         </div>
 
@@ -186,7 +186,6 @@ export function EcosystemWork() {
               >
                 <div className="community-area-meta">
                   <span>{area.number}</span>
-                  <p>{area.category}</p>
                 </div>
                 <h3>{area.title}</h3>
                 <p className="community-area-description">{area.description}</p>
@@ -201,7 +200,7 @@ export function EcosystemWork() {
           <h2>Product &amp; GTM</h2>
           <p>Made bridging, staking, wallets, and validator infrastructure easier to understand and adopt.</p>
           <ol className="ecosystem-product-process">
-            {productSteps.map((step, index) => <li key={step}><span>0{index + 1}</span>{step}</li>)}
+            {productSteps.map((step) => <li key={step}>{step}</li>)}
           </ol>
         </div>
 
