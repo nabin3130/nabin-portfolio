@@ -4505,7 +4505,7 @@ img {
 
 .work-page .marketing-case-heading > p {
   max-width: 850px;
-  margin: 13px 0 0 48px;
+  margin: 13px 0 0;
   color: var(--muted);
   font-size: 18px;
   line-height: 1.55;
@@ -5541,7 +5541,7 @@ img {
 }
 
 .work-page .events-case-heading > p {
-  margin: 12px 0 0 48px;
+  margin: 12px 0 0;
   color: var(--muted);
   font-size: 18px;
   line-height: 1.5;
