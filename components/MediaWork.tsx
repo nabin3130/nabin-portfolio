@@ -63,31 +63,21 @@ export function MediaWork() {
 
       <main className="media-case-content">
         <section className="rhc-summary" aria-labelledby="rhc-title">
-          <div className="rhc-summary-brand">
-            <img className="rhc-logo" src="/images/work/real-homies-club-logo.png" alt="Real Homies Club logo" />
-            <div>
-              <h2 id="rhc-title">Real Homies Club</h2>
-              <p>Independent crypto media capturing conversations, people, and stories across the global crypto ecosystem.</p>
-            </div>
-          </div>
-          <div className="rhc-summary-metrics" aria-label="Real Homies Club selected metrics">
-            <div><strong>50+</strong><span>Interviews</span></div>
-            <div><strong>1.6K+</strong><span>Followers</span></div>
-            <div><strong>1K+</strong><span>Likes</span></div>
-          </div>
-          <div className="rhc-socials">
-            <p>Published across</p>
-            <div>
+          <img className="rhc-logo" src="/images/work/real-homies-club-logo.png" alt="Real Homies Club logo" />
+          <div className="rhc-summary-profile">
+            <h2 id="rhc-title">Real Homies Club</h2>
+            <p>Independent crypto media capturing people, conversations, and stories across the global crypto ecosystem.</p>
+            <div className="rhc-socials">
               {socialLinks.map((social) => (
                 <a
                   href={social.href}
                   target="_blank"
                   rel="noreferrer"
                   aria-label={`Open Real Homies Club on ${social.label}`}
-                  title={social.label}
                   key={social.label}
                 >
                   <SocialIcon name={social.icon} />
+                  <span>{social.label}</span>
                 </a>
               ))}
             </div>
