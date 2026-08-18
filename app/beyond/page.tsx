@@ -42,10 +42,10 @@ export default function BeyondWorkPage() {
             </p>
             <div className="beyond-project-links">
               <a href="https://digital-legacy-five.vercel.app/" target="_blank" rel="noreferrer">
-                Open project ↗
+                Open project
               </a>
               <a href="https://github.com/nabin3130/digital-legacy" target="_blank" rel="noreferrer">
-                GitHub ↗
+                GitHub
               </a>
             </div>
           </div>
@@ -68,7 +68,7 @@ export default function BeyondWorkPage() {
             <p className="beyond-project-meta">Automation · YouTube API · JavaScript</p>
             <div className="beyond-project-links">
               <a href="https://github.com/nabin3130/yt-subtitle-tool" target="_blank" rel="noreferrer">
-                GitHub ↗
+                GitHub
               </a>
             </div>
           </div>
