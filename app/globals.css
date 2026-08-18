@@ -7946,3 +7946,269 @@ img {
     grid-template-columns: 1fr;
   }
 }
+
+/* Marketing & Content: editorial case-study layout */
+.marketing-case-study {
+  grid-template-columns: minmax(220px, 24%) minmax(0, 1fr);
+  gap: clamp(34px, 4vw, 54px);
+}
+
+.marketing-case-sidebar nav a {
+  color: var(--body-text);
+  transition: color 0.2s ease;
+}
+
+.marketing-case-sidebar nav a.active,
+.marketing-case-sidebar nav a.active span {
+  color: var(--accent);
+  font-weight: 600;
+}
+
+.marketing-case-section {
+  padding-bottom: 58px;
+}
+
+.marketing-case-section + .marketing-case-section {
+  padding-top: 56px;
+  border-top: 1px solid var(--border);
+}
+
+.marketing-channel-strip {
+  min-height: 0;
+  border: 0;
+  border-radius: 0;
+}
+
+.marketing-channel-strip > div {
+  padding: 4px 24px 6px;
+}
+
+.marketing-channel-strip > div:first-child {
+  padding-left: 0;
+}
+
+.marketing-channel-strip > div:last-child {
+  padding-right: 0;
+}
+
+.content-publishing-layout {
+  margin-top: 42px;
+  overflow: visible;
+  border: 0;
+  border-radius: 0;
+}
+
+.content-publishing-layout > div {
+  padding: 0;
+}
+
+.published-content-grid {
+  gap: 28px 22px;
+}
+
+.published-content-grid > article > div,
+.published-content-grid > a > div {
+  height: auto;
+  aspect-ratio: 4 / 3;
+  background: #f4f4f4;
+}
+
+.published-content-grid img,
+.published-content-grid .medium-card img {
+  object-fit: contain;
+  object-position: top center;
+}
+
+.communication-highlight-list {
+  margin-top: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 0;
+  border: 0;
+  border-radius: 0;
+}
+
+.communication-highlight-list > div {
+  display: flex;
+  align-items: center;
+  gap: 0;
+}
+
+.communication-highlight-list > div + div::before {
+  content: "·";
+  margin: 0 12px;
+  color: var(--accent);
+}
+
+.work-page .communication-highlight-list p {
+  color: var(--body-text);
+}
+
+.bilingual-pr-feature {
+  margin-top: 28px;
+  min-height: 0;
+  padding: 0;
+  grid-template-columns: minmax(260px, 42%) minmax(0, 1fr);
+  gap: clamp(28px, 4vw, 52px);
+  border: 0;
+  border-radius: 0;
+}
+
+.bilingual-pr-feature:hover {
+  border-color: transparent;
+}
+
+.bilingual-pr-image {
+  height: auto;
+  aspect-ratio: 16 / 10;
+  border-radius: 6px;
+}
+
+.influencer-case-panel {
+  grid-template-columns: minmax(280px, 38%) minmax(0, 1fr);
+  gap: clamp(30px, 4vw, 52px);
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+}
+
+.education-subsection {
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+}
+
+.education-subsection + .education-subsection {
+  margin-top: 52px;
+  padding-top: 48px;
+  border-top: 1px solid var(--border);
+}
+
+.education-subsection > header,
+.documentation-overview > header {
+  display: block;
+}
+
+.education-subsection > header > span,
+.documentation-overview > header > span {
+  display: none;
+}
+
+.documentation-layout {
+  grid-template-columns: minmax(0, 65fr) minmax(250px, 35fr);
+  gap: clamp(28px, 4vw, 48px);
+}
+
+.work-page .documentation-description,
+.documentation-image {
+  margin-left: 0;
+}
+
+.selected-guides {
+  padding-left: clamp(24px, 3vw, 38px);
+}
+
+.selected-guide-list {
+  gap: 0;
+}
+
+.selected-guide-list a {
+  min-height: 58px;
+  padding: 14px 0;
+  grid-template-columns: 44px minmax(0, 1fr);
+  border: 0;
+  border-bottom: 1px solid var(--border);
+  border-radius: 0;
+  transform: none;
+}
+
+.selected-guide-list a:first-child {
+  border-top: 1px solid var(--border);
+}
+
+.selected-guide-list a:hover {
+  border-color: var(--border);
+  color: var(--accent);
+  transform: none;
+}
+
+.work-page .education-subsection header .video-production-meta {
+  margin-top: 14px;
+  color: var(--body-text);
+  font-size: 14px;
+}
+
+.tutorial-video-layout {
+  grid-template-columns: 1fr;
+}
+
+.tutorial-video-grid {
+  gap: 20px;
+}
+
+.content-campaign-grid {
+  margin-top: 34px;
+  padding-bottom: 0;
+  border-bottom: 0;
+}
+
+.campaign-visual img,
+.campaign-education img,
+.campaign-metro img {
+  object-fit: contain;
+  object-position: center;
+}
+
+@media (max-width: 1100px) {
+  .marketing-case-study {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 700px) {
+  .marketing-case-study {
+    gap: 40px;
+  }
+
+  .marketing-case-section + .marketing-case-section {
+    padding-top: 42px;
+  }
+
+  .marketing-channel-strip {
+    grid-template-columns: 1fr;
+  }
+
+  .marketing-channel-strip > div,
+  .marketing-channel-strip > div:first-child,
+  .marketing-channel-strip > div:last-child {
+    padding: 14px 0;
+  }
+
+  .marketing-channel-strip > div + div {
+    border-top: 1px solid var(--border);
+    border-left: 0;
+  }
+
+  .published-content-grid,
+  .bilingual-pr-feature,
+  .influencer-case-panel,
+  .documentation-layout,
+  .tutorial-video-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .published-content-grid > article > div,
+  .published-content-grid > a > div {
+    height: auto;
+  }
+
+  .selected-guides {
+    padding-top: 28px;
+    padding-left: 0;
+  }
+
+  .content-campaign-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
