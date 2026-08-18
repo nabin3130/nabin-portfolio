@@ -1,5 +1,6 @@
 import { Header } from "@/components/Header";
 import { ContactFooter } from "@/components/ContactFooter";
+import { ExternalSitePreview } from "@/components/ExternalSitePreview";
 
 export default function BeyondWorkPage() {
   return (
@@ -39,12 +40,7 @@ export default function BeyondWorkPage() {
                 digital-legacy-five.vercel.app
               </a>
             </div>
-            <iframe
-              src="https://digital-legacy-five.vercel.app/"
-              title="Interactive preview of the Digital Legacy project"
-              loading="lazy"
-              allow="fullscreen"
-            />
+            <ExternalSitePreview />
           </div>
         </article>
       </section>

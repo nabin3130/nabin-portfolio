@@ -13,17 +13,15 @@ export function WorkContent() {
     ? requestedWork
     : "ecosystem";
 
-  if (activeWork === "marketing") {
-    return <MarketingContentWork />;
-  }
+  let content = <EcosystemWork />;
 
-  if (activeWork === "events") {
-    return <EventsWork />;
-  }
+  if (activeWork === "marketing") content = <MarketingContentWork />;
+  if (activeWork === "events") content = <EventsWork />;
+  if (activeWork === "media") content = <MediaWork />;
 
-  if (activeWork === "media") {
-    return <MediaWork />;
-  }
-
-  return <EcosystemWork />;
+  return (
+    <div className="work-panel" key={activeWork}>
+      {content}
+    </div>
+  );
 }
