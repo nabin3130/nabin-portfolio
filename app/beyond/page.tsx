@@ -27,8 +27,7 @@ export default function BeyondWorkPage() {
         <header className="beyond-page-heading">
           <p>Beyond Work</p>
           <h1>
-            <span>Projects and ideas I explore</span>
-            <span>outside of my professional work.</span>
+            <span>Projects &amp; Experiments</span>
           </h1>
         </header>
 
