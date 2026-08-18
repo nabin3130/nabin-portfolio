@@ -544,7 +544,7 @@ img {
 .beyond-page-content {
   width: min(calc(100% - 48px), var(--max-width));
   margin: 0 auto;
-  padding: 96px 0 140px;
+  padding: 80px 0 120px;
 }
 
 .beyond-page-heading {
@@ -570,43 +570,43 @@ img {
   white-space: nowrap;
 }
 
-.digital-legacy-project {
-  margin-top: 80px;
+.beyond-page-heading > div {
+  margin-top: 20px;
+  color: var(--body-text);
+  font-size: 18px;
+  line-height: 1.55;
+}
+
+.beyond-project {
   display: grid;
-  grid-template-columns: minmax(280px, 0.72fr) minmax(0, 1.28fr);
-  min-height: 620px;
-  overflow: hidden;
-  border: 1px solid var(--border);
-  background: var(--card);
-  transition: border-color 0.2s ease, transform 0.2s ease;
+  grid-template-columns: minmax(250px, 0.52fr) minmax(0, 1fr);
+  gap: clamp(40px, 6vw, 76px);
+  padding: 72px 0;
+  border-top: 1px solid var(--border);
 }
 
-.digital-legacy-project:hover {
-  border-color: #bdbdbd;
+.beyond-page-heading + .beyond-project {
+  margin-top: 64px;
 }
 
-.digital-legacy-copy {
-  padding: 48px;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
+.beyond-project:last-of-type {
+  padding-bottom: 0;
 }
 
-.digital-legacy-copy > span {
-  margin-bottom: auto;
+.beyond-project-number {
   color: var(--accent);
   font-size: 14px;
   font-weight: 700;
 }
 
-.digital-legacy-copy h2 {
-  margin: 0;
+.beyond-project-copy h2 {
+  margin: 18px 0 0;
   font-size: clamp(42px, 5vw, 68px);
-  line-height: 0.96;
-  letter-spacing: -0.055em;
+  line-height: 1;
+  letter-spacing: -0.05em;
 }
 
-.digital-legacy-copy p {
+.beyond-project-copy > p {
   max-width: 440px;
   margin: 24px 0 0;
   color: var(--muted);
@@ -614,9 +614,25 @@ img {
   line-height: 1.55;
 }
 
-.digital-legacy-link {
-  width: fit-content;
-  margin-top: 34px;
+.beyond-project-copy .beyond-project-detail {
+  margin-top: 14px;
+  font-size: 16px;
+}
+
+.beyond-project-copy .beyond-project-meta {
+  margin-top: 22px;
+  color: var(--body-text);
+  font-size: 14px;
+}
+
+.beyond-project-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px 26px;
+  margin-top: 32px;
+}
+
+.beyond-project-links a {
   padding-bottom: 4px;
   border-bottom: 1px solid var(--text);
   font-size: 16px;
@@ -624,53 +640,64 @@ img {
   transition: color 0.2s ease, border-color 0.2s ease;
 }
 
-.digital-legacy-link:hover {
+.beyond-project-links a:hover,
+.beyond-project-links a:focus-visible {
   color: var(--accent);
   border-color: var(--accent);
 }
 
-.digital-legacy-visual {
+.beyond-project-preview {
   min-width: 0;
   overflow: hidden;
-  display: grid;
-  grid-template-rows: 42px minmax(0, 1fr);
+  margin: 0;
+  border: 1px solid var(--border);
+  border-radius: 10px;
   background: #ece8e2;
 }
 
-.digital-legacy-browser-bar {
+.logout-project-preview {
+  min-height: 640px;
+  display: grid;
+  grid-template-rows: 42px minmax(0, 1fr);
+}
+
+.beyond-preview-bar {
   position: relative;
   z-index: 1;
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  gap: 18px;
   padding: 0 16px;
   border-bottom: 1px solid var(--border);
   background: #f7f4f0;
 }
 
-.digital-legacy-browser-bar > span {
+.beyond-preview-bar > span {
   display: flex;
   gap: 6px;
 }
 
-.digital-legacy-browser-bar i {
+.beyond-preview-bar i {
   width: 7px;
   height: 7px;
   border-radius: 50%;
   background: #b8b1a8;
 }
 
-.digital-legacy-browser-bar a {
-  overflow: hidden;
-  color: var(--muted);
-  font-size: 13px;
-  text-overflow: ellipsis;
-  white-space: nowrap;
+.subtitle-project-preview {
+  min-height: 440px;
+  display: grid;
+  place-items: center;
+  padding: 24px;
+  background: var(--warm-beige);
 }
 
-.digital-legacy-browser-bar a:hover {
-  color: var(--text);
+.subtitle-project-preview img {
+  display: block;
+  width: auto;
+  max-width: 100%;
+  height: auto;
+  max-height: 440px;
+  border-radius: 8px;
 }
 
 .external-preview {
@@ -6977,23 +7004,32 @@ img {
     white-space: normal;
   }
 
-  .digital-legacy-project {
-    margin-top: 52px;
+  .beyond-project {
+    margin-top: 0;
     grid-template-columns: 1fr;
-    min-height: 0;
+    gap: 30px;
+    padding: 48px 0;
   }
 
-  .digital-legacy-copy {
-    min-height: 360px;
-    padding: 32px;
+  .beyond-page-heading + .beyond-project {
+    margin-top: 48px;
   }
 
-  .digital-legacy-copy h2 {
+  .beyond-project-copy h2 {
     font-size: 44px;
   }
 
-  .digital-legacy-visual {
+  .logout-project-preview {
     min-height: 520px;
+  }
+
+  .subtitle-project-preview {
+    min-height: 380px;
+    padding: 20px;
+  }
+
+  .subtitle-project-preview img {
+    max-height: 380px;
   }
 
   .case-meta,

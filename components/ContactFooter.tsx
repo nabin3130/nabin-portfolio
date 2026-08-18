@@ -2,6 +2,7 @@ const contacts = [
   { label: "Email", href: "mailto:kimnabin01@gmail.com", external: false },
   { label: "LinkedIn", href: "https://www.linkedin.com/in/nabinkim", external: true },
   { label: "Telegram", href: "https://t.me/tlsrns10", external: true },
+  { label: "GitHub", href: "https://github.com/nabin3130", external: true },
 ];
 
 export function ContactFooter() {

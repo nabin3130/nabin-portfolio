@@ -23,6 +23,10 @@ export function WorkPageLayout({ activeWork }: { activeWork: WorkCategory }) {
             <a href="https://www.linkedin.com/in/nabinkim" target="_blank" rel="noreferrer" aria-label="Nabin Kim on LinkedIn">
               LinkedIn
             </a>
+            <span aria-hidden="true">|</span>
+            <a href="https://github.com/nabin3130" target="_blank" rel="noreferrer" aria-label="Nabin Kim on GitHub">
+              GitHub
+            </a>
           </div>
         </div>
       </section>
@@ -34,4 +38,3 @@ export function WorkPageLayout({ activeWork }: { activeWork: WorkCategory }) {
     </main>
   );
 }
-
