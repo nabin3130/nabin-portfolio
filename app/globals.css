@@ -210,7 +210,7 @@ img {
   position: sticky;
   top: 0;
   z-index: 20;
-  background: rgba(245, 241, 235, 0.94);
+  background: #f5f1eb;
   backdrop-filter: blur(16px);
 }
 
@@ -767,7 +767,7 @@ img {
 
 .work-introduction {
   border-bottom: 1px solid var(--border);
-  background: #f3eee7;
+  background: #f5f1eb;
   color: var(--text);
 }
 
@@ -8669,5 +8669,25 @@ img {
   .work-page .events-case-heading > p,
   .work-page .media-case-section-heading p {
     font-size: 16px !important;
+  }
+}
+
+/* Events: align the compact experience cards without forcing mobile overflow. */
+@media (min-width: 701px) {
+  .work-page .more-event-experience-item h3 {
+    min-height: 1.3em;
+    font-size: clamp(17px, 1.25vw, 20px);
+    white-space: nowrap;
+  }
+}
+
+/* Marketing: give each ruled section a clear visual pause before its heading. */
+.work-page .marketing-case-section + .marketing-case-section {
+  padding-top: 48px;
+}
+
+@media (max-width: 700px) {
+  .work-page .marketing-case-section + .marketing-case-section {
+    padding-top: 36px;
   }
 }
