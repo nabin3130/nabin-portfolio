@@ -766,7 +766,7 @@ img {
 }
 
 .work-introduction {
-  border-bottom: 1px solid var(--border);
+  border-bottom: 0;
   background: #f5f1eb;
   color: var(--text);
 }
@@ -775,7 +775,7 @@ img {
   width: min(calc(100% - 48px), var(--max-width));
   margin: 0 auto;
   padding: 22px 0 20px;
-  border-bottom: 1px solid #d8d0c5;
+  border-bottom: 0;
 }
 
 .work-introduction h1 {
@@ -6406,7 +6406,15 @@ img {
 
 .contact-footer {
   padding: 27px 0;
+  border-top: 0;
   background: #f5f1eb;
+}
+
+/* Keep the transition into the footer unruled across every Work category. */
+.ecosystem-reference-layout > .work-story-section:last-of-type,
+.marketing-case-content > .marketing-case-section:last-child .content-campaign-grid,
+.media-case-content > .media-case-section:last-child {
+  border-bottom: 0;
 }
 
 .contact-footer-inner {

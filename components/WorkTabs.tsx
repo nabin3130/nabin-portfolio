@@ -1,6 +1,7 @@
 "use client";
 
-import { usePathname, useRouter, useSearchParams } from "next/navigation";
+import { useRouter } from "next/navigation";
+import type { WorkCategory } from "@/data/work";
 
 const tabs = [
   { key: "ecosystem", number: "01", label: "Ecosystem Growth", enabled: true },
@@ -9,21 +10,12 @@ const tabs = [
   { key: "media", number: "04", label: "Media", enabled: true },
 ] as const;
 
-export function WorkTabs() {
+export function WorkTabs({ activeWork }: { activeWork: WorkCategory }) {
   const router = useRouter();
-  const pathname = usePathname();
-  const searchParams = useSearchParams();
-  const requestedWork = searchParams.get("work");
-  const activeWork = requestedWork === "marketing" || requestedWork === "events" || requestedWork === "media"
-    ? requestedWork
-    : "ecosystem";
 
-  function selectWork(key: string, enabled: boolean) {
+  function selectWork(key: WorkCategory, enabled: boolean) {
     if (!enabled || key === activeWork) return;
-
-    const params = new URLSearchParams(searchParams.toString());
-    params.set("work", key);
-    router.push(`${pathname}?${params.toString()}`, { scroll: false });
+    router.push(`/work/${key}`, { scroll: false });
   }
 
   return (

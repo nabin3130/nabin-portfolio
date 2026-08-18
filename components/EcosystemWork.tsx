@@ -180,7 +180,7 @@ export function EcosystemWork() {
             {communityAreas.map((area) => (
               <Link
                 className="community-area"
-                href="/work?work=marketing"
+                href="/work/marketing"
                 scroll={false}
                 key={area.number}
               >

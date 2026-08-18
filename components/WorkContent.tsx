@@ -1,18 +1,10 @@
-"use client";
-
-import { useSearchParams } from "next/navigation";
 import { EcosystemWork } from "@/components/EcosystemWork";
 import { MarketingContentWork } from "@/components/MarketingContentWork";
 import { EventsWork } from "@/components/EventsWork";
 import { MediaWork } from "@/components/MediaWork";
+import type { WorkCategory } from "@/data/work";
 
-export function WorkContent() {
-  const searchParams = useSearchParams();
-  const requestedWork = searchParams.get("work");
-  const activeWork = requestedWork === "marketing" || requestedWork === "events" || requestedWork === "media"
-    ? requestedWork
-    : "ecosystem";
-
+export function WorkContent({ activeWork }: { activeWork: WorkCategory }) {
   let content = <EcosystemWork />;
 
   if (activeWork === "marketing") content = <MarketingContentWork />;
