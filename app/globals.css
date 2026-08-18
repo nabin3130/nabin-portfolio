@@ -8699,3 +8699,25 @@ img {
     padding-top: 36px;
   }
 }
+
+/* Marketing: keep the PR capability summary on one balanced desktop row. */
+@media (min-width: 1101px) {
+  .work-page .communication-highlight-list {
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    gap: 0;
+  }
+
+  .work-page .communication-highlight-list > div {
+    min-width: 0;
+  }
+
+  .work-page .communication-highlight-list > div + div::before {
+    margin: 0 clamp(8px, 0.8vw, 14px);
+  }
+
+  .work-page .communication-highlight-list p {
+    font-size: clamp(14px, 1.05vw, 16px);
+    white-space: nowrap;
+  }
+}
