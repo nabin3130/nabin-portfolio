@@ -118,7 +118,7 @@ export function EcosystemWork() {
           <h1>Bifrost Network</h1>
           <p className="work-intro">
             Connecting a Web3 infrastructure product with users, partners, and
-            communities through education, content, enablement, and ecosystem communication.
+            communities through education, content, enablement, and ecosystem growth.
           </p>
         </div>
         <div className="ecosystem-reference-metrics" aria-label="Selected ecosystem outcomes">

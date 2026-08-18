@@ -12,9 +12,9 @@ const publishedContent = [
 const communicationHighlights = [
   "Product launch communications",
   "Partnership announcements",
-  "Bilingual press releases",
+  "Bilingual PR",
   "Content planning",
-  "Publishing and distribution",
+  "Distribution",
 ];
 
 const influencerWork = [
@@ -194,7 +194,7 @@ export function MarketingContentWork() {
               <article><div className="campaign-visual campaign-education"><img src="/images/work/marketing-gopax-education.png" alt="GOPAX Bitcoin Cash educational content" /></div><span>01</span><h4>Educational Content</h4><p>GOPAX</p></article>
               <article><div className="campaign-visual campaign-metro"><img src="/images/work/event-btl-marketing.jpg" alt="GOPAX metro campaign" /></div><span>02</span><h4>Metro Campaign</h4><p>GOPAX</p></article>
               <article><div className="campaign-visual"><img src="/images/work/marketing-nft-campaign-01.png" alt="NFT marketplace community campaign artwork" /></div><span>03</span><h4>Community Campaign</h4><p>NFT Marketplace</p></article>
-              <article><div className="campaign-visual"><img src="/images/work/marketing-nft-campaign-02.png" alt="NFT marketplace raffle community campaign artwork" /></div><span>04</span><h4>Community Campaign</h4><p>NFT Marketplace</p></article>
+              <article><div className="campaign-visual"><img src="/images/work/marketing-nft-campaign-02.png" alt="NFT marketplace raffle community campaign artwork" /></div><span>04</span><h4>Raffle Campaign</h4><p>NFT Marketplace</p></article>
             </div>
           </div>
         </section>

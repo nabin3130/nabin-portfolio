@@ -3899,12 +3899,13 @@ img {
   flex-direction: column;
   justify-content: space-between;
   border-radius: 10px;
-  background: #151419;
-  color: var(--card);
+  border: 1px solid #d5cdc3;
+  background: #ebe5dd;
+  color: var(--text);
 }
 
 .ecosystem-board-heading > span {
-  color: #a5a5a5;
+  color: var(--muted);
   font-size: 9px;
   letter-spacing: 0.08em;
   text-transform: uppercase;
@@ -3913,7 +3914,7 @@ img {
 .ecosystem-board-heading > strong {
   display: block;
   margin-top: 30px;
-  color: var(--card);
+  color: var(--text);
   font-size: clamp(28px, 2.65vw, 38px);
   line-height: 1;
   letter-spacing: -0.04em;
@@ -3923,7 +3924,7 @@ img {
 .ecosystem-board-heading > p {
   max-width: 620px;
   margin: 18px 0 0;
-  color: #d4d2d8;
+  color: var(--body-text);
   font-size: 14px;
   line-height: 1.5;
 }
@@ -4013,10 +4014,10 @@ img {
   display: grid;
   grid-template-rows: 52% 48%;
   overflow: hidden;
-  border: 1px solid #424048;
+  border: 1px solid #cfc6bb;
   border-radius: 8px;
-  background: #101015;
-  color: var(--card);
+  background: transparent;
+  color: var(--text);
   font: inherit;
   text-align: left;
   cursor: pointer;
@@ -4024,7 +4025,7 @@ img {
 }
 
 .partnership-material-card:hover {
-  border-color: #8a878f;
+  border-color: #a99f93;
   transform: translateY(-2px);
 }
 
@@ -4080,7 +4081,7 @@ img {
   overflow: hidden;
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 2;
-  color: #aaa7b0;
+  color: var(--body-text);
   font-size: 12px;
   line-height: 1.5;
 }
@@ -5082,7 +5083,13 @@ img {
 
 @media (max-width: 1100px) {
   .marketing-case-study {
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .marketing-case-sidebar,
+  .marketing-case-content,
+  .marketing-case-section {
+    min-width: 0;
   }
 
   .marketing-case-sidebar {
@@ -8175,7 +8182,7 @@ img {
   margin-top: 28px;
   min-height: 0;
   padding: 0;
-  grid-template-columns: minmax(260px, 42%) minmax(0, 1fr);
+  grid-template-columns: minmax(260px, 38%) minmax(0, 1fr);
   gap: clamp(28px, 4vw, 52px);
   border: 0;
   border-radius: 0;
@@ -8189,6 +8196,21 @@ img {
   height: auto;
   aspect-ratio: 16 / 10;
   border-radius: 6px;
+}
+
+.bilingual-pr-image img {
+  object-fit: contain;
+}
+
+.work-page .bilingual-pr-feature h3 {
+  max-width: 760px;
+  font-size: clamp(25px, 2.15vw, 30px);
+  line-height: 1.28;
+}
+
+.bilingual-pr-feature:focus-visible {
+  outline: 1px solid var(--accent);
+  outline-offset: 4px;
 }
 
 .influencer-case-panel {
@@ -8273,6 +8295,13 @@ img {
   gap: 20px;
 }
 
+.tutorial-video-grid .marketing-video-card,
+.influencer-video-grid .marketing-video-card {
+  display: grid;
+  grid-template-rows: auto 1fr;
+  align-content: start;
+}
+
 .content-campaign-grid {
   margin-top: 34px;
   padding-bottom: 0;
@@ -8289,6 +8318,23 @@ img {
 @media (max-width: 1100px) {
   .marketing-case-study {
     grid-template-columns: 1fr;
+  }
+
+  .bilingual-pr-feature,
+  .influencer-case-panel,
+  .documentation-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .selected-guides {
+    padding-top: 28px;
+    padding-left: 0;
+    border-top: 1px solid var(--border);
+    border-left: 0;
+  }
+
+  .content-campaign-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
 
@@ -8336,6 +8382,12 @@ img {
 
   .content-campaign-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 440px) {
+  .content-campaign-grid {
+    grid-template-columns: 1fr;
   }
 }
 
@@ -8594,17 +8646,17 @@ img {
   line-height: 1.45;
 }
 
-/* Preserve the intentional inverse type inside the dark partnership board. */
+/* Keep the partnership feature legible on its warm editorial surface. */
 .work-page .ecosystem-partnership-board :is(h2, h3, h4, strong) {
-  color: #ffffff;
+  color: var(--work-heading);
 }
 
 .work-page .ecosystem-partnership-board p {
-  color: #b8b5c0;
+  color: var(--work-copy);
 }
 
 .work-page .ecosystem-board-heading > span {
-  color: #a9a6b0;
+  color: var(--work-meta);
 }
 
 @media (max-width: 1100px) {
@@ -8719,5 +8771,20 @@ img {
   .work-page .communication-highlight-list p {
     font-size: clamp(14px, 1.05vw, 16px);
     white-space: nowrap;
+  }
+}
+
+/* Ecosystem Growth: shared editorial grid and stronger Product & GTM evidence. */
+@media (min-width: 721px) {
+  .ecosystem-reference-layout .compact-ecosystem-section,
+  .ecosystem-reference-layout .community-growth-editorial {
+    grid-template-columns: minmax(210px, 24%) minmax(0, 1fr);
+    gap: clamp(28px, 3.25vw, 44px);
+    padding-block: 36px;
+  }
+
+  .ecosystem-reference-layout .ecosystem-product-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
   }
 }
