@@ -187,11 +187,9 @@ export function EventsWork() {
                 <div className="selected-event-copy">
                   <h3>{event.title}</h3>
                   <p className="selected-event-meta"><span>⌖</span>{event.city}<b>·</b>{event.role}</p>
-                  {event.bullets ? (
-                    <ul className="selected-event-bullets">
-                      {event.bullets.map((bullet) => <li key={bullet}>{bullet}</li>)}
-                    </ul>
-                  ) : <p>{event.text}</p>}
+                  <p className="selected-event-contribution">
+                    {event.bullets ? event.bullets.join(" · ") : event.text}
+                  </p>
                 </div>
               </article>
             ))}

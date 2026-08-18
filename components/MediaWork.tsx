@@ -123,7 +123,7 @@ export function MediaWork() {
               <h2><span>01</span> Interviews</h2>
               <p>Conversations with founders, builders, and community across the crypto ecosystem.</p>
             </div>
-            <a href="https://www.tiktok.com/@realhomiesclub" target="_blank" rel="noreferrer">View all interviews →</a>
+            <a href="https://www.tiktok.com/@realhomiesclub" target="_blank" rel="noreferrer">View all interviews</a>
           </header>
           <div className="selected-interview-grid">
             {interviews.map((interview) => (
@@ -136,7 +136,6 @@ export function MediaWork() {
               >
                 <div className="selected-interview-visual">
                   {interview.image ? <img src={interview.image} alt={`${interview.title} interview thumbnail`} /> : <span>Thumbnail to be added</span>}
-                  <b aria-hidden="true">↗</b>
                 </div>
                 <span>{interview.number}</span>
                 <h3>{interview.title}</h3>
@@ -154,16 +153,16 @@ export function MediaWork() {
             </div>
           </header>
           <div className="media-partnership-panel">
-            <div className="media-partnership-title">
-              <span>Southeast Asia Blockchain Week</span>
-              <h3>Media Partner</h3>
-            </div>
-            <div className="media-partnership-role">
-              <ul>
-                <li>On-site interviews</li>
-                <li>Short-form content production</li>
-                <li>Interviewed founders, builders, and ecosystem participants</li>
-                <li>Distributed content across social channels</li>
+            <div className="media-partnership-copy">
+              <div className="media-partnership-title">
+                <span>Southeast Asia Blockchain Week</span>
+                <h3>Media Partner</h3>
+              </div>
+              <ul className="media-partnership-capabilities" aria-label="Media partnership capabilities">
+                <li>On-site Interviews</li>
+                <li>Short-form Production</li>
+                <li>Founder &amp; Builder Interviews</li>
+                <li>Social Distribution</li>
               </ul>
             </div>
             <div className="media-partnership-visual">
