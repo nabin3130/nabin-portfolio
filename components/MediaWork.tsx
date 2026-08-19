@@ -156,7 +156,6 @@ export function MediaWork() {
             <div className="media-partnership-copy">
               <div className="media-partnership-title">
                 <span>Southeast Asia Blockchain Week</span>
-                <h3>Media Partner</h3>
               </div>
               <ul className="media-partnership-capabilities" aria-label="Media partnership capabilities">
                 <li>On-site Interviews</li>
