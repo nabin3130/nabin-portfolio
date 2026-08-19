@@ -3,18 +3,18 @@ import "./globals.css";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://nabin.cc"),
-  title: "🦋 Nabin Kim — Portfolio",
+  title: "Nabin Kim — Portfolio",
   description: "Portfolio of Nabin Kim, a bilingual Web3 go-to-market and ecosystem professional.",
   openGraph: {
     type: "website",
     siteName: "Nabin Kim",
-    title: "🦋 Nabin Kim — Portfolio",
+    title: "Nabin Kim — Portfolio",
     description: "Portfolio of Nabin Kim, a bilingual Web3 go-to-market and ecosystem professional.",
     url: "/work",
   },
   twitter: {
     card: "summary",
-    title: "🦋 Nabin Kim — Portfolio",
+    title: "Nabin Kim — Portfolio",
     description: "Portfolio of Nabin Kim, a bilingual Web3 go-to-market and ecosystem professional.",
   },
 };
