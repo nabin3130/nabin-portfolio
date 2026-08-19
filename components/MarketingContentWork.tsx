@@ -181,7 +181,7 @@ export function MarketingContentWork() {
             </div>
           </div>
 
-          <div className="education-subsection">
+          <div className="education-subsection" id="video-tutorials">
             <header><div><h3>Video Tutorials — YouTube</h3><p>Bifrost Network / Biport Wallet</p><p className="video-production-meta">Script Writing · Filming · Editing · Publishing</p></div></header>
             <div className="tutorial-video-layout">
               <div className="tutorial-video-grid">{tutorialVideos.map((video) => <VideoCard {...video} key={video.href} />)}</div>

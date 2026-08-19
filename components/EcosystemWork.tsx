@@ -205,7 +205,7 @@ export function EcosystemWork() {
         </div>
 
         <div className="ecosystem-product-grid">
-          <article className="ecosystem-product-card">
+          <Link className="ecosystem-product-card" href="/work/marketing#education-content">
             <div className="ecosystem-docs-visual">
               <img
                 src="/images/work/product-gitbook.jpg"
@@ -214,8 +214,8 @@ export function EcosystemWork() {
             </div>
             <h3>GitBook &amp; Product Docs</h3>
             <p>Bilingual guides, GIF tutorials, and product documentation.</p>
-          </article>
-          <article className="ecosystem-product-card">
+          </Link>
+          <Link className="ecosystem-product-card" href="/work/marketing#video-tutorials">
             <div className="ecosystem-video-visual">
               <img
                 src="/images/work/product-video.jpg"
@@ -224,7 +224,7 @@ export function EcosystemWork() {
             </div>
             <h3>Product Videos</h3>
             <p>YouTube tutorials for wallet and bridge features.</p>
-          </article>
+          </Link>
         </div>
       </section>
 
