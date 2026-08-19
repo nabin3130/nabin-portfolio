@@ -180,8 +180,8 @@ export function EcosystemWork() {
             {communityAreas.map((area) => (
               <Link
                 className="community-area"
-                href="/work/marketing"
-                scroll={false}
+                href={area.title === "Influencer Partnerships" ? "/work/marketing#influencer-marketing" : "/work/marketing"}
+                scroll={area.title === "Influencer Partnerships"}
                 key={area.number}
               >
                 <div className="community-area-meta">
