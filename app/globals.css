@@ -9179,7 +9179,7 @@ img {
   }
 
   .work-page .selected-interview-visual {
-    width: min(100%, 380px);
+    width: min(62vw, 220px);
     margin: 0 auto;
   }
 
