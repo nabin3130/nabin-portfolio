@@ -5,6 +5,7 @@ const baseUrl = "https://nabin.cc";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const staticRoutes = [
+    "",
     "/work/ecosystem",
     "/work/marketing",
     "/work/events",
