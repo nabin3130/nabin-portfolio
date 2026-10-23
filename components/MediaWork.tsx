@@ -1,6 +1,8 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { messages } from "@/data/messages";
+import type { Locale } from "@/lib/locale";
 
 const socialLinks = [
   { label: "TikTok", icon: "tiktok", href: "https://www.tiktok.com/@realhomiesclub" },
@@ -11,49 +13,45 @@ const socialLinks = [
 
 function SocialIcon({ name }: { name: string }) {
   if (name === "youtube") {
-    return <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2" y="5" width="20" height="14" rx="4" /><path d="m10 9 5 3-5 3Z" fill="#fff" /></svg>;
+    return (
+      <svg viewBox="0 0 24 24" aria-hidden="true">
+        <rect x="2" y="5" width="20" height="14" rx="4" />
+        <path d="m10 9 5 3-5 3Z" fill="#fff" />
+      </svg>
+    );
   }
 
   if (name === "instagram") {
-    return <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5" fill="none" stroke="currentColor" strokeWidth="2" /><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" strokeWidth="2" /><circle cx="17.5" cy="6.5" r="1.2" /></svg>;
+    return (
+      <svg viewBox="0 0 24 24" aria-hidden="true">
+        <rect x="3" y="3" width="18" height="18" rx="5" fill="none" stroke="currentColor" strokeWidth="2" />
+        <circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" strokeWidth="2" />
+        <circle cx="17.5" cy="6.5" r="1.2" />
+      </svg>
+    );
   }
 
   if (name === "x") {
-    return <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4h3.8l3.7 5.1L17 4h2l-5.6 6.6L20 20h-3.8l-4.1-5.7L7 20H5l6.2-7.2Z" /></svg>;
+    return (
+      <svg viewBox="0 0 24 24" aria-hidden="true">
+        <path d="M5 4h3.8l3.7 5.1L17 4h2l-5.6 6.6L20 20h-3.8l-4.1-5.7L7 20H5l6.2-7.2Z" />
+      </svg>
+    );
   }
 
-  return <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M13.1 3v11.3a4.2 4.2 0 1 1-3.6-4.1v2.5a1.8 1.8 0 1 0 1.2 1.7V3h2.4Zm0 0c.6 2.4 2 3.8 4.4 4.2v2.5a7.2 7.2 0 0 1-4.4-1.8Z" /></svg>;
+  return (
+    <svg viewBox="0 0 24 24" aria-hidden="true">
+      <path d="M13.1 3v11.3a4.2 4.2 0 1 1-3.6-4.1v2.5a1.8 1.8 0 1 0 1.2 1.7V3h2.4Zm0 0c.6 2.4 2 3.8 4.4 4.2v2.5a7.2 7.2 0 0 1-4.4-1.8Z" />
+    </svg>
+  );
 }
 
-const interviews = [
-  {
-    number: "01",
-    title: "First Crypto",
-    text: "“What was your first crypto?”",
-    href: "https://www.tiktok.com/@realhomiesclub/video/7668248794181537054?is_from_webapp=1&sender_device=pc&web_id=7595780493363414550",
-    image: "/images/work/media.jpg",
-  },
-  {
-    number: "02",
-    title: "Bitcoin in 2011",
-    text: "“Yeah, it was Bitcoin back in 2011”",
-    href: "https://www.tiktok.com/@realhomiesclub/video/7607831708485815583?is_from_webapp=1&sender_device=pc&web_id=7595780493363414550",
-    image: "/images/work/media-bitcoin-2011.jpg",
-  },
-  {
-    number: "03",
-    title: "NFT Experience",
-    text: "“Have you traded NFT before?”",
-    href: "https://www.tiktok.com/@realhomiesclub/video/7606734391443836190?is_from_webapp=1&sender_device=pc&web_id=7595780493363414550",
-    image: "/images/work/media-nft.jpg",
-  },
-];
-
-export function MediaWork() {
+export function MediaWork({ locale }: { locale: Locale }) {
+  const t = messages[locale].media;
   const [activeSection, setActiveSection] = useState("media-interviews");
 
   useEffect(() => {
-    const sectionIds = ["media-interviews", "media-partnership"];
+    const sectionIds = t.nav.map((item) => item.id);
     const updateActiveSection = () => {
       const activationLine = window.innerHeight * 0.35;
       let currentSection = sectionIds[0];
@@ -77,38 +75,35 @@ export function MediaWork() {
       window.removeEventListener("scroll", updateActiveSection);
       window.removeEventListener("resize", updateActiveSection);
     };
-  }, []);
+  }, [t.nav]);
 
   return (
     <div className="media-case-study">
       <aside className="media-case-sidebar">
-        <p className="work-kicker"><span>04</span> / Media</p>
-        <h1>Media</h1>
-        <p>
-          Co-founded and grew an independent crypto media, creating short-form
-          interviews and on-the-ground content.
+        <p className="work-kicker">
+          <span>04</span> / {t.kicker}
         </p>
-        <nav aria-label="Media case study sections">
-          <a className={activeSection === "media-interviews" ? "active" : ""} href="#media-interviews"><span>01</span>Interviews</a>
-          <a className={activeSection === "media-partnership" ? "active" : ""} href="#media-partnership"><span>02</span>Media Partnership</a>
+        <h1>{t.title}</h1>
+        <p>{t.intro}</p>
+        <nav aria-label={t.navLabel}>
+          {t.nav.map((item) => (
+            <a className={activeSection === item.id ? "active" : ""} href={`#${item.id}`} key={item.id}>
+              <span>{item.number}</span>
+              {item.label}
+            </a>
+          ))}
         </nav>
       </aside>
 
       <main className="media-case-content">
         <section className="rhc-summary" aria-labelledby="rhc-title">
-          <img className="rhc-logo" src="/images/work/real-homies-club-logo.png" alt="Real Homies Club logo" />
+          <img className="rhc-logo" src="/images/work/real-homies-club-logo.png" alt={t.logoAlt} />
           <div className="rhc-summary-profile">
-            <h2 id="rhc-title">Real Homies Club</h2>
-            <p>Independent crypto media capturing people, conversations, and stories across the global crypto ecosystem.</p>
+            <h2 id="rhc-title">{t.name}</h2>
+            <p>{t.summary}</p>
             <div className="rhc-socials">
               {socialLinks.map((social) => (
-                <a
-                  href={social.href}
-                  target="_blank"
-                  rel="noreferrer"
-                  aria-label={`Open Real Homies Club on ${social.label}`}
-                  key={social.label}
-                >
+                <a href={social.href} target="_blank" rel="noreferrer" aria-label={`${t.openOn} ${social.label}`} key={social.label}>
                   <SocialIcon name={social.icon} />
                   <span>{social.label}</span>
                 </a>
@@ -120,22 +115,20 @@ export function MediaWork() {
         <section className="media-case-section" id="media-interviews">
           <header className="media-case-section-heading">
             <div>
-              <h2><span>01</span> Interviews</h2>
-              <p>Conversations with founders, builders, and community across the crypto ecosystem.</p>
+              <h2>
+                <span>01</span> {t.interviewsTitle}
+              </h2>
+              <p>{t.interviewsText}</p>
             </div>
-            <a href="https://www.tiktok.com/@realhomiesclub" target="_blank" rel="noreferrer">View all interviews</a>
+            <a href="https://www.tiktok.com/@realhomiesclub" target="_blank" rel="noreferrer">
+              {t.viewAll}
+            </a>
           </header>
           <div className="selected-interview-grid">
-            {interviews.map((interview) => (
-              <a
-                className={`selected-interview-card${interview.image ? " has-image" : ""}`}
-                href={interview.href}
-                target="_blank"
-                rel="noreferrer"
-                key={interview.title}
-              >
+            {t.interviews.map((interview) => (
+              <a className="selected-interview-card has-image" href={interview.href} target="_blank" rel="noreferrer" key={interview.number}>
                 <div className="selected-interview-visual">
-                  {interview.image ? <img src={interview.image} alt={`${interview.title} interview thumbnail`} /> : <span>Thumbnail to be added</span>}
+                  <img src={interview.image} alt={`${interview.title} ${t.thumbnail}`} />
                 </div>
                 <span>{interview.number}</span>
                 <h3>{interview.title}</h3>
@@ -148,24 +141,25 @@ export function MediaWork() {
         <section className="media-case-section" id="media-partnership">
           <header className="media-case-section-heading">
             <div>
-              <h2><span>02</span> Media Partnership</h2>
-              <p>Official media partner for a global crypto conference.</p>
+              <h2>
+                <span>02</span> {t.partnershipTitle}
+              </h2>
+              <p>{t.partnershipText}</p>
             </div>
           </header>
           <div className="media-partnership-panel">
             <div className="media-partnership-copy">
               <div className="media-partnership-title">
-                <span>Southeast Asia Blockchain Week</span>
+                <span>{t.partnershipName}</span>
               </div>
-              <ul className="media-partnership-capabilities" aria-label="Media partnership capabilities">
-                <li>On-site Interviews</li>
-                <li>Short-form Production</li>
-                <li>Founder &amp; Builder Interviews</li>
-                <li>Social Distribution</li>
+              <ul className="media-partnership-capabilities" aria-label={t.capabilitiesLabel}>
+                {t.capabilities.map((item) => (
+                  <li key={item}>{item}</li>
+                ))}
               </ul>
             </div>
             <div className="media-partnership-visual">
-              <img src="/images/work/media-partnership.jpg" alt="Southeast Asia Blockchain Week media partnership announcement" />
+              <img src="/images/work/media-partnership.jpg" alt={t.partnershipAlt} />
             </div>
           </div>
         </section>

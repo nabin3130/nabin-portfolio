@@ -14,7 +14,20 @@ export default function sitemap(): MetadataRoute.Sitemap {
   ];
   const projectRoutes = projects.map(({ slug }) => `/projects/${slug}`);
 
-  return [...staticRoutes, ...projectRoutes].map((route) => ({
-    url: `${baseUrl}${route}`,
-  }));
+  const routes = [...staticRoutes, ...projectRoutes];
+
+  return routes.flatMap((route) => {
+    const en = `${baseUrl}${route}`;
+    const ko = `${baseUrl}${route === "" ? "/ko" : `/ko${route}`}`;
+    return [
+      {
+        url: en,
+        alternates: { languages: { en, ko } },
+      },
+      {
+        url: ko,
+        alternates: { languages: { en, ko } },
+      },
+    ];
+  });
 }
