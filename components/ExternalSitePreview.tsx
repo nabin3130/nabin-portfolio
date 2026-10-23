@@ -1,10 +1,13 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { messages } from "@/data/messages";
+import type { Locale } from "@/lib/locale";
 
 const previewUrl = "https://digital-legacy-five.vercel.app/";
 
-export function ExternalSitePreview() {
+export function ExternalSitePreview({ locale }: { locale: Locale }) {
+  const t = messages[locale].preview;
   const [status, setStatus] = useState<"loading" | "ready" | "error">("loading");
   const [attempt, setAttempt] = useState(0);
 
@@ -25,30 +28,27 @@ export function ExternalSitePreview() {
       {status === "loading" && (
         <div className="external-preview-state" role="status">
           <span className="preview-loading-mark" aria-hidden="true" />
-          <strong>Loading project preview</strong>
-          <p>The interactive site will appear here.</p>
+          <strong>{t.loadingTitle}</strong>
+          <p>{t.loadingText}</p>
         </div>
       )}
 
       {status === "error" && (
         <div className="external-preview-state" role="alert">
-          <strong>Preview unavailable</strong>
-          <p>The project can still be opened in a new tab.</p>
+          <strong>{t.errorTitle}</strong>
+          <p>{t.errorText}</p>
           <div>
-            <button type="button" onClick={retry}>Try again</button>
-            <a href={previewUrl} target="_blank" rel="noreferrer">Open project</a>
+            <button type="button" onClick={retry}>
+              {t.retry}
+            </button>
+            <a href={previewUrl} target="_blank" rel="noreferrer">
+              {t.open}
+            </a>
           </div>
         </div>
       )}
 
-      <iframe
-        key={attempt}
-        src={previewUrl}
-        title="Interactive preview of the Digital Legacy project"
-        loading="lazy"
-        allow="fullscreen"
-        onLoad={() => setStatus("ready")}
-      />
+      <iframe key={attempt} src={previewUrl} title={t.iframeTitle} loading="lazy" allow="fullscreen" onLoad={() => setStatus("ready")} />
     </div>
   );
 }
