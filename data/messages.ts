@@ -44,7 +44,7 @@ const en = {
         text: "On-site crypto industry interviews at Solana Breakpoint Abu Dhabi, SEAW Thailand (official media partner), BUIDL Asia Korea and KBW Korea. Produce content and run X (@tlsrns10) incl. comment management; TikTok @realhomiesclub — 30+ videos, ~1,957 followers.",
       },
       {
-        dates: "Apr 2025 – 2025",
+        dates: "Apr 2025 – Oct 2025",
         company: "Tomato",
         role: "Co-founder",
         href: "/projects/tomato",
@@ -496,7 +496,7 @@ const ko: Messages = {
         text: "Solana Breakpoint Abu Dhabi, SEAW Thailand(공식 미디어 파트너), BUIDL Asia Korea, KBW Korea 현장에서 크립토 업계 인터뷰를 진행했습니다. 콘텐츠 제작과 X(@tlsrns10) 운영·댓글 관리를 맡고 있으며, TikTok(@realhomiesclub)에 영상 30편 이상을 올려 팔로워 약 1,957명을 모았습니다.",
       },
       {
-        dates: "2025.04~2025",
+        dates: "2025.04~2025.10",
         company: "Tomato",
         role: "공동창업자",
         href: "/projects/tomato",
